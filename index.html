@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pop Pop – Pop-corn gourmet</title>
+  <meta name="description" content="Du pop-corn gourmet aux saveurs uniques, livré chez vous.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 1. NAVIGATION -->
+<header class="nav">
+  <button class="nav__cart nav__cart--mobile icon-btn" data-open-cart aria-label="Ouvrir le panier">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <span class="badge" data-cart-count>0</span>
+  </button>
+
+  <nav class="nav__links nav__links--left" aria-label="Principal">
+    <a href="#produits">Acheter</a>
+    <a href="#histoire">Notre histoire</a>
+    <a href="#engagements">Engagements</a>
+  </nav>
+
+  <a class="logo" href="#top" aria-label="Pop Pop, accueil"><span>POP</span><span>POP<i></i></span></a>
+
+  <nav class="nav__links nav__links--right" aria-label="Secondaire">
+    <a href="#">Recrutement</a>
+    <a href="#">Points de vente</a>
+    <button class="icon-btn nav__cart" data-open-cart aria-label="Ouvrir le panier">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="badge" data-cart-count>0</span>
+    </button>
+  </nav>
+
+  <button class="icon-btn burger" id="burger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- 2. HERO -->
+  <section class="hero">
+    <span class="kernel kernel--1" aria-hidden="true"></span>
+    <span class="kernel kernel--2" aria-hidden="true"></span>
+    <span class="kernel kernel--3" aria-hidden="true"></span>
+
+    <h1 class="hero__title">
+      <span class="scribble scribble--l" aria-hidden="true"></span>
+      Du pop-corn <br><u>délicieusement</u> unique
+      <span class="scribble scribble--r" aria-hidden="true"></span>
+    </h1>
+    <a href="#produits" class="pill pill--dark">Découvrir</a>
+
+    <div class="hero__bags" aria-hidden="true">
+      <div class="bag-slot bag-slot--left" data-bag="caramel"></div>
+      <div class="bag-slot bag-slot--center" data-bag="sriracha"></div>
+      <div class="bag-slot bag-slot--right" data-bag="truffe"></div>
+    </div>
+  </section>
+
+  <!-- 3. MEET THE CREW -->
+  <section class="crew" id="produits">
+    <div class="crew__head">
+      <h2 class="h2">Rencontrez la bande</h2>
+      <a href="#produits" class="pill pill--outline">Tous les produits</a>
+    </div>
+    <div class="crew__grid" id="grid"></div>
+  </section>
+
+  <!-- 4. FICHE PRODUIT -->
+  <section class="product" id="fiche" hidden>
+    <div class="product__visual">
+      <button class="product__back" id="back">← Retour</button>
+      <div class="product__bag" id="p-bag"></div>
+    </div>
+    <div class="product__info">
+      <div class="product__row">
+        <h2 class="h3" id="p-name"></h2>
+        <span class="price" id="p-price"></span>
+      </div>
+      <div class="product__row product__row--sub">
+        <span class="stars" aria-label="5 étoiles sur 5">★★★★★</span>
+        <a href="#" class="link">Écrire un avis</a>
+      </div>
+      <p id="p-desc" class="product__desc"></p>
+      <form class="buy" id="buy">
+        <label class="sr-only" for="qty">Quantité</label>
+        <input id="qty" type="number" min="1" max="20" value="1" inputmode="numeric">
+        <button class="pill pill--dark pill--block" type="submit">Ajouter au panier</button>
+      </form>
+
+      <h3 class="h4">Infos nutritionnelles</h3>
+      <p class="muted">Pour 100 g</p>
+      <ul class="nutri" id="p-nutri"></ul>
+    </div>
+  </section>
+
+  <!-- 5. HISTOIRE / ENGAGEMENTS -->
+  <section class="story" id="histoire">
+    <h2 class="h2">Notre histoire</h2>
+    <p>Une envie simple : un pop-corn qui a du goût, fait avec des ingrédients qu’on comprend, dans une recette qui ne ressemble à aucune autre. Remplacez ce texte par l’histoire de votre marque.</p>
+  </section>
+
+  <section class="values" id="engagements">
+    <article><b>100 % naturel</b><span>Sans colorant ni arôme artificiel.</span></article>
+    <article><b>Fabriqué en France</b><span>Cuit et emballé près de chez vous.</span></article>
+    <article><b>Livraison offerte</b><span>Dès 25 € d’achat.</span></article>
+  </section>
+</main>
+
+<footer class="foot">
+  <a class="logo logo--sm" href="#top"><span>POP</span><span>POP<i></i></span></a>
+  <p>© <span id="year"></span> Pop Pop · Mentions légales · CGV · Contact</p>
+</footer>
+
+<!-- 6. PANIER -->
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Panier" aria-hidden="true">
+  <div class="drawer__head">
+    <h2 class="h4">Votre panier</h2>
+    <button class="icon-btn" id="close-cart" aria-label="Fermer">✕</button>
+  </div>
+  <div class="drawer__progress">
+    <p id="ship-msg"></p>
+    <div class="bar"><i id="ship-bar"></i></div>
+  </div>
+  <ul class="drawer__items" id="cart-items"></ul>
+  <div class="drawer__foot">
+    <div class="drawer__total"><span>Total</span><b id="cart-total">0,00 €</b></div>
+    <button class="pill pill--dark pill--block" id="checkout">Passer commande</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
