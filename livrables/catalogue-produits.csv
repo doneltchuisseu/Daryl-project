@@ -73,3 +73,5 @@ kelloggs-cornflakes-sachet;Corn Flakes Original, petit sachet;Kellogg's;Sachet;P
 kelloggs-cornflakes-200g;Corn Flakes Original, boîte 200 g;Kellogg's;Boîte 200 g;Petit-déjeuner;Petit-déjeuner;2000;;oui;prix
 kelloggs-cornflakes-243g;Corn Flakes Original, boîte 243 g;Kellogg's;Boîte 243 g;Petit-déjeuner;Petit-déjeuner;2300;;oui;prix, doublon possible avec kelloggs-cornflakes-200g
 redwhite-cornflakes;Corn Flakes Red & White;Red & White;Boîte 510 g;Petit-déjeuner;Petit-déjeuner;3000;;non;photo tenue à la main sur fond jaune inutilisable (à reprendre sur fond blanc)
+lavazza-rossa-1kg;Lavazza Qualità Rossa, café en grains;Lavazza;Paquet 1 kg · grains;Petit-déjeuner;Cafés;12000;;oui;prix, demande réelle pour du café en grains
+lavazza-espresso-1kg;Lavazza Espresso, café en grains;Lavazza;Paquet 1 kg · grains;Petit-déjeuner;Cafés;14000;;oui;prix, demande réelle pour du café en grains

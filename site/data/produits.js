@@ -844,6 +844,32 @@ window.PRODUITS = [
   "image": "images/kelloggs-cornflakes-243g.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "lavazza-rossa-1kg",
+  "nom": "Lavazza Qualità Rossa, café en grains",
+  "marque": "Lavazza",
+  "format": "Paquet 1 kg · grains",
+  "rayon": "Petit-déjeuner",
+  "famille": "Cafés",
+  "prix": 12000,
+  "etiquette": "",
+  "image": "images/lavazza-rossa-1kg.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "lavazza-espresso-1kg",
+  "nom": "Lavazza Espresso, café en grains",
+  "marque": "Lavazza",
+  "format": "Paquet 1 kg · grains",
+  "rayon": "Petit-déjeuner",
+  "famille": "Cafés",
+  "prix": 14000,
+  "etiquette": "",
+  "image": "images/lavazza-espresso-1kg.webp",
+  "pack": false,
+  "verre": false
  }
 ];
 window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés", "Bébé et enfants"];
