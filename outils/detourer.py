@@ -22,6 +22,8 @@ Photo sur fond gris ou dégradé : ajouter « neutre » avec une tolérance
 de saturation (ex. « fanta-shokata 30 neutre »). Si le fond est moucheté,
 ajouter « nettoyer » pour enlever les petites taches restantes.
 Fond noir ou gris foncé : ajouter aussi « sombre ».
+Étiquette blanche qui touche le fond blanc (trous dans le produit) :
+ajouter « plein » pour boucher l'intérieur de la silhouette.
 Les images déjà transparentes (PNG/WebP) sont seulement recadrées.
 """
 import sys
@@ -38,6 +40,7 @@ NEUTRE = False  # True : fond gris/dégradé au lieu de blanc
 SOMBRE = False  # avec NEUTRE : le fond peut aussi être noir ou gris foncé
 PRINCIPAL = False  # True : ne garder que le plus grand objet de l'image
 NETTOYER = False  # True : enlever seulement les petites taches isolées
+PLEIN = False  # True : boucher les trous à l'intérieur de la silhouette
 HAUTEUR_MIN = 1200  # px : hauteur minimale de sortie, pour un rendu homogène
 EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".jxl", ".avif"}
 
@@ -81,6 +84,8 @@ def detourer(src: Path, dst: Path) -> tuple[int, int]:
 
     masque = Image.new("L", (w, h))
     masque.putdata([0 if f else 255 for f in fond])
+    if PLEIN:
+        masque = remplir(masque)
     if PRINCIPAL:
         masque = garder_principal(masque)
     elif NETTOYER:
@@ -135,9 +140,36 @@ def garder_principal(masque: Image.Image, seuil: float = 0.0) -> Image.Image:
     return Image.frombytes("L", (w, h), bytes(garde))
 
 
-def reglages() -> dict[str, tuple[int | None, bool, bool, bool, bool]]:
+def remplir(masque: Image.Image) -> Image.Image:
+    """Bouche les trous du produit : un pixel est gardé s'il est entre le premier
+    et le dernier pixel du produit à la fois sur sa ligne et sur sa colonne.
+    Utile quand une étiquette blanche touche le fond blanc."""
+    w, h = masque.size
+    m = masque.load()
+    lignes = []
+    for y in range(h):
+        xs = [x for x in range(w) if m[x, y] >= 128]
+        lignes.append((xs[0], xs[-1]) if xs else None)
+    colonnes = []
+    for x in range(w):
+        ys = [y for y in range(h) if m[x, y] >= 128]
+        colonnes.append((ys[0], ys[-1]) if ys else None)
+    out = masque.copy()
+    o = out.load()
+    for y in range(h):
+        if not lignes[y]:
+            continue
+        x0, x1 = lignes[y]
+        for x in range(x0, x1 + 1):
+            c = colonnes[x]
+            if c and c[0] <= y <= c[1]:
+                o[x, y] = 255
+    return out
+
+
+def reglages() -> dict[str, tuple[int | None, bool, bool, bool, bool, bool]]:
     """Réglages par image, lus dans outils/detourage-reglages.txt :
-    « nom [tolérance] [principal] [neutre] [nettoyer] [sombre] »."""
+    « nom [tolérance] [principal] [neutre] [nettoyer] [sombre] [plein] »."""
     f = RACINE / "outils/detourage-reglages.txt"
     if not f.exists():
         return {}
@@ -147,12 +179,13 @@ def reglages() -> dict[str, tuple[int | None, bool, bool, bool, bool]]:
         if not mots:
             continue
         tol = next((int(m) for m in mots[1:] if m.isdigit()), None)
-        out[mots[0]] = (tol, "principal" in mots[1:], "neutre" in mots[1:], "nettoyer" in mots[1:], "sombre" in mots[1:])
+        out[mots[0]] = (tol, "principal" in mots[1:], "neutre" in mots[1:], "nettoyer" in mots[1:],
+                        "sombre" in mots[1:], "plein" in mots[1:])
     return out
 
 
 def main():
-    global TOL, PRINCIPAL, NEUTRE, NETTOYER, SOMBRE
+    global TOL, PRINCIPAL, NEUTRE, NETTOYER, SOMBRE, PLEIN
     SORTIE.mkdir(parents=True, exist_ok=True)
     tol_defaut, par_image = TOL, reglages()
     fichiers = sorted(p for p in ENTREE.iterdir() if p.suffix.lower() in EXTENSIONS)
@@ -164,7 +197,8 @@ def main():
         if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
             print(f"  déjà fait   {src.name}")
             continue
-        tol, PRINCIPAL, NEUTRE, NETTOYER, SOMBRE = par_image.get(src.stem, (None, False, False, False, False))
+        tol, PRINCIPAL, NEUTRE, NETTOYER, SOMBRE, PLEIN = par_image.get(
+            src.stem, (None, False, False, False, False, False))
         TOL = tol if tol is not None else tol_defaut
         try:
             taille = detourer(src, dst)

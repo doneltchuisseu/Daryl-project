@@ -13,3 +13,8 @@ fanta-canette-orange principal
 fanta-canette-ananas principal
 coca-50cl 30 neutre nettoyer
 perrier-citron-50cl 40 neutre sombre nettoyer
+evian-pack6-50cl 6
+evian-pack6-1l 6 plein
+evian-sport-1l 6
+evian-1-5l 6
+evian-sport-75cl 6
