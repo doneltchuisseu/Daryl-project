@@ -33,7 +33,7 @@ body{width:1440px}
 .eta i{width:10px;height:10px;border-radius:50%;background:#1f9d55;box-shadow:0 0 0 4px rgba(31,157,85,.2)}
 
 /* Hero */
-.hero{position:relative;text-align:center;padding:76px 0 0;border-bottom:var(--trait);overflow:hidden;height:760px}
+.hero{position:relative;text-align:center;padding:76px 0 0;border-bottom:var(--trait);overflow:hidden;height:900px}
 .hero h1{position:relative;display:block;width:fit-content;margin:0 auto 18px;font-family:var(--display);font-size:84px;line-height:1.02;text-transform:uppercase}
 .hero h1 u{text-decoration-thickness:6px;text-underline-offset:10px}
 .hero h1 .scrib{position:absolute;top:22px;width:48px;height:48px}
@@ -46,12 +46,25 @@ body{width:1440px}
 .kernel.k2{right:170px;top:96px;width:44px;height:44px;background:var(--bleu)}
 .kernel.k3{left:1130px;top:330px;width:34px;height:34px;background:var(--rouge)}
 .kernel::after{content:"";position:absolute;inset:-9px;border:2px solid var(--encre);border-radius:50%;clip-path:polygon(0 0,60% 0,0 60%)}
-.bags{position:absolute;left:0;right:0;bottom:0;height:400px}
-.bag{position:absolute;width:360px;height:470px;border-radius:14px;box-shadow:0 18px 30px rgba(0,0,0,.22);font-size:13px}
-.bag.l{left:40px;bottom:-150px;transform:rotate(-12deg)}
-.bag.c{left:540px;bottom:-110px}
-.bag.r{right:40px;bottom:-150px;transform:rotate(11deg)}
-.bag .tag{position:absolute;top:22px;left:22px;background:var(--creme);border-color:var(--creme);color:var(--encre)}
+.bags{position:absolute;left:0;right:0;bottom:0;height:500px}
+.bottle{position:absolute;filter:drop-shadow(0 22px 22px rgba(0,0,0,.28))}
+.bags .bottle{height:640px}
+.bags .l{left:250px;bottom:-250px;transform:rotate(-16deg)}
+.bags .c{left:50%;height:700px!important;bottom:-250px;transform:translateX(-50%)}
+.bags .r{right:250px;bottom:-250px;transform:rotate(15deg)}
+.bags .disc{position:absolute;border-radius:50%;bottom:-260px}
+.bags .d1{left:90px;width:420px;height:420px;background:var(--orange)}
+.bags .d2{left:50%;margin-left:-260px;width:520px;height:520px;background:var(--rouge);bottom:-300px}
+.bags .d3{right:90px;width:420px;height:420px;background:var(--bleu)}
+/* Sirops */
+.crew{padding:0 0 90px}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card .pimg{position:relative;height:360px;display:grid;place-items:center;margin:18px}
+.card .pimg img{height:300px;filter:drop-shadow(0 12px 12px rgba(0,0,0,.2))}
+.card .pimg .scrib{position:absolute}
+.card .pimg .s1{left:60px;top:70px}.card .pimg .s2{right:60px;top:70px}
+.card .pimg .s3{left:54px;bottom:60px;transform:rotate(30deg)}.card .pimg .s4{right:54px;bottom:60px;transform:scaleX(-1) rotate(30deg)}
+.card .pimg .tag{position:absolute;top:0;left:0}
 
 /* Rayons */
 .rayons{padding:80px 0}
@@ -150,9 +163,10 @@ footer p{font-size:14px;margin-top:14px;max-width:280px}
   <p class="sub">Plus de 170 produits du quotidien et des kits pour les urgences, à Yaoundé.</p>
   <div class="ctas"><span class="pill dark">Faire mes courses</span><span class="pill">Voir les kits</span></div>
   <div class="bags">
-    <div class="bag l ph fill-orange"><span class="tag">Kit</span>Visuel · Kit soirée</div>
-    <div class="bag c ph fill-rouge"><span class="tag">Kit</span>Visuel · Kit bébé</div>
-    <div class="bag r ph fill-bleu"><span class="tag">Kit</span>Visuel · Kit délestage</div>
+    <span class="disc d1"></span><span class="disc d3"></span><span class="disc d2"></span>
+    <img class="bottle l" src="images/sirop-pomme.webp" alt="Sirop pomme">
+    <img class="bottle r" src="images/sirop-peche.webp" alt="Sirop pêche">
+    <img class="bottle c" src="images/sirop-fraise.webp" alt="Sirop fraise">
   </div>
 </section>
 
@@ -168,6 +182,20 @@ footer p{font-size:14px;margin-top:14px;max-width:280px}
     <div class="ray"><div class="ph">Icône</div><b>Hygiène et beauté</b><span>17 produits</span></div>
     <div class="ray"><div class="ph">Icône</div><b>Délestage</b><span>9 produits</span></div>
     <div class="ray"><div class="ph">Icône</div><b>Anti-<br>moustiques</b><span>5 produits</span></div>
+  </div>
+</div></section>
+
+<!-- SIROPS (équivalent « Meet the crew ») -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">La bande des sirops</h2><p>Un sirop, de l’eau fraîche : 39 verres par bouteille.</p></div><span class="pill">Toutes les boissons</span></div>
+  <div class="cgrid">
+    <div class="card on"><div class="pimg"><span class="tag red">Promo</span><span class="scrib s1"></span><span class="scrib r s2"></span><span class="scrib s3"></span><span class="scrib s4"></span><img src="images/sirop-fraise.webp" alt="Sirop fraise"></div>
+      <div class="meta"><div><b>Sirop fraise</b><small>Teisseire · 60 cl</small><span>2&nbsp;900 FCFA</span></div><span class="plus">+</span></div>
+      <div class="explore"><i></i>Voir</div></div>
+    <div class="card"><div class="pimg"><img src="images/sirop-pomme.webp" alt="Sirop pomme"></div>
+      <div class="meta"><div><b>Sirop pomme</b><small>Teisseire · 60 cl</small><span>2&nbsp;900 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/sirop-peche.webp" alt="Sirop pêche"></div>
+      <div class="meta"><div><b>Sirop pêche</b><small>Teisseire · 60 cl</small><span>2&nbsp;900 FCFA</span></div><span class="plus">+</span></div></div>
   </div>
 </div></section>
 

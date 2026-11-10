@@ -114,7 +114,9 @@ p,li{font-size:10.5px}
 .voice li{margin:0 0 1.5mm 4mm}
 .quote{font-family:var(--display);font-size:20px;line-height:1.08;text-transform:uppercase}
 .photo{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
-.photo .ph{height:40mm}
+.photo .shot{position:relative;height:48mm;display:grid;place-items:center;border:var(--trait);border-radius:4px;overflow:hidden}
+.photo .shot img{position:relative;height:42mm;filter:drop-shadow(0 6px 6px rgba(0,0,0,.25))}
+.photo .disc{position:absolute;width:34mm;height:34mm;border-radius:50%;bottom:-8mm}
 .tilt-l{transform:rotate(-8deg)}
 .tilt-r{transform:rotate(7deg)}
 </style>
@@ -373,9 +375,9 @@ p,li{font-size:10.5px}
   <h2>Les visuels produit</h2>
   <p class="intro">Photos <b>détourées sur fond transparent</b> (PNG ou WebP), produit de face, bien éclairé, au moins 1&nbsp;000&nbsp;px. Sur le site, elles sont posées sur le crème, avec une ombre douce, et parfois inclinées dans les bannières.</p>
   <div class="photo">
-    <div class="ph fill-orange tilt-l">Produit incliné ←</div>
-    <div class="ph fill-rouge">Produit de face</div>
-    <div class="ph fill-bleu tilt-r">Produit incliné →</div>
+    <div class="shot"><span class="disc" style="background:var(--orange)"></span><img class="tilt-l" src="images/sirop-pomme.webp" alt=""></div>
+    <div class="shot"><span class="disc" style="background:var(--rouge)"></span><img src="images/sirop-fraise.webp" alt=""></div>
+    <div class="shot"><span class="disc" style="background:var(--bleu)"></span><img class="tilt-r" src="images/sirop-peche.webp" alt=""></div>
   </div>
   <div class="grid3 cap" style="margin-top:4mm"><span>✓ Fond transparent</span><span>✓ Même cadrage pour tous</span><span>✕ Pas de fond blanc ni de photo de rayon</span></div>
 
