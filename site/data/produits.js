@@ -870,6 +870,71 @@ window.PRODUITS = [
   "image": "images/lavazza-espresso-1kg.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "twinings-english-25",
+  "nom": "English Breakfast, 25 sachets",
+  "marque": "Twinings",
+  "format": "Boîte de 25 sachets",
+  "rayon": "Petit-déjeuner",
+  "famille": "Thés et infusions",
+  "prix": 2500,
+  "etiquette": "",
+  "image": "images/twinings-english-25.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "twinings-english-100",
+  "nom": "English Breakfast, 100 sachets",
+  "marque": "Twinings",
+  "format": "Boîte de 100 sachets · 200 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Thés et infusions",
+  "prix": 7500,
+  "etiquette": "Promo",
+  "image": "images/twinings-english-100.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "twinings-earl-grey-100",
+  "nom": "Earl Grey, 100 sachets",
+  "marque": "Twinings",
+  "format": "Boîte de 100 sachets · 200 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Thés et infusions",
+  "prix": 7500,
+  "etiquette": "",
+  "image": "images/twinings-earl-grey-100.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "twinings-rooibos",
+  "nom": "Rooibos, 20 sachets",
+  "marque": "Twinings",
+  "format": "Boîte de 20 sachets · sans théine",
+  "rayon": "Petit-déjeuner",
+  "famille": "Thés et infusions",
+  "prix": 3000,
+  "etiquette": "Nouveau",
+  "image": "images/twinings-rooibos.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "twinings-assortiment",
+  "nom": "Assortiment de thés noirs",
+  "marque": "Twinings",
+  "format": "Coffret · Earl Grey, English, Irish, Lady Grey",
+  "rayon": "Petit-déjeuner",
+  "famille": "Thés et infusions",
+  "prix": 4000,
+  "etiquette": "",
+  "image": "images/twinings-assortiment.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés", "Bébé et enfants"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés", "Thés et infusions", "Bébé et enfants"];

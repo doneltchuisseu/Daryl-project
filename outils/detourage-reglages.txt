@@ -28,3 +28,5 @@ kelloggs-chocos-sachet principal
 kelloggs-cornflakes-200g 4 plein
 kelloggs-cornflakes-243g 4 plein
 redwhite-cornflakes principal
+twinings-english-25 12 neutre principal
+twinings-earl-grey-100 5 plein
