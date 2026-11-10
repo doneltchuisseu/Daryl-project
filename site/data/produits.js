@@ -649,6 +649,71 @@ window.PRODUITS = [
   "image": "images/milo-cereales.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "nesquik-pot-500g",
+  "nom": "Nesquik chocolat, pot 500 g",
+  "marque": "Nestlé Nesquik",
+  "format": "Pot 500 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 3500,
+  "etiquette": "",
+  "image": "images/nesquik-pot-500g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "nesquik-milkshake-500g",
+  "nom": "Nesquik Milkshake Mix chocolat",
+  "marque": "Nestlé Nesquik",
+  "format": "Pot 500 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 3500,
+  "etiquette": "",
+  "image": "images/nesquik-milkshake-500g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "nesquik-boite-400g",
+  "nom": "Nesquik chocolat, boîte 400 g",
+  "marque": "Nestlé Nesquik",
+  "format": "Boîte 400 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 3000,
+  "etiquette": "",
+  "image": "images/nesquik-boite-400g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "nesquik-fraise-350g",
+  "nom": "Nesquik fraise, sachet 350 g",
+  "marque": "Nestlé Nesquik",
+  "format": "Sachet 350 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 2800,
+  "etiquette": "Nouveau",
+  "image": "images/nesquik-fraise-350g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "nesquik-cereales",
+  "nom": "Céréales Nesquik",
+  "marque": "Nestlé Nesquik",
+  "format": "Boîte",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 3500,
+  "etiquette": "",
+  "image": "images/nesquik-cereales.webp",
+  "pack": false,
+  "verre": false
  }
 ];
 window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés"];

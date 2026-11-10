@@ -56,3 +56,8 @@ milo-sachet-500g;Milo, sachet 500 g;Nestlé Milo;Sachet 500 g;Petit-déjeuner;Pe
 milo-sachet-600g;Milo, sachet 600 g;Nestlé Milo;Sachet 600 g;Petit-déjeuner;Petit-déjeuner;3000;;oui;prix
 milo-boite-1-5kg;Milo, grande boîte 1,5 kg;Nestlé Milo;Boîte 1,5 kg;Petit-déjeuner;Petit-déjeuner;8500;Promo;oui;prix
 milo-cereales;Céréales Milo;Nestlé Milo;Boîte 350 g;Petit-déjeuner;Petit-déjeuner;3500;Nouveau;oui;prix
+nesquik-pot-500g;Nesquik chocolat, pot 500 g;Nestlé Nesquik;Pot 500 g;Petit-déjeuner;Petit-déjeuner;3500;;oui;prix
+nesquik-milkshake-500g;Nesquik Milkshake Mix chocolat;Nestlé Nesquik;Pot 500 g;Petit-déjeuner;Petit-déjeuner;3500;;oui;prix, doublon possible avec nesquik-pot-500g
+nesquik-boite-400g;Nesquik chocolat, boîte 400 g;Nestlé Nesquik;Boîte 400 g;Petit-déjeuner;Petit-déjeuner;3000;;oui;prix
+nesquik-fraise-350g;Nesquik fraise, sachet 350 g;Nestlé Nesquik;Sachet 350 g;Petit-déjeuner;Petit-déjeuner;2800;Nouveau;oui;prix
+nesquik-cereales;Céréales Nesquik;Nestlé Nesquik;Boîte;Petit-déjeuner;Petit-déjeuner;3500;;oui;prix, poids
