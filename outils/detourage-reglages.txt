@@ -67,3 +67,6 @@ amora-mayonnaise-squeeze 4 plein
 azur-huile-pack3 6 principal
 azur-huile-1l 6 plein
 azur-huile-5l 6 plein
+titus-sardines-olive-pack3 6 plein
+titus-sardines-epicees 3 principal
+titus-sardines-huile-125g 6 plein

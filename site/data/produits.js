@@ -1468,6 +1468,45 @@ window.PRODUITS = [
   "image": "images/azur-huile-5l.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "titus-sardines-huile-125g",
+  "nom": "Sardines à l'huile Titus, boîte 125 g",
+  "marque": "Titus",
+  "format": "Boîte 125 g",
+  "rayon": "Épicerie salée",
+  "famille": "Conserves",
+  "prix": 500,
+  "etiquette": "Favori",
+  "image": "images/titus-sardines-huile-125g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "titus-sardines-epicees",
+  "nom": "Sardines épicées à l'huile Hot Titus",
+  "marque": "Titus",
+  "format": "Boîte",
+  "rayon": "Épicerie salée",
+  "famille": "Conserves",
+  "prix": 600,
+  "etiquette": "",
+  "image": "images/titus-sardines-epicees.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "titus-sardines-olive-pack3",
+  "nom": "Sardines à l'huile d'olive Titus, lot de 3",
+  "marque": "Titus",
+  "format": "Lot de 3 boîtes",
+  "rayon": "Épicerie salée",
+  "famille": "Conserves",
+  "prix": 3000,
+  "etiquette": "Nouveau",
+  "image": "images/titus-sardines-olive-pack3.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Nouilles", "Huiles", "Sauces", "Bébé et enfants"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Nouilles", "Huiles", "Conserves", "Sauces", "Bébé et enfants"];

@@ -39,6 +39,7 @@ const DESCRIPTIONS = {
   "Boissons maltées": "La boisson maltée sans alcool préférée du Cameroun, pleine d’énergie.",
   "Petit-déjeuner": "Pour bien commencer la journée : boisson chocolatée, céréales et pâte à tartiner que toute la famille réclame.",
   "Confitures et douceurs": "Confitures, compotée et galettes pur beurre Bonne Maman pour les tartines, le goûter et les desserts.",
+  "Conserves": "Les sardines Titus, indispensables des placards : à l’huile, épicées ou à l’huile d’olive.",
   "Huiles": "Huile végétale Azur Gold, une marque camerounaise : en bouteille, en pack de 3 ou en bidon de 5 litres.",
   "Sauces": "Ketchup Heinz et mayonnaise Heinz ou Amora pour les frites, les sandwichs et les grillades.",
   "Nouilles": "Les nouilles instantanées Indomie, prêtes en 3 minutes : en sachet ou en gobelet.",
@@ -49,7 +50,7 @@ const DESCRIPTIONS = {
   "Bébé et enfants": "Laits de croissance pour les 1 à 3 ans. Demandez conseil à votre pédiatre pour choisir le lait adapté à votre enfant.",
   "Cafés": "Café soluble prêt en quelques secondes, ou café en grains Lavazza pour les amateurs d’espresso.",
 };
-const titreFamille = f => ({ "Eaux": "Les eaux", "Sodas": "Les sodas", "Jus et nectars": "Les jus", "Thés glacés": "Les thés glacés", "Sirops": "Les sirops", "Boissons maltées": "Les boissons maltées", "Cafés": "Les cafés", "Petit-déjeuner": "Le petit-déjeuner", "Bébé et enfants": "Bébé et enfants", "Thés et infusions": "Thés et infusions", "Laits": "Les laits", "Confitures et douceurs": "Confitures et douceurs", "Pâtes": "Les pâtes", "Riz": "Le riz", "Nouilles": "Les nouilles", "Sauces": "Les sauces", "Huiles": "Les huiles" }[f] || f);
+const titreFamille = f => ({ "Eaux": "Les eaux", "Sodas": "Les sodas", "Jus et nectars": "Les jus", "Thés glacés": "Les thés glacés", "Sirops": "Les sirops", "Boissons maltées": "Les boissons maltées", "Cafés": "Les cafés", "Petit-déjeuner": "Le petit-déjeuner", "Bébé et enfants": "Bébé et enfants", "Thés et infusions": "Thés et infusions", "Laits": "Les laits", "Confitures et douceurs": "Confitures et douceurs", "Pâtes": "Les pâtes", "Riz": "Le riz", "Nouilles": "Les nouilles", "Sauces": "Les sauces", "Huiles": "Les huiles", "Conserves": "Les conserves" }[f] || f);
 const BIENTOT = ["Épicerie", "Hygiène et beauté", "Entretien", "Délestage", "Anti-moustiques"];
 
 /* ===== Composants ===== */
