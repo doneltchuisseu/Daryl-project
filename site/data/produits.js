@@ -1312,6 +1312,45 @@ window.PRODUITS = [
   "image": "images/barilla-cellentani.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "indomie-oignon-poulet",
+  "nom": "Indomie Onion Chicken",
+  "marque": "Indomie",
+  "format": "Sachet 70 g",
+  "rayon": "Épicerie salée",
+  "famille": "Nouilles",
+  "prix": 250,
+  "etiquette": "Favori",
+  "image": "images/indomie-oignon-poulet.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "indomie-legumes",
+  "nom": "Indomie légumes",
+  "marque": "Indomie",
+  "format": "Sachet 75 g",
+  "rayon": "Épicerie salée",
+  "famille": "Nouilles",
+  "prix": 250,
+  "etiquette": "",
+  "image": "images/indomie-legumes.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "indomie-poulet-cup",
+  "nom": "Indomie poulet, gobelet",
+  "marque": "Indomie",
+  "format": "Gobelet 58 g",
+  "rayon": "Épicerie salée",
+  "famille": "Nouilles",
+  "prix": 500,
+  "etiquette": "Nouveau",
+  "image": "images/indomie-poulet-cup.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Bébé et enfants"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Nouilles", "Bébé et enfants"];

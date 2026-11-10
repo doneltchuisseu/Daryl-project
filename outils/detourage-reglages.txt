@@ -55,3 +55,6 @@ taj-mahal-6kg 6 plein
 taj-mahal-1kg 6 plein
 taj-mahal-xxxl-5kg 6 plein
 barilla-cellentani 6 plein
+indomie-poulet-cup 6 plein
+indomie-legumes 6 plein
+indomie-oignon-poulet 6 plein

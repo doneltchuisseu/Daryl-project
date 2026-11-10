@@ -24,7 +24,7 @@ SITE = RACINE / "site"
 HAUTEUR_WEB = 900
 
 # Ordre d'affichage des familles sur le site
-ORDRE_FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Bébé et enfants"]
+ORDRE_FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Nouilles", "Bébé et enfants"]
 
 
 def main():
