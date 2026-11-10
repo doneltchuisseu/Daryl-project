@@ -95,18 +95,25 @@ const MOSAIQUE = {
     ["nido-boite-2-5kg", 50, -.02, .32, 0, 4],
   ],
   petit: [
-    ["evian-1-5l", 8, .40, .40, -7, 1], ["sirop-pomme", 27, .42, .42, 4, 1], ["azur-huile-1l", 47, .44, .42, -3, 1],
-    ["jus-orange-1l", 67, .42, .42, 5, 1], ["coca-zero-bouteille", 87, .40, .40, -6, 1],
-    ["malta-canette", 17, .20, .40, -6, 2], ["heinz-ketchup-907g", 38, .18, .42, 5, 2],
-    ["candia-le-lait", 62, .18, .42, -5, 2], ["supermont-10l", 83, .20, .43, 6, 2],
-    ["quaker-white-oats-500g", 20, -.03, .34, -5, 3], ["nutella-pot", 40, -.05, .38, -4, 3],
-    ["milo-boite-1-5kg", 63, -.05, .40, 4, 3], ["taj-mahal-xxxl-5kg", 84, -.04, .34, 6, 3],
-    ["nido-boite-2-5kg", 51, -.02, .50, 0, 4],
+    // plan arrière : bouteilles, bien serrées sur toute la largeur
+    ["evian-1-5l", 2, .30, .42, -6, 1], ["fanta-orange-bouteille", 13, .32, .44, 4, 1], ["sirop-pomme", 24, .29, .44, -3, 1],
+    ["the-glace-agrumes", 35, .31, .44, 5, 1], ["azur-huile-1l", 46, .33, .44, -3, 1], ["perrier-1l", 57, .31, .44, 4, 1],
+    ["jus-orange-1l", 68, .32, .44, -5, 1], ["sirop-peche", 79, .30, .44, 3, 1], ["coca-zero-bouteille", 90, .31, .44, -4, 1],
+    ["tangui-1-5l", 99, .29, .42, 6, 1],
+    // plan intermédiaire : canettes, cartons, pots
+    ["malta-canette", 8, .13, .40, -6, 2], ["heinz-ketchup-907g", 30, .14, .38, 5, 2], ["candia-le-lait", 52, .13, .40, -4, 2],
+    ["supermont-10l", 74, .14, .42, 4, 2], ["bonne-maman-fraise", 94, .14, .34, -5, 2],
+    // plan avant : le cœur, groupé au centre
+    ["indomie-oignon-poulet", 10, -.04, .30, -7, 3], ["quaker-white-oats-500g", 30, -.05, .32, -3, 3],
+    ["nutella-pot", 50, -.04, .31, -2, 3], ["milo-boite-1-5kg", 72, -.05, .32, 3, 3],
+    ["taj-mahal-xxxl-5kg", 91, -.04, .31, 5, 3],
+    // au centre, le plus gros produit
+    ["nido-boite-2-5kg", 50, -.03, .44, 0, 4],
   ],
 };
 const DISQUES = {
   grand: [[12, -.14, .30, "var(--orange)"], [32, -.18, .26, "var(--bleu)"], [50, -.22, .34, "var(--rouge)"], [70, -.18, .26, "var(--bleu)"], [89, -.14, .30, "var(--orange)"]],
-  petit: [[14, -.14, .62, "var(--orange)"], [50, -.20, .72, "var(--rouge)"], [88, -.14, .62, "var(--bleu)"]],
+  petit: [[4, -.02, .50, "var(--orange)"], [50, -.14, .60, "var(--rouge)"], [96, -.02, .50, "var(--bleu)"]],
 };
 const mobileQ = matchMedia("(max-width:760px)");
 function mosaique() {

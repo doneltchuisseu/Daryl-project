@@ -309,7 +309,7 @@ img{max-width:100%;display:block}
   .eta span{display:inline}
   .hero{padding-top:36px}
   .hero h1 .scrib,.kernel{display:none}
-  .mosaic{aspect-ratio:100/92;margin-top:22px}
+  .mosaic{aspect-ratio:100/74;margin-top:6px}
   .sec{padding-top:52px}
   .grid,.grid.g3{grid-template-columns:repeat(2,1fr);gap:12px}
   .card__img{padding:14px}
