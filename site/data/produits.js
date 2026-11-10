@@ -1351,6 +1351,45 @@ window.PRODUITS = [
   "image": "images/indomie-poulet-cup.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "heinz-ketchup-907g",
+  "nom": "Heinz Tomato Ketchup, grand flacon",
+  "marque": "Heinz",
+  "format": "Flacon 907 g",
+  "rayon": "Épicerie salée",
+  "famille": "Sauces",
+  "prix": 3500,
+  "etiquette": "Favori",
+  "image": "images/heinz-ketchup-907g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "heinz-mayonnaise",
+  "nom": "Heinz Mayonnaise originale",
+  "marque": "Heinz",
+  "format": "Flacon souple",
+  "rayon": "Épicerie salée",
+  "famille": "Sauces",
+  "prix": 2800,
+  "etiquette": "",
+  "image": "images/heinz-mayonnaise.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "heinz-ketchup-zero",
+  "nom": "Heinz Tomato Ketchup sans sucre ajouté",
+  "marque": "Heinz",
+  "format": "Flacon 13 oz · 368 g",
+  "rayon": "Épicerie salée",
+  "famille": "Sauces",
+  "prix": 2800,
+  "etiquette": "Nouveau",
+  "image": "images/heinz-ketchup-zero.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Nouilles", "Bébé et enfants"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Nouilles", "Sauces", "Bébé et enfants"];
