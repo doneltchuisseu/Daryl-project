@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Maquette desktop – Timaini Les Courses</title>
+<link rel="stylesheet" href="brand.css">
+<style>
+body{width:1440px}
+.wrap{max-width:1240px;margin:0 auto}
+.h2{font-family:var(--display);font-size:48px;line-height:1;text-transform:uppercase}
+.sec-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}
+.sec-head p{font-size:16px;margin-top:8px;opacity:.8}
+
+/* Bandeau */
+.top{background:var(--bleu);color:#fff;font-size:13px;display:flex;justify-content:center;gap:36px;padding:9px 0;font-weight:700}
+.top span::before{content:"●";margin-right:8px;color:var(--orange)}
+
+/* Nav */
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 48px;border-bottom:var(--trait)}
+.nav .links{display:flex;gap:34px;font-family:var(--display);font-size:12px;text-transform:uppercase;letter-spacing:.03em;align-items:center}
+.nav .links.r{justify-content:flex-end}
+.nav .logo{font-size:30px}
+.cart{position:relative;display:inline-flex}
+.cart .badge{position:absolute;top:-7px;right:-10px}
+
+/* Recherche */
+.search{display:flex;gap:16px;align-items:center;padding:14px 48px;border-bottom:var(--trait)}
+.where{display:flex;align-items:center;gap:10px;border:var(--trait);border-radius:999px;padding:10px 20px;font-size:14px;white-space:nowrap}
+.where b{font-family:var(--display);font-weight:400;font-size:12px;text-transform:uppercase}
+.input{flex:1;display:flex;justify-content:space-between;align-items:center;border:var(--trait);border-radius:999px;padding:11px 22px;font-size:15px;color:rgba(20,20,20,.55)}
+.input svg{color:var(--encre)}
+.eta{display:flex;align-items:center;gap:8px;font-size:14px;white-space:nowrap}
+.eta i{width:10px;height:10px;border-radius:50%;background:#1f9d55;box-shadow:0 0 0 4px rgba(31,157,85,.2)}
+
+/* Hero */
+.hero{position:relative;text-align:center;padding:76px 0 0;border-bottom:var(--trait);overflow:hidden;height:900px}
+.hero h1{position:relative;display:block;width:fit-content;margin:0 auto 18px;font-family:var(--display);font-size:84px;line-height:1.02;text-transform:uppercase}
+.hero h1 u{text-decoration-thickness:6px;text-underline-offset:10px}
+.hero h1 .scrib{position:absolute;top:22px;width:48px;height:48px}
+.hero h1 .scrib.l{left:-72px}
+.hero h1 .scrib.r{right:-72px}
+.hero .sub{font-size:19px;margin-bottom:28px}
+.hero .ctas{display:flex;justify-content:center;gap:14px}
+.kernel{position:absolute;width:62px;height:62px;border-radius:50%}
+.kernel.k1{left:150px;top:110px;background:var(--orange)}
+.kernel.k2{right:170px;top:96px;width:44px;height:44px;background:var(--bleu)}
+.kernel.k3{left:1130px;top:330px;width:34px;height:34px;background:var(--rouge)}
+.kernel::after{content:"";position:absolute;inset:-9px;border:2px solid var(--encre);border-radius:50%;clip-path:polygon(0 0,60% 0,0 60%)}
+.bags{position:absolute;left:0;right:0;bottom:0;height:500px}
+.bottle{position:absolute;filter:drop-shadow(0 22px 22px rgba(0,0,0,.28))}
+.bags .bottle{height:640px}
+.bags .l{left:250px;bottom:-250px;transform:rotate(-16deg)}
+.bags .c{left:50%;height:700px!important;bottom:-250px;transform:translateX(-50%)}
+.bags .r{right:250px;bottom:-250px;transform:rotate(15deg)}
+.bags .disc{position:absolute;border-radius:50%;bottom:-260px}
+.bags .d1{left:90px;width:420px;height:420px;background:var(--orange)}
+.bags .d2{left:50%;margin-left:-260px;width:520px;height:520px;background:var(--rouge);bottom:-300px}
+.bags .d3{right:90px;width:420px;height:420px;background:var(--bleu)}
+/* Sirops */
+.crew{padding:0 0 90px}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card .pimg{position:relative;height:360px;display:grid;place-items:center;margin:18px}
+.card .pimg img{max-height:300px;max-width:88%;filter:drop-shadow(0 12px 12px rgba(0,0,0,.2))}
+.card .pimg .scrib{position:absolute}
+.card .pimg .s1{left:60px;top:70px}.card .pimg .s2{right:60px;top:70px}
+.card .pimg .s3{left:54px;bottom:60px;transform:rotate(30deg)}.card .pimg .s4{right:54px;bottom:60px;transform:scaleX(-1) rotate(30deg)}
+.card .pimg .tag{position:absolute;top:0;left:0}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.card.pack{display:grid;grid-template-columns:1.2fr 1fr}
+.pack .pimg{height:330px;margin:18px}
+.pack .pimg img{max-height:290px;max-width:100%}
+.card.pack .meta{border-top:0;border-left:var(--trait);flex-direction:column;align-items:flex-start;justify-content:center;gap:16px;padding:24px}
+.pack .meta b{font-size:20px;line-height:1.1}
+.pack .meta small{font-size:13px}
+.pack .meta span{font-size:17px}
+.pack .save{font-family:var(--display);font-size:11px;text-transform:uppercase;color:var(--rouge)}
+
+/* Rayons */
+.rayons{padding:80px 0}
+.rgrid{display:grid;grid-template-columns:repeat(8,1fr);gap:14px}
+.ray{border:var(--trait);background:var(--creme);padding:18px 10px 16px;text-align:center;display:grid;gap:10px;justify-items:center}
+.ray .ph{width:76px;height:76px;border-radius:50%;font-size:8px}
+.ray b{font-family:var(--display);font-weight:400;font-size:12px;text-transform:uppercase;line-height:1.15}
+.ray span{font-size:12px;opacity:.7}
+.ray.on{box-shadow:6px 6px 0 var(--encre);transform:translate(-3px,-3px)}
+
+/* Kits */
+.kits{padding:0 0 90px}
+.kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{position:relative;border:var(--trait);background:var(--creme);display:flex;flex-direction:column}
+.card .ph{height:260px;margin:18px;border-radius:8px}
+.card .ph .tag{position:absolute;top:12px;left:12px}
+.card .meta{border-top:var(--trait);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.card .meta b{display:block;font-family:var(--display);font-weight:400;font-size:15px;text-transform:uppercase}
+.card .meta small{display:block;font-size:12px;opacity:.75;line-height:1.35;margin:2px 0 4px}
+.card .meta span{font-weight:700;font-size:14px}
+.plus{flex:none;width:38px;height:38px;border-radius:50%;background:var(--encre);color:var(--creme);display:grid;place-items:center;font-size:20px;font-weight:700}
+.card.on{box-shadow:9px 9px 0 var(--encre);transform:translate(-4px,-4px)}
+.card .explore{position:absolute;right:-18px;bottom:62px}
+
+/* Bannière délestage */
+.banner{background:var(--encre);color:var(--creme);border-top:var(--trait);border-bottom:var(--trait);position:relative;overflow:hidden}
+.banner .wrap{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;min-height:420px}
+.banner .eyebrow{font-family:var(--display);font-size:13px;letter-spacing:.12em;color:var(--orange);text-transform:uppercase;margin-bottom:14px}
+.banner h2{font-family:var(--display);font-size:72px;line-height:1;text-transform:uppercase;margin-bottom:18px}
+.banner p{font-size:18px;max-width:520px;margin-bottom:28px;opacity:.9}
+.banner .scrib::before,.banner .scrib::after{background:var(--creme)}
+.banner .ph{position:relative;z-index:1;height:330px;width:330px;justify-self:center;transform:rotate(8deg);border-radius:14px}
+.banner .burst{position:absolute;right:170px;top:46px;width:120px;height:120px;border-radius:50%;background:var(--rouge);display:grid;place-items:center;text-align:center;font-family:var(--display);font-size:15px;line-height:1.05;text-transform:uppercase;transform:rotate(-10deg);color:#fff;z-index:2;border:2px solid var(--creme)}
+
+/* Indispensables */
+.must{padding:90px 0}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.mgrid .ph{height:200px}
+.price-old{text-decoration:line-through;opacity:.5;font-weight:600;margin-left:6px;font-size:12px}
+
+/* Étapes */
+.steps{border-top:var(--trait);border-bottom:var(--trait);display:grid;grid-template-columns:repeat(3,1fr)}
+.step{padding:54px 48px;border-right:var(--trait);display:grid;gap:12px;align-content:start}
+.step:last-child{border-right:0}
+.step .n{width:64px;height:64px;border-radius:50%;border:var(--trait);display:grid;place-items:center;font-family:var(--display);font-size:26px}
+.step:nth-child(1) .n{background:var(--orange)}
+.step:nth-child(2) .n{background:var(--bleu);color:#fff;border-color:var(--bleu)}
+.step:nth-child(3) .n{background:var(--rouge);color:#fff;border-color:var(--rouge)}
+.step h3{font-family:var(--display);font-weight:400;font-size:24px;text-transform:uppercase}
+.step p{font-size:16px;opacity:.85}
+
+/* Valeurs */
+.values{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:var(--trait)}
+.values div{padding:34px 28px;border-right:var(--trait);display:grid;gap:4px}
+.values div:last-child{border-right:0}
+.values b{font-family:var(--display);font-weight:400;font-size:16px;text-transform:uppercase}
+.values span{font-size:14px;opacity:.8}
+
+/* Footer */
+footer{background:var(--rouge);color:var(--creme);padding:64px 0 28px}
+footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.3fr;gap:40px}
+footer .logo{font-size:44px}
+footer h4{font-family:var(--display);font-weight:400;font-size:13px;text-transform:uppercase;margin-bottom:14px;letter-spacing:.05em}
+footer li{list-style:none;font-size:14px;margin-bottom:8px}
+footer p{font-size:14px;margin-top:14px;max-width:280px}
+.news{display:flex;border:2px solid var(--creme);border-radius:999px;overflow:hidden;margin-top:6px}
+.news span{flex:1;padding:12px 18px;font-size:14px;opacity:.8}
+.news b{background:var(--creme);color:var(--rouge);font-family:var(--display);font-weight:400;font-size:12px;text-transform:uppercase;padding:13px 20px}
+.pay{display:flex;gap:8px;margin-top:16px}
+.pay span{border:2px solid var(--creme);border-radius:6px;padding:6px 10px;font-size:11px;font-weight:700}
+.legal{max-width:1240px;margin:44px auto 0;border-top:2px solid var(--creme);padding-top:16px;display:flex;justify-content:space-between;font-size:12px}
+.legal .scrib::before,.legal .scrib::after{background:var(--creme)}
+</style>
+</head>
+<body class="paper">
+
+<div class="top"><span>Livraison en 1 h partout à Yaoundé</span><span>Gratuite dès 10&nbsp;000 FCFA</span><span>Orange Money · MTN MoMo · Espèces</span></div>
+
+<header class="nav">
+  <div class="links"><span>Rayons ▾</span><span>Nos kits</span><span>Promos</span></div>
+  <div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div>
+  <div class="links r"><span>Suivre ma commande</span><span>Mon compte</span>
+    <span class="cart"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="badge">3</span></span></div>
+</header>
+
+<div class="search">
+  <div class="where"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Livrer à : <b>Bastos</b> ▾</div>
+  <div class="input"><span>Rechercher : couches, café, piles, eau…</span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div>
+  <div class="eta"><i></i>Commandé maintenant, livré vers <b>&nbsp;15 h 40</b></div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="kernel k1"></span><span class="kernel k2"></span><span class="kernel k3"></span>
+  <h1><span class="scrib l"></span>Vos courses<br>livrées <u>en 1 h</u><span class="scrib r"></span></h1>
+  <p class="sub">Plus de 170 produits du quotidien et des kits pour les urgences, à Yaoundé.</p>
+  <div class="ctas"><span class="pill dark">Faire mes courses</span><span class="pill">Voir les kits</span></div>
+  <div class="bags">
+    <span class="disc d1"></span><span class="disc d3"></span><span class="disc d2"></span>
+    <img class="bottle l" src="images/sirop-pomme.webp" alt="Sirop pomme">
+    <img class="bottle r" src="images/sirop-peche.webp" alt="Sirop pêche">
+    <img class="bottle c" src="images/sirop-fraise.webp" alt="Sirop fraise">
+  </div>
+</section>
+
+<!-- RAYONS -->
+<section class="rayons"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Les rayons</h2><p>Tout le quotidien, rangé comme dans votre supérette.</p></div><span class="pill">Tous les rayons</span></div>
+  <div class="rgrid">
+    <div class="ray"><div class="ph">Icône</div><b>Eaux et boissons</b><span>11 produits</span></div>
+    <div class="ray"><div class="ph">Icône</div><b>Petit-<br>déjeuner</b><span>14 produits</span></div>
+    <div class="ray on"><div class="ph">Icône</div><b>Épicerie salée</b><span>20 produits</span></div>
+    <div class="ray"><div class="ph">Icône</div><b>Épicerie sucrée</b><span>10 produits</span></div>
+    <div class="ray"><div class="ph">Icône</div><b>Bébé</b><span>13 produits</span></div>
+    <div class="ray"><div class="ph">Icône</div><b>Hygiène et beauté</b><span>17 produits</span></div>
+    <div class="ray"><div class="ph">Icône</div><b>Délestage</b><span>9 produits</span></div>
+    <div class="ray"><div class="ph">Icône</div><b>Anti-<br>moustiques</b><span>5 produits</span></div>
+  </div>
+</div></section>
+
+<!-- FAVORIS D'ICI -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Les favoris d’ici</h2><p>Les incontournables du Cameroun, toujours en stock.</p></div><span class="pill">Voir les boissons</span></div>
+  <div class="cgrid">
+    <div class="card"><div class="pimg"><span class="tag orange">Favori</span><img src="images/malta-canette.webp" alt="Malta Guinness canette"></div>
+      <div class="meta"><div><b>Malta Guinness</b><small>Canette 33 cl · sans alcool</small><span>500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/malta-verre.webp" alt="Malta Guinness bouteille en verre"></div>
+      <div class="meta"><div><b>Malta Guinness verre</b><small>Bouteille en verre · consigne en plus</small><span>400 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><span class="tag orange">Favori</span><img src="images/tangui-1-5l.webp" alt="Eau minérale Tangui 1,5 L"></div>
+      <div class="meta"><div><b>Tangui 1,5 L</b><small>Eau minérale du Cameroun</small><span>450 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+  <div class="pgrid" style="grid-template-columns:1fr">
+    <div class="card pack" style="grid-template-columns:2fr 1fr"><div class="pimg"><span class="tag red">Promo</span><img src="images/malta-pack24.webp" alt="Plateau de 24 canettes Malta Guinness"></div>
+      <div class="meta"><div><b>Plateau<br>Malta Guinness</b><small>24 canettes</small></div><span>11&nbsp;000 FCFA</span><span class="save">La canette à 458 FCFA</span><span class="pill sm dark">+ Ajouter</span></div></div>
+  </div>
+</div></section>
+
+<!-- SIROPS (équivalent « Meet the crew ») -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">La bande des sirops</h2><p>Un sirop, de l’eau fraîche : 39 verres par bouteille.</p></div><span class="pill">Toutes les boissons</span></div>
+  <div class="cgrid">
+    <div class="card on"><div class="pimg"><span class="tag red">Promo</span><span class="scrib s1"></span><span class="scrib r s2"></span><span class="scrib s3"></span><span class="scrib s4"></span><img src="images/sirop-fraise.webp" alt="Sirop fraise"></div>
+      <div class="meta"><div><b>Sirop fraise</b><small>Teisseire · 60 cl</small><span>2&nbsp;900 FCFA</span></div><span class="plus">+</span></div>
+      <div class="explore"><i></i>Voir</div></div>
+    <div class="card"><div class="pimg"><img src="images/sirop-pomme.webp" alt="Sirop pomme"></div>
+      <div class="meta"><div><b>Sirop pomme</b><small>Teisseire · 60 cl</small><span>2&nbsp;900 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/sirop-peche.webp" alt="Sirop pêche"></div>
+      <div class="meta"><div><b>Sirop pêche</b><small>Teisseire · 60 cl</small><span>2&nbsp;900 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+</div></section>
+
+<!-- THÉS GLACÉS -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Les thés glacés</h2><p>Bien frais, livrés avant qu’ils ne tiédissent.</p></div><span class="pill">Toutes les boissons</span></div>
+  <div class="cgrid">
+    <div class="card"><div class="pimg"><span class="tag">Nouveau</span><img src="images/the-glace-agrumes.webp" alt="Thé glacé agrumes pétillant"></div>
+      <div class="meta"><div><b>Agrumes pétillant</b><small>Lipton · 1,25 L</small><span>1&nbsp;500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/the-glace-peche.webp" alt="Thé glacé pêche"></div>
+      <div class="meta"><div><b>Pêche</b><small>Lipton · canette</small><span>600 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/the-glace-tropical.webp" alt="Thé glacé tropical"></div>
+      <div class="meta"><div><b>Tropical</b><small>Lipton · bouteille</small><span>1&nbsp;300 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+</div></section>
+
+<!-- JUS DE FRUITS -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Les jus de fruits</h2><p>100 % fruits pour le petit-déjeuner, et des packs pour toute la famille.</p></div><span class="pill">Toutes les boissons</span></div>
+  <div class="cgrid">
+    <div class="card"><div class="pimg"><img src="images/jus-orange-1l.webp" alt="Jus d'orange sans pulpe 1 L"></div>
+      <div class="meta"><div><b>Orange sans pulpe</b><small>Tropicana Pure Premium · 1 L</small><span>2&nbsp;500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/jus-orange-gold.webp" alt="Jus d'orange Premium Gold"></div>
+      <div class="meta"><div><b>Orange Premium Gold</b><small>Tropicana · brique 1 L</small><span>2&nbsp;200 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><span class="tag">Nouveau</span><img src="images/limonade-fraise.webp" alt="Limonade fraise"></div>
+      <div class="meta"><div><b>Limonade fraise</b><small>Tropicana · bouteille</small><span>2&nbsp;800 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+  <div class="pgrid">
+    <div class="card pack"><div class="pimg"><span class="tag red">Promo</span><img src="images/jus-orange-pack3.webp" alt="Pack de 3 jus d'orange"></div>
+      <div class="meta"><div><b>Pack famille<br>jus d’orange</b><small>Tropicana Pure Premium · 3 × 1,36 L</small></div><span>9&nbsp;500 FCFA</span><span class="save">Le litre à 2&nbsp;330 FCFA</span><span class="pill sm dark">+ Ajouter</span></div></div>
+    <div class="card pack"><div class="pimg"><img src="images/jus-pomme-pack12.webp" alt="Pack de 12 jus de pomme"></div>
+      <div class="meta"><div><b>Pack goûter<br>jus de pomme</b><small>Tropicana · 12 × 450 ml</small></div><span>11&nbsp;000 FCFA</span><span class="save">Moins de 920 FCFA la bouteille</span><span class="pill sm dark">+ Ajouter</span></div></div>
+  </div>
+</div></section>
+
+<!-- SODAS -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Les sodas</h2><p>Du format solo au casier pour la fête.</p></div><span class="pill">Toutes les boissons</span></div>
+  <div class="cgrid">
+    <div class="card"><div class="pimg"><img src="images/sprite-canette.webp" alt="Sprite canette"></div>
+      <div class="meta"><div><b>Sprite canette</b><small>Citron-citron vert · canette</small><span>500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/sprite-50cl.webp" alt="Sprite 50 cl"></div>
+      <div class="meta"><div><b>Sprite 50 cl</b><small>Bouteille plastique</small><span>500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/sprite-1-25l.webp" alt="Sprite 1,25 L"></div>
+      <div class="meta"><div><b>Sprite 1,25 L</b><small>Bouteille plastique</small><span>900 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+  <div class="pgrid">
+    <div class="card pack"><div class="pimg"><span class="tag red">Promo</span><img src="images/sprite-pack9.webp" alt="Pack de 9 Sprite 1,5 L"></div>
+      <div class="meta"><div><b>Pack fête<br>Sprite</b><small>9 × 1,5 L</small></div><span>10&nbsp;000 FCFA</span><span class="save">Le litre à 740 FCFA</span><span class="pill sm dark">+ Ajouter</span></div></div>
+    <div class="card pack"><div class="pimg"><img src="images/sprite-verre-24.webp" alt="Casier de 24 Sprite en verre"></div>
+      <div class="meta"><div><b>Casier<br>Sprite verre</b><small>24 bouteilles en verre</small></div><span>8&nbsp;500 FCFA</span><span class="save">Consigne du casier en plus</span><span class="pill sm dark">+ Ajouter</span></div></div>
+  </div>
+</div></section>
+
+<!-- FANTA -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">La bande Fanta</h2><p>Orange, fraise, ananas… et même en bleu.</p></div><span class="pill">Tous les sodas</span></div>
+  <div class="cgrid">
+    <div class="card"><div class="pimg"><img src="images/fanta-canette-orange.webp" alt="Fanta orange canette"></div>
+      <div class="meta"><div><b>Fanta orange</b><small>Canette 33 cl</small><span>500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><span class="tag">Nouveau</span><img src="images/fanta-canette-fraise.webp" alt="Fanta fraise canette"></div>
+      <div class="meta"><div><b>Fanta fraise</b><small>Canette 33 cl</small><span>600 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/fanta-canette-ananas.webp" alt="Fanta ananas canette"></div>
+      <div class="meta"><div><b>Fanta ananas</b><small>Canette 33 cl</small><span>600 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+  <div class="cgrid" style="margin-top:28px">
+    <div class="card"><div class="pimg"><img src="images/fanta-orange-bouteille.webp" alt="Fanta orange bouteille"></div>
+      <div class="meta"><div><b>Fanta orange</b><small>Bouteille plastique</small><span>700 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/fanta-orange-2l.webp" alt="Fanta orange 2 L"></div>
+      <div class="meta"><div><b>Fanta orange 2 L</b><small>Grande bouteille</small><span>1&nbsp;200 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><span class="tag bleu">Édition limitée</span><img src="images/fanta-shokata.webp" alt="Fanta Shokata"></div>
+      <div class="meta"><div><b>Fanta Shokata</b><small>Fleur de sureau et citron · bouteille</small><span>900 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+  <div class="pgrid" style="grid-template-columns:1fr">
+    <div class="card pack" style="grid-template-columns:2fr 1fr"><div class="pimg"><span class="tag red">Promo</span><img src="images/fanta-pack24.webp" alt="Pack de 24 canettes Fanta orange"></div>
+      <div class="meta"><div><b>Plateau Fanta<br>orange</b><small>24 canettes de 33 cl</small></div><span>10&nbsp;500 FCFA</span><span class="save">La canette à 440 FCFA</span><span class="pill sm dark">+ Ajouter</span></div></div>
+  </div>
+</div></section>
+
+<!-- COCA-COLA -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Coca-Cola</h2><p>L’original, ou sans sucre.</p></div><span class="pill">Tous les sodas</span></div>
+  <div class="cgrid">
+    <div class="card"><div class="pimg"><img src="images/coca-zero-canette.webp" alt="Coca-Cola Zero canette"></div>
+      <div class="meta"><div><b>Coca-Cola Zero</b><small>Canette 33 cl</small><span>500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/coca-zero-bouteille.webp" alt="Coca-Cola sans sucre bouteille"></div>
+      <div class="meta"><div><b>Coca-Cola sans sucre</b><small>Bouteille plastique</small><span>800 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><span class="tag red">Promo</span><img src="images/coca-pack6-1-5l.webp" alt="Pack de 6 Coca-Cola 1,5 L"></div>
+      <div class="meta"><div><b>Pack Coca-Cola</b><small>6 × 1,5 L · le litre à 720 FCFA</small><span>6&nbsp;500 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+</div></section>
+
+<!-- PERRIER -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Eaux pétillantes</h2><p>Les fines bulles de Perrier, en bouteille, en verre ou en canette.</p></div><span class="pill">Toutes les eaux</span></div>
+  <div class="cgrid">
+    <div class="card"><div class="pimg"><img src="images/perrier-1l.webp" alt="Perrier 1 L"></div>
+      <div class="meta"><div><b>Perrier 1 L</b><small>Bouteille plastique</small><span>2&nbsp;000 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/perrier-canette.webp" alt="Perrier canette 33 cl"></div>
+      <div class="meta"><div><b>Perrier canette</b><small>Canette 33 cl</small><span>1&nbsp;000 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/perrier-verre-33cl.webp" alt="Maison Perrier bouteille en verre"></div>
+      <div class="meta"><div><b>Maison Perrier verre</b><small>Bouteille en verre 33 cl</small><span>1&nbsp;200 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+  <div class="pgrid" style="grid-template-columns:1fr">
+    <div class="card pack" style="grid-template-columns:2fr 1fr"><div class="pimg"><img src="images/perrier-pack6.webp" alt="Pack de 6 Maison Perrier"></div>
+      <div class="meta"><div><b>Pack Maison<br>Perrier</b><small>6 bouteilles</small></div><span>6&nbsp;500 FCFA</span><span class="save">La bouteille à 1&nbsp;083 FCFA</span><span class="pill sm dark">+ Ajouter</span></div></div>
+  </div>
+</div></section>
+
+<!-- EVIAN -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Eaux plates</h2><p>Evian, du format sport au pack pour la semaine.</p></div><span class="pill">Toutes les eaux</span></div>
+  <div class="cgrid">
+    <div class="card"><div class="pimg"><img src="images/evian-1-5l.webp" alt="Evian 1,5 L"></div>
+      <div class="meta"><div><b>Evian 1,5 L</b><small>Bouteille plastique</small><span>1&nbsp;500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/evian-sport-75cl.webp" alt="Evian bouchon sport 75 cl"></div>
+      <div class="meta"><div><b>Evian sport 75 cl</b><small>Bouchon sport</small><span>1&nbsp;500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/evian-sport-1l.webp" alt="Evian bouchon sport 1 L"></div>
+      <div class="meta"><div><b>Evian sport 1 L</b><small>Bouchon sport</small><span>1&nbsp;800 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+  <div class="pgrid">
+    <div class="card pack"><div class="pimg"><span class="tag red">Promo</span><img src="images/evian-pack6-1l.webp" alt="Pack de 6 Evian 1 L"></div>
+      <div class="meta"><div><b>Pack Evian<br>6 × 1 L</b><small>6 bouteilles de 1 L</small></div><span>8&nbsp;000 FCFA</span><span class="save">Le litre à 1&nbsp;333 FCFA</span><span class="pill sm dark">+ Ajouter</span></div></div>
+    <div class="card pack"><div class="pimg"><img src="images/evian-pack6-50cl.webp" alt="Pack de 6 Evian 50 cl"></div>
+      <div class="meta"><div><b>Pack Evian<br>6 × 50 cl</b><small>6 bouteilles de 50 cl</small></div><span>5&nbsp;500 FCFA</span><span class="save">Idéal pour le sac ou le bureau</span><span class="pill sm dark">+ Ajouter</span></div></div>
+  </div>
+</div></section>
+
+<!-- KITS -->
+<section class="kits"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Nos kits malins</h2><p>Un clic, et tout ce qu’il faut arrive en une seule course.</p></div><span class="pill">Tous les kits</span></div>
+  <div class="kgrid">
+    <div class="card on"><div class="ph fill-rouge"><span class="tag" style="background:var(--creme);border-color:var(--creme)">Kit</span>Visuel kit</div>
+      <div class="meta"><div><b>Kit bébé</b><small>Couches, lingettes, savon bébé</small><span>12&nbsp;000 FCFA</span></div><span class="plus">+</span></div>
+      <div class="explore"><i></i>Voir</div></div>
+    <div class="card"><div class="ph fill-bleu"><span class="tag" style="background:var(--creme);border-color:var(--creme)">Kit</span>Visuel kit</div>
+      <div class="meta"><div><b>Kit délestage</b><small>Bougies, allumettes, piles, lampe</small><span>6&nbsp;500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="ph fill-orange"><span class="tag" style="background:var(--creme);border-color:var(--creme)">Kit</span>Visuel kit</div>
+      <div class="meta"><div><b>Kit soirée</b><small>Sodas, eau, chips, cacahuètes</small><span>9&nbsp;000 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="ph"><span class="tag">Kit</span>Visuel kit</div>
+      <div class="meta"><div><b>Kit petit-déj</b><small>Café, lait, sucre, pain de mie</small><span>7&nbsp;500 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+</div></section>
+
+<!-- BANNIÈRE -->
+<section class="banner">
+  <div class="burst">6&nbsp;500<br>FCFA</div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Kit délestage</div>
+      <h2><span class="scrib"></span> Coupure<br>ce soir ?</h2>
+      <p>Bougies, allumettes, piles et lampe torche rechargeable : on vous livre la lumière en moins d’une heure.</p>
+      <span class="pill red">Commander le kit</span>
+    </div>
+    <div class="ph fill-bleu">Visuel · Kit délestage</div>
+  </div>
+</section>
+
+<!-- INDISPENSABLES -->
+<section class="must"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Les indispensables</h2><p>Ce qui manque toujours à la maison.</p></div><span class="pill">Voir tout le catalogue</span></div>
+  <div class="mgrid">
+    <div class="card"><div class="ph">Visuel produit</div><div class="meta"><div><b>Eau minérale</b><small>1,5 L · pack de 6</small><span>2&nbsp;500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="ph"><span class="tag red">Promo</span>Visuel produit</div><div class="meta"><div><b>Couches taille 4</b><small>Paquet</small><span>6&nbsp;900 FCFA<span class="price-old">7 800</span></span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="ph">Visuel produit</div><div class="meta"><div><b>Spaghetti</b><small>Paquet 500 g</small><span>650 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="ph">Visuel produit</div><div class="meta"><div><b>Huile végétale</b><small>Bouteille 1 L</small><span>1&nbsp;600 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="ph">Visuel produit</div><div class="meta"><div><b>Papier toilette</b><small>Lot de 12 rouleaux</small><span>3&nbsp;200 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="ph"><span class="tag bleu">Livré en 1 h</span>Visuel produit</div><div class="meta"><div><b>Piles AA</b><small>Blister de 4</small><span>1&nbsp;500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="ph">Visuel produit</div><div class="meta"><div><b>Lait en poudre</b><small>Boîte 400 g</small><span>3&nbsp;100 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="ph"><span class="tag">Nouveau</span>Visuel produit</div><div class="meta"><div><b>Spirales anti-moustiques</b><small>Boîte de 10</small><span>800 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+</div></section>
+
+<!-- ÉTAPES -->
+<section class="steps">
+  <div class="step"><span class="n">1</span><h3>Je remplis mon panier</h3><p>Sur le site ou par WhatsApp, à toute heure.</p></div>
+  <div class="step"><span class="n">2</span><h3>On prépare</h3><p>Votre commande est emballée en 15 minutes dans notre supérette.</p></div>
+  <div class="step"><span class="n">3</span><h3>Livré en 1 h</h3><p>Un livreur à moto vous l’apporte. Vous payez à la livraison ou par mobile money.</p></div>
+</section>
+
+<section class="values">
+  <div><b>Livré en 1 h</b><span>Partout à Yaoundé, 7 j/7</span></div>
+  <div><b>Paiement facile</b><span>Orange Money, MTN MoMo, espèces</span></div>
+  <div><b>Prix justes</b><span>Les prix de votre quartier</span></div>
+  <div><b>Un souci ?</b><span>On répond sur WhatsApp</span></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><div class="logo on-dark"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div><p>La supérette en ligne de Yaoundé. Vos courses du quotidien, livrées en 1 h.</p></div>
+    <div><h4>Rayons</h4><ul><li>Eaux et boissons</li><li>Épicerie</li><li>Bébé</li><li>Hygiène et beauté</li><li>Délestage</li></ul></div>
+    <div><h4>Aide</h4><ul><li>Suivre ma commande</li><li>Zones de livraison</li><li>Paiement</li><li>FAQ</li><li>Contact</li></ul></div>
+    <div><h4>Les bons plans par SMS</h4><div class="news"><span>Votre numéro</span><b>OK</b></div>
+      <div class="pay"><span>Orange Money</span><span>MTN MoMo</span><span>Espèces</span></div></div>
+  </div>
+  <div class="legal"><span>© 2026 Timaini Les Courses · Yaoundé, Cameroun</span><span>Mentions légales · CGV · Confidentialité</span></div>
+</footer>
+
+</body>
+</html>

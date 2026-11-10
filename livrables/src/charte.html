@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Charte graphique – Timaini Les Courses</title>
+<link rel="stylesheet" href="brand.css">
+<style>
+@page{size:A4;margin:0}
+html,body{background:#888}
+.page{
+  width:210mm;height:297mm;padding:16mm 16mm 14mm;position:relative;overflow:hidden;
+  page-break-after:always;break-after:page;display:flex;flex-direction:column;
+}
+.page:last-child{page-break-after:auto;break-after:auto}
+.head{display:flex;justify-content:space-between;align-items:center;border-bottom:var(--trait);padding-bottom:4mm;margin-bottom:9mm;font-size:9px;text-transform:uppercase;letter-spacing:.1em}
+.head .logo{font-size:15px}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-size:8.5px;text-transform:uppercase;letter-spacing:.1em;border-top:var(--trait);padding-top:3mm}
+.num{font-family:var(--display);font-size:11px}
+h1{font-family:var(--display);text-transform:uppercase;font-size:40px;line-height:1;margin-bottom:3mm}
+h2{font-family:var(--display);text-transform:uppercase;font-size:14px;margin:7mm 0 3mm}
+p,li{font-size:10.5px}
+.intro{max-width:140mm;font-size:11.5px;margin-bottom:4mm}
+.eyebrow{font-family:var(--display);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--rouge);margin-bottom:2mm}
+.box{border:var(--trait);border-radius:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm}
+.cap{font-size:9px;margin-top:2mm;opacity:.75}
+
+/* Couverture */
+.cover{background:var(--rouge);color:var(--creme);justify-content:space-between}
+.cover .logo{font-size:84px;color:var(--creme)}
+.cover h1{font-size:22px;color:var(--creme)}
+.cover .meta{display:flex;justify-content:space-between;font-size:10px;text-transform:uppercase;letter-spacing:.12em;border-top:2px solid var(--creme);padding-top:4mm}
+.cover .center{flex:1;display:grid;place-items:center;align-content:center;gap:12mm;text-align:center}
+.cover .scribs{display:flex;align-items:center;gap:8mm}
+.cover .scrib::before,.cover .scrib::after{background:var(--creme)}
+
+/* Logo */
+.logo-hero{display:grid;place-items:center;height:78mm;margin-bottom:5mm}
+.logo-hero .logo{font-size:84px}
+.construct{position:relative;display:inline-block;padding:12mm;border:1.5px dashed var(--rouge)}
+.construct .logo{font-size:40px}
+.construct .x{position:absolute;font-family:var(--display);font-size:10px;color:var(--rouge);background:var(--creme);padding:0 1mm}
+.construct .t{top:2.5mm;left:50%;transform:translateX(-50%)}
+.construct .l{left:2.5mm;top:50%;transform:translateY(-50%)}
+.variant{height:42mm;display:grid;place-items:center;border-radius:4px}
+.variant .logo{font-size:25px}
+.anatomy{list-style:none;display:grid;gap:2mm}
+.anatomy li{display:flex;gap:3mm;align-items:baseline}
+.anatomy b{font-family:var(--display);font-size:10px;width:6mm;height:6mm;border-radius:50%;background:var(--encre);color:var(--creme);display:inline-grid;place-items:center;flex:none}
+
+/* Interdits */
+.dont{position:relative;height:44mm;display:grid;place-items:center;border:var(--trait);border-radius:4px;overflow:hidden}
+.dont .logo{font-size:27px}
+.dont::after{content:"✕";position:absolute;top:2mm;right:2.5mm;width:6mm;height:6mm;border-radius:50%;background:var(--rouge);color:#fff;display:grid;place-items:center;font-size:10px;font-weight:700}
+.do{position:relative;height:44mm;display:grid;place-items:center;border:var(--trait);border-radius:4px}
+.do::after{content:"✓";position:absolute;top:2mm;right:2.5mm;width:6mm;height:6mm;border-radius:50%;background:#1f9d55;color:#fff;display:grid;place-items:center;font-size:10px;font-weight:700}
+.do .logo{font-size:27px}
+
+/* Couleurs */
+.sw{border:var(--trait);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.sw .c{height:34mm;display:flex;align-items:flex-end;padding:3mm;font-family:var(--display);font-size:13px;text-transform:uppercase}
+.sw .v{padding:3mm;font-size:9.5px;line-height:1.55;border-top:var(--trait);background:var(--creme)}
+.sw .v b{font-family:var(--display);font-weight:400;font-size:9px;text-transform:uppercase}
+.ratio{display:flex;height:14mm;border:var(--trait);border-radius:4px;overflow:hidden;font-family:var(--display);font-size:10px;text-transform:uppercase}
+.ratio div{display:grid;place-items:center}
+.usage{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+.usage div{border:var(--trait);border-radius:4px;padding:3mm;font-size:9.5px}
+.usage div b{display:block;font-family:var(--display);font-weight:400;font-size:10px;text-transform:uppercase;margin-bottom:1mm}
+
+/* Typo */
+.typo{border:var(--trait);border-radius:4px;padding:6mm;display:grid;grid-template-columns:52mm 1fr;gap:6mm;margin-bottom:5mm}
+.typo .big{font-size:76px;line-height:.9}
+.typo .glyphs{font-size:15px;line-height:1.35;word-break:break-all}
+.scale{border:var(--trait);border-radius:4px}
+.scale>div{display:grid;grid-template-columns:34mm 1fr 30mm;align-items:center;gap:4mm;padding:3mm 5mm;border-bottom:1.5px solid rgba(20,20,20,.2)}
+.scale>div:last-child{border-bottom:0}
+.scale small{font-size:8.5px;text-transform:uppercase;letter-spacing:.08em;opacity:.7}
+
+/* Éléments */
+.el{border:var(--trait);border-radius:4px;padding:5mm;display:flex;flex-direction:column;gap:3mm}
+.el .stage{height:30mm;display:grid;place-items:center;gap:3mm}
+.el h3{font-family:var(--display);font-weight:400;font-size:11px;text-transform:uppercase}
+.el p{font-size:9.5px}
+.shadowcard{width:34mm;height:22mm;border:var(--trait);background:var(--creme);box-shadow:5px 5px 0 var(--encre);transform:translate(-3px,-3px)}
+.nutri{display:grid;grid-template-columns:1fr 28%;width:60mm;border:var(--trait);border-radius:99px;overflow:hidden}
+.nutri div{display:grid;place-items:center;padding:1.5mm;line-height:1.1;font-size:10px;text-align:center}
+.nutri small{font-size:7px;opacity:.7}
+.nutri div+div{background:var(--gris);border-left:var(--trait);font-weight:700}
+.bar{width:60mm;height:9px;border:var(--trait);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:62%;background:var(--rouge)}
+.texture{width:100%;height:30mm;border:var(--trait);border-radius:4px;background-size:3px 3px}
+
+/* Composants */
+.card{border:var(--trait);background:var(--creme);display:flex;flex-direction:column}
+.card .ph{height:40mm;margin:4mm;border-radius:4px}
+.card .meta{border-top:var(--trait);padding:2.5mm 3.5mm;display:flex;justify-content:space-between;align-items:center}
+.card .meta b{display:block;font-family:var(--display);font-weight:400;font-size:10.5px;text-transform:uppercase}
+.card .meta span{font-size:9.5px}
+.plus{width:8mm;height:8mm;border-radius:50%;background:var(--encre);color:var(--creme);display:grid;place-items:center;font-size:14px;font-weight:700}
+.field{display:flex;gap:3mm;align-items:center}
+.field .q{width:16mm;height:11mm;border:var(--trait);display:grid;place-items:center;font-weight:700}
+.input{border:var(--trait);border-radius:99px;padding:2.5mm 5mm;font-size:10px;opacity:.85;width:100%;display:flex;justify-content:space-between}
+
+/* Ton */
+.voice{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.voice div{border:var(--trait);border-radius:4px;padding:4mm}
+.voice .yes{border-color:#1f9d55}
+.voice .no{border-color:var(--rouge)}
+.voice h3{font-family:var(--display);font-weight:400;font-size:10.5px;text-transform:uppercase;margin-bottom:2mm}
+.voice .yes h3{color:#1f9d55}
+.voice .no h3{color:var(--rouge)}
+.voice li{margin:0 0 1.5mm 4mm}
+.quote{font-family:var(--display);font-size:20px;line-height:1.08;text-transform:uppercase}
+.photo{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+.photo .shot{position:relative;height:48mm;display:grid;place-items:center;border:var(--trait);border-radius:4px;overflow:hidden}
+.photo .shot img{position:relative;height:42mm;filter:drop-shadow(0 6px 6px rgba(0,0,0,.25))}
+.photo .disc{position:absolute;width:34mm;height:34mm;border-radius:50%;bottom:-8mm}
+.tilt-l{transform:rotate(-8deg)}
+.tilt-r{transform:rotate(7deg)}
+</style>
+</head>
+<body>
+
+<!-- 1. COUVERTURE -->
+<section class="page cover paper" style="background-color:var(--rouge);background-image:radial-gradient(rgba(0,0,0,.06) 1px,transparent 1px)">
+  <div class="meta"><span>Charte graphique</span><span>Version 1.0 · Novembre 2026</span></div>
+  <div class="center">
+    <div class="scribs"><span class="scrib"></span>
+      <div class="logo on-dark"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div>
+      <span class="scrib r"></span></div>
+    <h1>Vos courses livrées en 1 h à Yaoundé</h1>
+  </div>
+  <div class="meta"><span>Identité visuelle et règles d’usage</span><span>Document interne</span></div>
+</section>
+
+<!-- 2. SOMMAIRE + ESPRIT -->
+<section class="page paper">
+  <div class="head"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div><span>Introduction</span></div>
+  <div class="eyebrow">L’esprit de la marque</div>
+  <h1>Les courses,<br>sans la corvée</h1>
+  <p class="intro">Timaini Les Courses est la supérette en ligne de Yaoundé : les produits du quotidien et des kits pour les urgences, livrés en une heure. L’identité visuelle est franche et chaleureuse : un fond papier crème, de gros titres noirs, trois couleurs vives et des traits dessinés à la main. Elle doit donner l’impression d’une épicerie de quartier qu’on aime bien, pas d’un hypermarché.</p>
+
+  <div class="grid3" style="margin-top:6mm">
+    <div class="box" style="padding:5mm"><div class="quote" style="color:var(--rouge)">Rapide</div><p style="margin-top:2mm">Livraison en 1 h. Le design va droit au but : chercher, ajouter, payer.</p></div>
+    <div class="box" style="padding:5mm"><div class="quote" style="color:var(--orange)">Généreux</div><p style="margin-top:2mm">Couleurs franches, gros titres, ton chaleureux. On a envie de remplir son panier.</p></div>
+    <div class="box" style="padding:5mm"><div class="quote" style="color:var(--bleu)">Fiable</div><p style="margin-top:2mm">Bordures nettes, prix lisibles, infos claires. On sait ce qu’on achète.</p></div>
+  </div>
+
+  <h2>Sommaire</h2>
+  <div class="scale">
+    <div><span class="num">03</span><b>Le logo</b><small>Construction, versions</small></div>
+    <div><span class="num">04</span><b>Usages du logo</b><small>À faire, à éviter</small></div>
+    <div><span class="num">05</span><b>Les couleurs</b><small>Palette, proportions</small></div>
+    <div><span class="num">06</span><b>La typographie</b><small>Polices, hiérarchie</small></div>
+    <div><span class="num">07</span><b>Éléments graphiques</b><small>Traits, formes, textures</small></div>
+    <div><span class="num">08</span><b>Composants du site</b><small>Boutons, cartes, champs</small></div>
+    <div><span class="num">09</span><b>Ton et visuels</b><small>Écriture, photos</small></div>
+  </div>
+  <div class="foot"><span>Timaini Les Courses · Charte graphique</span><span class="num">02</span></div>
+</section>
+
+<!-- 3. LOGO -->
+<section class="page paper">
+  <div class="head"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div><span>Le logo</span></div>
+  <div class="eyebrow">01 · Le logo</div>
+  <h1>Le logo</h1>
+  <p class="intro">Un logotype en deux étages : deux mots de 7 lettres empilés, et à droite une petite colonne avec « LES » au-dessus d’un code-barres stylisé. Il est toujours composé en Bowlby One, en capitales, sans modification.</p>
+
+  <div class="box logo-hero"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+
+  <div class="grid2">
+    <div>
+      <h2 style="margin-top:0">Anatomie</h2>
+      <ul class="anatomy">
+        <li><b>1</b><span><strong>TIMAINI</strong> : le nom, première ligne, corps principal.</span></li>
+        <li><b>2</b><span><strong>COURSES</strong> : deuxième ligne, même corps, aligné à gauche.</span></li>
+        <li><b>3</b><span><strong>LES</strong> : 36 % du corps principal, calé en haut à droite de TIMAINI.</span></li>
+        <li><b>4</b><span><strong>Code-barres</strong> : 7 barres verticales sous « LES », clin d’œil au ticket de caisse.</span></li>
+      </ul>
+      <h2>Taille minimale</h2>
+      <p>Écran : 90 px de large. Impression : 22 mm de large. En dessous, « LES » et le code-barres ne sont plus lisibles.</p>
+    </div>
+    <div>
+      <h2 style="margin-top:0">Zone de protection</h2>
+      <div class="construct"><span class="x t">X</span><span class="x l">X</span>
+        <div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div>
+      </div>
+      <p class="cap">X = hauteur d’une lettre de « TIMAINI ». Aucun texte ni élément dans cette zone.</p>
+    </div>
+  </div>
+
+  <h2>Versions autorisées</h2>
+  <div class="grid4">
+    <div class="variant paper box"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+    <div class="variant" style="background:var(--rouge)"><div class="logo on-dark"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+    <div class="variant" style="background:var(--bleu)"><div class="logo on-dark"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+    <div class="variant" style="background:var(--encre)"><div class="logo on-dark"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+  </div>
+  <p class="cap">Principale : encre sur crème. Inversée : crème sur rouge, bleu ou encre. Sur orange, utiliser la version encre.</p>
+  <div class="foot"><span>Timaini Les Courses · Charte graphique</span><span class="num">03</span></div>
+</section>
+
+<!-- 4. USAGES -->
+<section class="page paper">
+  <div class="head"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div><span>Usages du logo</span></div>
+  <div class="eyebrow">02 · Usages</div>
+  <h1>À faire,<br>à éviter</h1>
+  <p class="intro">Le logo est la signature de la marque. Il se reconnaît à sa forme compacte et à son contraste : on ne le modifie jamais.</p>
+
+  <h2>À faire</h2>
+  <div class="grid3">
+    <div class="do paper"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+    <div class="do" style="background:var(--orange)"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+    <div class="do" style="background:var(--bleu)"><div class="logo on-dark"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+  </div>
+
+  <h2>À éviter</h2>
+  <div class="grid3">
+    <div class="dont paper"><div class="logo" style="transform:scaleX(1.45);font-size:19px"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+    <div class="dont paper"><div class="logo" style="color:#8a3fd1"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+    <div class="dont paper"><div class="logo" style="text-shadow:3px 3px 4px rgba(0,0,0,.45)"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+    <div class="dont paper"><div class="logo" style="font-family:Georgia,serif;font-weight:700"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+    <div class="dont" style="background:var(--orange)"><div class="logo" style="color:var(--rouge)"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div></div>
+    <div class="dont paper"><div class="logo" style="display:block;font-size:22px;line-height:1"><span>TIMAINI LES COURSES</span></div></div>
+  </div>
+  <div class="grid3 cap" style="margin-top:2mm">
+    <span>Ne pas déformer ni étirer.</span><span>Ne pas changer de couleur hors palette.</span><span>Pas d’ombre, de contour ni d’effet.</span>
+    <span>Ne pas changer de police.</span><span>Pas de couleurs à faible contraste.</span><span>Ne pas mettre sur une seule ligne.</span>
+  </div>
+  <div class="foot"><span>Timaini Les Courses · Charte graphique</span><span class="num">04</span></div>
+</section>
+
+<!-- 5. COULEURS -->
+<section class="page paper">
+  <div class="head"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div><span>Les couleurs</span></div>
+  <div class="eyebrow">03 · Couleurs</div>
+  <h1>La palette</h1>
+  <p class="intro">Deux couleurs de base (crème et encre) et trois couleurs d’accent. Chaque accent a un rôle précis, pour que le client comprenne la page d’un coup d’œil.</p>
+
+  <div class="grid3">
+    <div class="sw"><div class="c paper">Crème</div><div class="v"><b>Fond</b><br>HEX #EEE1D6<br>RVB 238 · 225 · 214<br>CMJN 0 · 5 · 10 · 7</div></div>
+    <div class="sw"><div class="c" style="background:var(--encre);color:var(--creme)">Encre</div><div class="v"><b>Texte et traits</b><br>HEX #141414<br>RVB 20 · 20 · 20<br>CMJN 0 · 0 · 0 · 92</div></div>
+    <div class="sw"><div class="c" style="background:var(--gris)">Gris sable</div><div class="v"><b>Secondaire</b><br>HEX #C9C0B8<br>RVB 201 · 192 · 184<br>CMJN 0 · 4 · 8 · 21</div></div>
+    <div class="sw"><div class="c" style="background:var(--rouge);color:#fff">Rouge</div><div class="v"><b>Couleur signature</b><br>HEX #E63A37<br>RVB 230 · 58 · 55<br>CMJN 0 · 75 · 76 · 10</div></div>
+    <div class="sw"><div class="c" style="background:var(--orange)">Orange</div><div class="v"><b>Accent</b><br>HEX #F08A24<br>RVB 240 · 138 · 36<br>CMJN 0 · 43 · 85 · 6</div></div>
+    <div class="sw"><div class="c" style="background:var(--bleu);color:#fff">Bleu</div><div class="v"><b>Accent</b><br>HEX #2540D8<br>RVB 37 · 64 · 216<br>CMJN 83 · 70 · 0 · 15</div></div>
+  </div>
+  <p class="cap">Valeurs CMJN approximatives, à valider avec l’imprimeur sur épreuve.</p>
+
+  <h2>Proportions</h2>
+  <div class="ratio">
+    <div class="paper" style="width:60%">Crème 60 %</div>
+    <div style="width:25%;background:var(--encre);color:var(--creme)">Encre 25 %</div>
+    <div style="width:8%;background:var(--rouge);color:#fff">8 %</div>
+    <div style="width:4%;background:var(--orange)"></div>
+    <div style="width:3%;background:var(--bleu)"></div>
+  </div>
+
+  <h2>Rôle de chaque accent</h2>
+  <div class="usage">
+    <div><b style="color:var(--rouge)">Rouge</b>Promotions, urgences, badges du panier, bouton « Voir ». La couleur qu’on remarque en premier.</div>
+    <div><b style="color:var(--orange)">Orange</b>Les kits et les bons plans : kit bébé, kit délestage, kit soirée…</div>
+    <div><b style="color:var(--bleu)">Bleu</b>Livraison, suivi de commande, informations pratiques et paiement.</div>
+  </div>
+  <div class="foot"><span>Timaini Les Courses · Charte graphique</span><span class="num">05</span></div>
+</section>
+
+<!-- 6. TYPO -->
+<section class="page paper">
+  <div class="head"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div><span>Typographie</span></div>
+  <div class="eyebrow">04 · Typographie</div>
+  <h1>Deux polices,<br>c’est tout</h1>
+  <p class="intro">Les deux polices sont gratuites (Google Fonts) et fonctionnent sur le web comme en impression.</p>
+
+  <div class="typo">
+    <div><div class="big" style="font-family:var(--display)">Aa</div><p style="margin-top:3mm"><b>Bowlby One</b><br>Titres, logo, boutons, noms de produits. Toujours en CAPITALES.</p></div>
+    <div class="glyphs" style="font-family:var(--display)">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>ÀÂÉÈÊËÎÏÔÙÛÇ<br>0123456789 · FCFA · € · % · !?</div>
+  </div>
+  <div class="typo">
+    <div><div class="big" style="font-family:var(--body);font-weight:700">Aa</div><p style="margin-top:3mm"><b>Quicksand</b><br>Textes, descriptions, prix, formulaires. Graisses 500, 600 et 700.</p></div>
+    <div class="glyphs" style="font-family:var(--body)">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>àâéèêëîïôùûç 0123456789<br><span style="font-weight:500">Medium 500</span> · <span style="font-weight:600">SemiBold 600</span> · <span style="font-weight:700">Bold 700</span></div>
+  </div>
+
+  <h2>Hiérarchie (site web)</h2>
+  <div class="scale">
+    <div><small>Titre H1 · 64 px</small><span style="font-family:var(--display);font-size:28px;line-height:1">VOS COURSES EN 1 H</span><small>Bowlby One</small></div>
+    <div><small>Titre H2 · 44 px</small><span style="font-family:var(--display);font-size:21px">NOS KITS MALINS</span><small>Bowlby One</small></div>
+    <div><small>Titre H3 · 20 px</small><span style="font-family:var(--display);font-size:14px">KIT DÉLESTAGE</span><small>Bowlby One</small></div>
+    <div><small>Bouton · 13 px</small><span style="font-family:var(--display);font-size:11px;letter-spacing:.04em">AJOUTER AU PANIER</span><small>Bowlby One</small></div>
+    <div><small>Texte · 16 px</small><span style="font-size:11px">Bougies, allumettes, piles et lampe torche : tout pour la coupure.</span><small>Quicksand 600</small></div>
+    <div><small>Prix · 16 px</small><span style="font-size:12px;font-weight:700">6&nbsp;500&nbsp;FCFA</span><small>Quicksand 700</small></div>
+    <div><small>Mention · 12 px</small><span style="font-size:9.5px;font-weight:500">Livraison gratuite dès 10&nbsp;000&nbsp;FCFA</span><small>Quicksand 500</small></div>
+  </div>
+  <div class="foot"><span>Timaini Les Courses · Charte graphique</span><span class="num">06</span></div>
+</section>
+
+<!-- 7. ÉLÉMENTS GRAPHIQUES -->
+<section class="page paper">
+  <div class="head"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div><span>Éléments graphiques</span></div>
+  <div class="eyebrow">05 · Éléments</div>
+  <h1>La boîte à outils</h1>
+  <p class="intro">Ces éléments reviennent sur toutes les pages. Ce sont eux, autant que le logo, qui rendent la marque reconnaissable.</p>
+
+  <div class="grid2">
+    <div class="el"><div class="stage" style="display:flex;justify-content:center"><span class="scrib"></span><span style="font-family:var(--display);font-size:20px">TITRE</span><span class="scrib r"></span></div>
+      <h3>Traits « dessinés »</h3><p>Deux petits traits de chaque côté d’un titre ou d’un produit, comme un croquis. À utiliser avec parcimonie : un seul titre par écran.</p></div>
+    <div class="el"><div class="stage"><div class="texture paper"></div></div>
+      <h3>Texture papier</h3><p>Le crème n’est jamais un aplat : une fine trame de points (3 px) donne l’effet papier kraft sur tous les fonds.</p></div>
+    <div class="el"><div class="stage" style="display:flex;justify-content:center"><span class="pill">Contour</span><span class="pill dark">Plein</span></div>
+      <h3>Pilules</h3><p>Boutons totalement arrondis, bordure encre de 2 px. Plein = action principale. Contour = action secondaire.</p></div>
+    <div class="el"><div class="stage"><div class="shadowcard"></div></div>
+      <h3>Bordure et ombre décalée</h3><p>Tous les blocs ont une bordure encre de 2 px et des angles nets. Au survol, ombre pleine décalée de 8 px, sans flou.</p></div>
+    <div class="el"><div class="stage" style="display:flex;justify-content:center;gap:5mm"><div class="explore"><i></i>Voir</div><span class="badge">3</span></div>
+      <h3>Pastilles rouges</h3><p>Le rond rouge « Voir » apparaît au survol d’une carte produit. Le petit badge rouge compte les articles du panier.</p></div>
+    <div class="el"><div class="stage" style="display:grid;gap:3mm"><div class="nutri"><div><small>Énergie</small>66 kcal</div><div>3 %</div></div><div class="bar"><i></i></div></div>
+      <h3>Jauges en pilule</h3><p>Infos nutritionnelles et barre « livraison gratuite » : une pilule à bordure encre, remplie en gris ou en rouge.</p></div>
+  </div>
+  <div class="foot"><span>Timaini Les Courses · Charte graphique</span><span class="num">07</span></div>
+</section>
+
+<!-- 8. COMPOSANTS -->
+<section class="page paper">
+  <div class="head"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div><span>Composants du site</span></div>
+  <div class="eyebrow">06 · Composants</div>
+  <h1>Composants<br>du site</h1>
+  <p class="intro">Les briques de base de la boutique. Elles sont déjà codées dans le site et utilisées sur la maquette.</p>
+
+  <h2>Cartes produit</h2>
+  <div class="grid3">
+    <div class="card"><div class="ph fill-orange">Visuel kit</div><div class="meta"><div><b>Kit délestage</b><span>6&nbsp;500&nbsp;FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card" style="box-shadow:6px 6px 0 var(--encre);transform:translate(-3px,-3px)"><div class="ph">Visuel produit</div><div class="meta"><div><b>Eau minérale 1,5 L</b><span>Pack de 6</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="ph fill-bleu">Visuel kit</div><div class="meta"><div><b>Kit bébé</b><span>12&nbsp;000&nbsp;FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+  <p class="cap">Au centre : état au survol (ombre décalée).</p>
+
+  <h2>Étiquettes</h2>
+  <div style="display:flex;gap:3mm;flex-wrap:wrap">
+    <span class="tag red">Promo</span><span class="tag orange">Kit</span><span class="tag bleu">Livré en 1 h</span><span class="tag">Nouveau</span><span class="tag" style="background:var(--encre);color:var(--creme)">Rupture</span>
+  </div>
+
+  <h2>Boutons</h2>
+  <div style="display:flex;gap:4mm;flex-wrap:wrap;align-items:center">
+    <span class="pill dark">Ajouter au panier</span><span class="pill">Tous les produits</span><span class="pill red">Commander</span><span class="pill sm dark">+ Ajouter</span>
+  </div>
+
+  <h2>Formulaires</h2>
+  <div class="grid2">
+    <div class="input"><span>Rechercher : couches, café, piles…</span><span>⌕</span></div>
+    <div class="field"><span class="q">1</span><span class="pill dark" style="flex:1">Ajouter au panier</span></div>
+  </div>
+  <div class="foot"><span>Timaini Les Courses · Charte graphique</span><span class="num">08</span></div>
+</section>
+
+<!-- 9. TON + PHOTOS -->
+<section class="page paper">
+  <div class="head"><div class="logo"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div><span>Ton et visuels</span></div>
+  <div class="eyebrow">07 · Ton et visuels</div>
+  <h1>Comment on parle,<br>ce qu’on montre</h1>
+
+  <h2>Le ton</h2>
+  <p class="intro">On parle comme un voisin serviable : direct, chaleureux, un brin d’humour. Phrases courtes. On vouvoie le client.</p>
+  <div class="voice">
+    <div class="yes"><h3>On dit</h3><ul>
+      <li>« Délestage ce soir ? On vous livre la lumière en 1 h. »</li>
+      <li>« Plus de couches ? Pas de panique. »</li>
+      <li>« Livraison gratuite dès 10&nbsp;000&nbsp;FCFA. »</li></ul></div>
+    <div class="no"><h3>On évite</h3><ul>
+      <li>« Profitez de notre offre exceptionnelle !!! »</li>
+      <li>Le jargon : « solution logistique optimisée ».</li>
+      <li>Les textes longs sur les fiches produit.</li></ul></div>
+  </div>
+
+  <h2>Les visuels produit</h2>
+  <p class="intro">Photos <b>détourées sur fond transparent</b> (PNG ou WebP), produit de face, bien éclairé, au moins 1&nbsp;000&nbsp;px. Sur le site, elles sont posées sur le crème, avec une ombre douce, et parfois inclinées dans les bannières.</p>
+  <div class="photo">
+    <div class="shot"><span class="disc" style="background:var(--orange)"></span><img class="tilt-l" src="images/sirop-pomme.webp" alt=""></div>
+    <div class="shot"><span class="disc" style="background:var(--rouge)"></span><img src="images/sirop-fraise.webp" alt=""></div>
+    <div class="shot"><span class="disc" style="background:var(--bleu)"></span><img class="tilt-r" src="images/sirop-peche.webp" alt=""></div>
+  </div>
+  <div class="grid3 cap" style="margin-top:4mm"><span>✓ Fond transparent</span><span>✓ Même cadrage pour tous</span><span>✕ Pas de fond blanc ni de photo de rayon</span></div>
+
+  <div class="box" style="margin-top:8mm;padding:6mm;background:var(--encre);color:var(--creme);display:flex;justify-content:space-between;align-items:center">
+    <div class="quote">Vos courses,<br>livrées en 1 h.</div>
+    <div class="logo on-dark" style="font-size:34px"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></div>
+  </div>
+  <div class="foot"><span>Timaini Les Courses · Charte graphique</span><span class="num">09</span></div>
+</section>
+
+</body>
+</html>

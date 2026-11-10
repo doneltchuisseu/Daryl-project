@@ -1,0 +1,48 @@
+image;nom;marque;format;rayon;famille;prix_fcfa;etiquette;publier;a_confirmer
+sirop-fraise;Sirop fraise;Teisseire;Bouteille 60 cl;Eaux et boissons;Sirops;2900;Promo;oui;prix
+sirop-pomme;Sirop pomme;Teisseire;Bouteille 60 cl;Eaux et boissons;Sirops;2900;;oui;prix
+sirop-peche;Sirop pêche;Teisseire;Bouteille 60 cl;Eaux et boissons;Sirops;2900;;oui;prix
+the-glace-agrumes;Thé glacé agrumes pétillant;Lipton;Bouteille 1,25 L;Eaux et boissons;Thés glacés;1500;Nouveau;oui;prix
+the-glace-peche;Thé glacé pêche;Lipton;Canette;Eaux et boissons;Thés glacés;600;;oui;prix, format
+the-glace-tropical;Thé glacé tropical;Lipton;Bouteille;Eaux et boissons;Thés glacés;1300;;oui;prix, format
+jus-orange-1l;Jus d'orange sans pulpe;Tropicana Pure Premium;Bouteille 1 L;Eaux et boissons;Jus et nectars;2500;;oui;prix
+jus-orange-gold;Jus d'orange Premium Gold;Tropicana;Brique 1 L;Eaux et boissons;Jus et nectars;2200;;oui;prix, format
+jus-orange-pack3;Jus d'orange sans pulpe, pack de 3;Tropicana Pure Premium;3 bouteilles de 1,36 L;Eaux et boissons;Jus et nectars;9500;Promo;oui;prix
+jus-pomme-pack12;Jus de pomme, pack de 12;Tropicana;12 bouteilles de 450 ml;Eaux et boissons;Jus et nectars;11000;;oui;prix
+limonade-fraise;Limonade fraise;Tropicana;Bouteille;Eaux et boissons;Jus et nectars;2800;Nouveau;oui;prix, format
+sprite-canette;Sprite canette;Sprite;Canette;Eaux et boissons;Sodas;500;;oui;prix, format
+sprite-50cl;Sprite 50 cl;Sprite;Bouteille 50 cl;Eaux et boissons;Sodas;500;;oui;prix
+sprite-1-25l;Sprite 1,25 L;Sprite;Bouteille 1,25 L;Eaux et boissons;Sodas;900;;oui;prix
+sprite-pack9;Sprite, pack de 9;Sprite;9 bouteilles de 1,5 L;Eaux et boissons;Sodas;10000;Promo;oui;prix, version française du pack
+sprite-verre-24;Sprite, casier de 24 en verre;Sprite;24 bouteilles en verre;Eaux et boissons;Sodas;8500;;oui;prix, contenance, consigne
+jus-orange-blend;Jus d'orange Orange Blend;Tropicana;Bouteille 450 ml;Eaux et boissons;Jus et nectars;1200;;oui;prix, format
+fanta-canette-orange;Fanta orange canette;Fanta;Canette 33 cl;Eaux et boissons;Sodas;500;;oui;prix, photo floue (à remplacer)
+fanta-canette-fraise;Fanta fraise canette;Fanta;Canette 33 cl;Eaux et boissons;Sodas;600;Nouveau;oui;prix, photo floue (à remplacer)
+fanta-canette-ananas;Fanta ananas canette;Fanta;Canette 33 cl;Eaux et boissons;Sodas;600;;oui;prix, photo floue (à remplacer)
+fanta-canette-peche;Fanta pêche canette;Fanta;Canette 33 cl;Eaux et boissons;Sodas;600;;non;prix, photo avec filigrane d'un autre vendeur (à remplacer)
+fanta-canette-raisin;Fanta raisin canette;Fanta;Canette 33 cl;Eaux et boissons;Sodas;600;;non;prix, photo avec filigrane d'un autre vendeur (à remplacer)
+fanta-canette-fruits-rouges;Fanta fruits rouges canette;Fanta;Canette 33 cl;Eaux et boissons;Sodas;600;;non;prix, photo avec filigrane d'un autre vendeur (à remplacer)
+fanta-orange-bouteille;Fanta orange;Fanta;Bouteille;Eaux et boissons;Sodas;700;;oui;prix, format
+fanta-orange-2l;Fanta orange 2 L;Fanta;Bouteille 2 L;Eaux et boissons;Sodas;1200;;oui;prix, format
+fanta-shokata;Fanta Shokata;Fanta;Bouteille;Eaux et boissons;Sodas;900;Édition limitée;oui;prix, format, disponibilité au Cameroun
+fanta-pack24;Fanta orange, plateau de 24;Fanta;24 canettes de 33 cl;Eaux et boissons;Sodas;10500;Promo;oui;prix
+coca-zero-canette;Coca-Cola Zero canette;Coca-Cola;Canette 33 cl;Eaux et boissons;Sodas;500;;oui;prix, format
+coca-zero-bouteille;Coca-Cola sans sucre;Coca-Cola;Bouteille;Eaux et boissons;Sodas;800;;oui;prix, format
+coca-pack6-1-5l;Coca-Cola, pack de 6;Coca-Cola;6 bouteilles de 1,5 L;Eaux et boissons;Sodas;6500;Promo;oui;prix
+coca-pack6-canettes;Coca-Cola, pack de 6 canettes;Coca-Cola;6 canettes de 25 cl;Eaux et boissons;Sodas;3000;;non;prix, photo avec autocollant d'une autre boutique (à remplacer)
+coca-50cl;Coca-Cola 50 cl;Coca-Cola;Bouteille 50 cl;Eaux et boissons;Sodas;500;;non;prix, photo sur fond moucheté inutilisable (à reprendre sur fond blanc)
+perrier-1l;Perrier 1 L;Perrier;Bouteille 1 L;Eaux et boissons;Eaux;2000;;oui;prix
+perrier-canette;Perrier canette;Perrier;Canette 33 cl;Eaux et boissons;Eaux;1000;;oui;prix
+perrier-verre-33cl;Maison Perrier, bouteille en verre;Perrier;Bouteille en verre 33 cl;Eaux et boissons;Eaux;1200;;oui;prix, format
+perrier-pack6;Maison Perrier, pack de 6;Perrier;6 bouteilles;Eaux et boissons;Eaux;6500;;oui;prix, contenance des bouteilles
+perrier-citron-50cl;Maison Perrier Forever Citron;Perrier;Bouteille 50 cl;Eaux et boissons;Eaux;1000;Nouveau;non;prix, photo sur fond noir inutilisable (à reprendre sur fond blanc)
+evian-1-5l;Evian 1,5 L;Evian;Bouteille 1,5 L;Eaux et boissons;Eaux;1500;;oui;prix
+evian-sport-75cl;Evian bouchon sport 75 cl;Evian;Bouteille 75 cl;Eaux et boissons;Eaux;1500;;oui;prix
+evian-sport-1l;Evian bouchon sport 1 L;Evian;Bouteille 1 L;Eaux et boissons;Eaux;1800;;oui;prix, format
+evian-pack6-1l;Evian, pack de 6 × 1 L;Evian;6 bouteilles de 1 L;Eaux et boissons;Eaux;8000;Promo;oui;prix
+evian-pack6-50cl;Evian, pack de 6 × 50 cl;Evian;6 bouteilles de 50 cl;Eaux et boissons;Eaux;5500;;oui;prix
+malta-canette;Malta Guinness canette;Malta Guinness;Canette 33 cl;Eaux et boissons;Boissons maltées;500;Favori;oui;prix
+malta-verre;Malta Guinness, bouteille en verre;Malta Guinness;Bouteille en verre;Eaux et boissons;Boissons maltées;400;;oui;prix, contenance, consigne
+malta-pack24;Malta Guinness, plateau de 24;Malta Guinness;24 canettes;Eaux et boissons;Boissons maltées;11000;Promo;oui;prix, contenance (l'emballage indique 33 cl ?)
+tangui-1-5l;Eau minérale Tangui 1,5 L;Tangui;Bouteille 1,5 L;Eaux et boissons;Eaux;450;Favori;oui;prix
+tangui-1-5l-ancien;Eau minérale Tangui 1,5 L (ancienne étiquette);Tangui;Bouteille 1,5 L;Eaux et boissons;Eaux;450;;non;photo rognée à droite, doublon de tangui-1-5l (à supprimer ou remplacer)

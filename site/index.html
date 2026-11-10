@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timaini Les Courses · Vos courses livrées en 1 h à Yaoundé</title>
+  <meta name="description" content="La supérette en ligne de Yaoundé : boissons, épicerie et produits du quotidien livrés en 1 h.">
+  <meta name="theme-color" content="#E63A37">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23E63A37'/%3E%3Ctext x='32' y='44' font-family='Arial Black,sans-serif' font-size='34' text-anchor='middle' fill='%23EEE1D6'%3ET%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="demo">Site de démonstration · prix indicatifs, commandes non traitées</div>
+<div class="band"><span>Livraison en 1 h partout à Yaoundé</span><span>Gratuite dès 10&nbsp;000 FCFA</span><span>Orange Money · MTN MoMo · Espèces</span></div>
+
+<header class="nav">
+  <button class="icon-btn nav__cart-m" data-open-cart aria-label="Ouvrir le panier">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <span class="badge" data-count>0</span>
+  </button>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#/boissons">Boissons</a>
+    <a href="#/boissons/promos">Promos</a>
+    <a href="#/" data-scroll="etapes">Comment ça marche</a>
+  </nav>
+  <a class="logo" href="#/" aria-label="Timaini Les Courses, accueil"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></a>
+  <nav class="nav__links nav__links--r" aria-label="Secondaire">
+    <a href="#/" data-scroll="aide">Aide</a>
+    <button class="icon-btn" data-open-cart aria-label="Ouvrir le panier">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="badge" data-count>0</span>
+    </button>
+  </nav>
+  <button class="icon-btn burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+</header>
+
+<form class="search" id="search" role="search">
+  <div class="where"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    <label for="quartier">Livrer à&nbsp;:</label>
+    <select id="quartier"><option>Bastos</option><option>Biyem-Assi</option><option>Mvan</option><option>Nlongkak</option><option>Omnisport</option><option>Essos</option><option>Mendong</option><option>Odza</option><option>Ngousso</option><option>Centre-ville</option></select>
+  </div>
+  <label class="input">
+    <span class="sr-only">Rechercher un produit</span>
+    <input id="q" type="search" placeholder="Rechercher : eau, Malta, Fanta, jus…" autocomplete="off">
+    <button type="submit" aria-label="Rechercher"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+  </label>
+  <div class="eta"><i></i><span>Commandé maintenant, livré vers <b data-eta>--</b></span></div>
+</form>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="foot" id="aide">
+  <div class="wrap foot__grid">
+    <div><a class="logo on-dark" href="#/"><span class="a">TIMAINI</span><span class="b">LES</span><span class="c">COURSES</span><span class="d"></span></a>
+      <p>La supérette en ligne de Yaoundé. Vos courses du quotidien, livrées en 1 h.</p></div>
+    <div><h4>Boissons</h4><ul id="foot-familles"></ul></div>
+    <div><h4>Aide</h4><ul><li>Livraison 7 j/7 de 8 h à 21 h</li><li>Zones : tout Yaoundé</li><li>Paiement à la livraison ou mobile money</li><li>Un souci ? On répond sur WhatsApp</li></ul></div>
+    <div><h4>Paiement</h4><div class="pay"><span>Orange Money</span><span>MTN MoMo</span><span>Espèces</span></div></div>
+  </div>
+  <div class="wrap legal"><span>© <span id="year"></span> Timaini Les Courses · Yaoundé, Cameroun</span><span>Mentions légales · CGV · Confidentialité</span></div>
+</footer>
+
+<!-- Panier -->
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Panier" aria-hidden="true">
+  <div class="drawer__head"><h2>Mon panier</h2><button class="icon-btn" id="close-cart" aria-label="Fermer le panier">✕</button></div>
+  <div class="drawer__ship"><p id="ship-msg"></p><div class="bar"><i id="ship-bar"></i></div></div>
+  <ul class="drawer__items" id="cart-items"></ul>
+  <div class="drawer__foot">
+    <div class="row"><span>Sous-total</span><span id="sub-total">0 FCFA</span></div>
+    <div class="row"><span>Livraison</span><span id="ship-fee">—</span></div>
+    <div class="row big"><span>Total</span><span id="total">0 FCFA</span></div>
+    <button class="pill dark block" id="checkout">Valider ma commande</button>
+  </div>
+</aside>
+
+<!-- Validation de commande -->
+<dialog class="modal" id="order">
+  <form method="dialog" id="order-form">
+    <div class="modal__head"><h2>Ma commande</h2><button type="button" class="icon-btn" onclick="this.closest('dialog').close()" aria-label="Fermer">✕</button></div>
+    <div class="modal__body">
+      <label>Nom<input name="nom" required autocomplete="name"></label>
+      <label>Téléphone<input name="tel" required inputmode="tel" autocomplete="tel" placeholder="6XX XX XX XX"></label>
+      <label>Quartier et repère<input name="adresse" required placeholder="Ex. : Bastos, derrière l’ambassade"></label>
+      <fieldset><legend>Livraison</legend>
+        <label class="opt"><input type="radio" name="quand" value="Dans 1 h" checked><span><b>Dans 1 h</b><small data-eta></small></span></label>
+        <label class="opt"><input type="radio" name="quand" value="Plus tard"><span><b>Plus tard</b><small>On vous appelle</small></span></label>
+      </fieldset>
+      <fieldset><legend>Paiement</legend>
+        <label class="opt"><input type="radio" name="paiement" value="Mobile money" checked><span><b>Mobile money</b><small>Orange / MTN</small></span></label>
+        <label class="opt"><input type="radio" name="paiement" value="Espèces à la livraison"><span><b>À la livraison</b><small>Espèces</small></span></label>
+      </fieldset>
+      <p class="modal__total">Total : <b id="order-total"></b></p>
+    </div>
+    <div class="modal__foot"><button class="pill dark block" value="ok">Envoyer ma commande</button></div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data/produits.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

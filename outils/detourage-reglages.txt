@@ -1,0 +1,23 @@
+# Tolérance de détourage par image (nom du fichier sans extension, puis valeur).
+# Défaut : 22. Plus bas = ne retire que le blanc pur (utile pour les emballages blancs).
+jus-pomme-pack12 8
+jus-orange-gold 8
+sprite-pack9 4
+sprite-verre-24 principal
+fanta-shokata 30 neutre principal
+fanta-canette-peche principal
+fanta-canette-fraise principal
+fanta-canette-raisin principal
+fanta-canette-fruits-rouges principal
+fanta-canette-orange principal
+fanta-canette-ananas principal
+coca-50cl 30 neutre nettoyer
+perrier-citron-50cl 40 neutre sombre nettoyer
+evian-pack6-50cl 6
+evian-pack6-1l 6 plein
+evian-sport-1l 6
+evian-1-5l 6
+evian-sport-75cl 6
+malta-canette principal
+tangui-1-5l 6 principal
+tangui-1-5l-ancien 6
