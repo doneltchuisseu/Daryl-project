@@ -935,6 +935,32 @@ window.PRODUITS = [
   "image": "images/twinings-assortiment.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "lipton-yellow-100",
+  "nom": "Lipton Yellow Label, 100 sachets",
+  "marque": "Lipton",
+  "format": "Boîte de 100 sachets",
+  "rayon": "Petit-déjeuner",
+  "famille": "Thés et infusions",
+  "prix": 3500,
+  "etiquette": "Favori",
+  "image": "images/lipton-yellow-100.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "lipton-yellow-1kg",
+  "nom": "Lipton Yellow Label, thé en vrac 1 kg",
+  "marque": "Lipton",
+  "format": "Paquet 1 kg · vrac",
+  "rayon": "Petit-déjeuner",
+  "famille": "Thés et infusions",
+  "prix": 9000,
+  "etiquette": "",
+  "image": "images/lipton-yellow-1kg.webp",
+  "pack": false,
+  "verre": false
  }
 ];
 window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés", "Thés et infusions", "Bébé et enfants"];

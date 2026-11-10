@@ -38,7 +38,7 @@ const DESCRIPTIONS = {
   "Sirops": "À allonger d’eau bien fraîche : une bouteille donne des dizaines de verres pour toute la famille.",
   "Boissons maltées": "La boisson maltée sans alcool préférée du Cameroun, pleine d’énergie.",
   "Petit-déjeuner": "Pour bien commencer la journée : boisson chocolatée, céréales et pâte à tartiner que toute la famille réclame.",
-  "Thés et infusions": "Thés noirs anglais et infusions pour le matin, l’après-midi ou le soir. À boire chaud ou glacé.",
+  "Thés et infusions": "Le Lipton du quotidien, les thés anglais Twinings et des infusions, à boire chaud ou glacé.",
   "Bébé et enfants": "Laits de croissance pour les 1 à 3 ans. Demandez conseil à votre pédiatre pour choisir le lait adapté à votre enfant.",
   "Cafés": "Café soluble prêt en quelques secondes, ou café en grains Lavazza pour les amateurs d’espresso.",
 };

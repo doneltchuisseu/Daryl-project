@@ -30,3 +30,5 @@ kelloggs-cornflakes-243g 4 plein
 redwhite-cornflakes principal
 twinings-english-25 12 neutre principal
 twinings-earl-grey-100 5 plein
+lipton-yellow-1kg principal
+lipton-yellow-100 6 plein
