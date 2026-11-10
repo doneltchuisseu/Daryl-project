@@ -57,7 +57,7 @@ const BIENTOT = ["Épicerie", "Hygiène et beauté", "Entretien", "Délestage", 
 function carte(p, i = 0) {
   const tag = p.etiquette ? `<span class="tag ${esc(p.etiquette.split(" ")[0])}">${esc(p.etiquette)}</span>` : "";
   return `<article class="card">
-    <div class="card__img">${tag}<img src="${p.image}" alt="" loading="${i < 4 ? "eager" : "lazy"}" width="300" height="300"></div>
+    <div class="card__img">${tag}<img src="${p.image}" alt="" loading="${i < 4 ? "eager" : "lazy"}"></div>
     <div class="card__meta">
       <div><a class="card__link" href="#/produit/${p.id}"><b>${esc(p.nom)}</b></a><small>${esc(p.marque)} · ${esc(p.format)}</small><span class="price">${fcfa(p.prix)}</span></div>
       <button class="plus" data-add="${p.id}" aria-label="Ajouter ${esc(p.nom)} au panier">+</button>
