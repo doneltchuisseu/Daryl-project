@@ -714,6 +714,58 @@ window.PRODUITS = [
   "image": "images/nesquik-cereales.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "nido-boite-2-5kg",
+  "nom": "Lait en poudre Nido, boîte 2,5 kg",
+  "marque": "Nestlé Nido",
+  "format": "Boîte 2,5 kg",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 16000,
+  "etiquette": "Favori",
+  "image": "images/nido-boite-2-5kg.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "nido-sachet-20g",
+  "nom": "Lait en poudre Nido, sachet 20 g",
+  "marque": "Nestlé Nido",
+  "format": "Sachet 20 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 100,
+  "etiquette": "",
+  "image": "images/nido-sachet-20g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "nido-kinder-1plus",
+  "nom": "Nido Kinder 1+",
+  "marque": "Nestlé Nido",
+  "format": "Boîte 2 kg · 1 à 3 ans",
+  "rayon": "Bébé",
+  "famille": "Bébé et enfants",
+  "prix": 14000,
+  "etiquette": "",
+  "image": "images/nido-kinder-1plus.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "nido-kinder-lacto-800g",
+  "nom": "Nido Kinder 1+ Lacto-Ease",
+  "marque": "Nestlé Nido",
+  "format": "Boîte 800 g · 1 à 3 ans",
+  "rayon": "Bébé",
+  "famille": "Bébé et enfants",
+  "prix": 8500,
+  "etiquette": "",
+  "image": "images/nido-kinder-lacto-800g.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés", "Bébé et enfants"];
