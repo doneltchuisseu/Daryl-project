@@ -48,3 +48,6 @@ bonne-maman-fraise 4 plein
 gloria-cuisine-entier 6 plein
 gloria-cuisine-demi-ecreme 6 plein
 gloria-original-150g 40 principal plein
+harrys-mie-nature-500g 4 plein
+harrys-american-rustique 4 plein
+harrys-brioche-pepites 4 plein
