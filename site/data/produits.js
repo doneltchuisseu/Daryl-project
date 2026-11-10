@@ -519,6 +519,19 @@ window.PRODUITS = [
   "image": "images/tangui-1-5l.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "supermont-10l",
+  "nom": "Eau minérale Supermont 10 L",
+  "marque": "Supermont",
+  "format": "Bidon 10 L",
+  "rayon": "Eaux et boissons",
+  "famille": "Eaux",
+  "prix": 1500,
+  "etiquette": "Favori",
+  "image": "images/supermont-10l.webp",
+  "pack": false,
+  "verre": false
  }
 ];
 window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées"];

@@ -65,7 +65,8 @@ function section(titre, sousTitre, liste, lien, libelle, cls = "") {
 /* ===== Pages ===== */
 function pageAccueil() {
   const img = id => parId(id)?.image || "";
-  const favoris = PRODUITS.filter(p => ["Malta Guinness", "Tangui"].includes(p.marque) && !p.id.endsWith("ancien"));
+  const favOrdre = ["malta-canette", "tangui-1-5l", "supermont-10l", "malta-pack24"];
+  const favoris = favOrdre.map(parId).filter(Boolean);
   const promos = PRODUITS.filter(p => p.etiquette === "Promo");
   const nouveautes = PRODUITS.filter(p => ["Nouveau", "Édition limitée"].includes(p.etiquette));
   const fams = FAMILLES.map(f => {
