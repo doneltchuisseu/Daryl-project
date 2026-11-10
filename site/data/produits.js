@@ -591,12 +591,64 @@ window.PRODUITS = [
   "marque": "Ferrero",
   "format": "Pot 750 g",
   "rayon": "Petit-déjeuner",
-  "famille": "Pâtes à tartiner",
+  "famille": "Petit-déjeuner",
   "prix": 4500,
   "etiquette": "Favori",
   "image": "images/nutella-pot.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "milo-sachet-500g",
+  "nom": "Milo, sachet 500 g",
+  "marque": "Nestlé Milo",
+  "format": "Sachet 500 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 2500,
+  "etiquette": "Favori",
+  "image": "images/milo-sachet-500g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "milo-sachet-600g",
+  "nom": "Milo, sachet 600 g",
+  "marque": "Nestlé Milo",
+  "format": "Sachet 600 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 3000,
+  "etiquette": "",
+  "image": "images/milo-sachet-600g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "milo-boite-1-5kg",
+  "nom": "Milo, grande boîte 1,5 kg",
+  "marque": "Nestlé Milo",
+  "format": "Boîte 1,5 kg",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 8500,
+  "etiquette": "Promo",
+  "image": "images/milo-boite-1-5kg.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "milo-cereales",
+  "nom": "Céréales Milo",
+  "marque": "Nestlé Milo",
+  "format": "Boîte 350 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 3500,
+  "etiquette": "Nouveau",
+  "image": "images/milo-cereales.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Cafés", "Pâtes à tartiner"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés"];

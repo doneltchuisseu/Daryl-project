@@ -37,10 +37,10 @@ const DESCRIPTIONS = {
   "Thés glacés": "Un thé glacé désaltérant, parfait quand il fait chaud à Yaoundé.",
   "Sirops": "À allonger d’eau bien fraîche : une bouteille donne des dizaines de verres pour toute la famille.",
   "Boissons maltées": "La boisson maltée sans alcool préférée du Cameroun, pleine d’énergie.",
-  "Pâtes à tartiner": "La pâte à tartiner que toute la famille réclame au petit-déjeuner et au goûter.",
+  "Petit-déjeuner": "Pour bien commencer la journée : boisson chocolatée, céréales et pâte à tartiner que toute la famille réclame.",
   "Cafés": "Un café soluble prêt en quelques secondes : de l’eau chaude, et la journée peut commencer.",
 };
-const titreFamille = f => ({ "Eaux": "Les eaux", "Sodas": "Les sodas", "Jus et nectars": "Les jus", "Thés glacés": "Les thés glacés", "Sirops": "Les sirops", "Boissons maltées": "Les boissons maltées", "Cafés": "Les cafés", "Pâtes à tartiner": "Les pâtes à tartiner" }[f] || f);
+const titreFamille = f => ({ "Eaux": "Les eaux", "Sodas": "Les sodas", "Jus et nectars": "Les jus", "Thés glacés": "Les thés glacés", "Sirops": "Les sirops", "Boissons maltées": "Les boissons maltées", "Cafés": "Les cafés", "Petit-déjeuner": "Le petit-déjeuner" }[f] || f);
 const BIENTOT = ["Épicerie", "Bébé", "Hygiène et beauté", "Entretien", "Délestage", "Anti-moustiques"];
 
 /* ===== Composants ===== */

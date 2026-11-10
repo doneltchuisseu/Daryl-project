@@ -51,4 +51,8 @@ nescafe-classic;Nescafé Classic;Nescafé;Pot 200 g;Petit-déjeuner;Cafés;4500;
 nescafe-espresso;Nescafé Espresso;Nescafé;Pot 100 g;Petit-déjeuner;Cafés;4000;;oui;prix
 nescafe-gold-caramel;Nescafé Gold Espresso Caramel;Nescafé;Pot;Petit-déjeuner;Cafés;4500;Nouveau;oui;prix, format
 nescafe-gold-blend;Nescafé Gold Blend;Nescafé;Pot;Petit-déjeuner;Cafés;5000;;oui;prix, format
-nutella-pot;Nutella;Ferrero;Pot 750 g;Petit-déjeuner;Pâtes à tartiner;4500;Favori;oui;prix, poids (le chiffre est caché sur la photo)
+nutella-pot;Nutella;Ferrero;Pot 750 g;Petit-déjeuner;Petit-déjeuner;4500;Favori;oui;prix, poids (le chiffre est caché sur la photo)
+milo-sachet-500g;Milo, sachet 500 g;Nestlé Milo;Sachet 500 g;Petit-déjeuner;Petit-déjeuner;2500;Favori;oui;prix
+milo-sachet-600g;Milo, sachet 600 g;Nestlé Milo;Sachet 600 g;Petit-déjeuner;Petit-déjeuner;3000;;oui;prix
+milo-boite-1-5kg;Milo, grande boîte 1,5 kg;Nestlé Milo;Boîte 1,5 kg;Petit-déjeuner;Petit-déjeuner;8500;Promo;oui;prix
+milo-cereales;Céréales Milo;Nestlé Milo;Boîte 350 g;Petit-déjeuner;Petit-déjeuner;3500;Nouveau;oui;prix
