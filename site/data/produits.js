@@ -1260,6 +1260,58 @@ window.PRODUITS = [
   "image": "images/barilla-tagliatelle.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "taj-mahal-1kg",
+  "nom": "Riz basmati Taj Mahal Fiesta, 1 kg",
+  "marque": "Taj Mahal",
+  "format": "Sachet 1 kg",
+  "rayon": "Épicerie salée",
+  "famille": "Riz",
+  "prix": 2000,
+  "etiquette": "",
+  "image": "images/taj-mahal-1kg.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "taj-mahal-xxxl-5kg",
+  "nom": "Riz basmati Taj Mahal XXXL, 5 kg",
+  "marque": "Taj Mahal",
+  "format": "Sac 5 kg",
+  "rayon": "Épicerie salée",
+  "famille": "Riz",
+  "prix": 9500,
+  "etiquette": "Favori",
+  "image": "images/taj-mahal-xxxl-5kg.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "taj-mahal-6kg",
+  "nom": "Riz basmati Taj Mahal Fiesta, sac de 6 kg",
+  "marque": "Taj Mahal",
+  "format": "Sac 6 kg (5 kg + 1 kg offert)",
+  "rayon": "Épicerie salée",
+  "famille": "Riz",
+  "prix": 10500,
+  "etiquette": "Promo",
+  "image": "images/taj-mahal-6kg.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "barilla-cellentani",
+  "nom": "Barilla Cellentani",
+  "marque": "Barilla",
+  "format": "Boîte 454 g",
+  "rayon": "Épicerie salée",
+  "famille": "Pâtes",
+  "prix": 1500,
+  "etiquette": "",
+  "image": "images/barilla-cellentani.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Bébé et enfants"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Bébé et enfants"];
