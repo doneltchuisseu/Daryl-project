@@ -1013,6 +1013,71 @@ window.PRODUITS = [
   "image": "images/candia-candyup-vanille.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "quaker-white-oats-500g",
+  "nom": "Quaker White Oats, boîte métal",
+  "marque": "Quaker",
+  "format": "Boîte 500 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 3000,
+  "etiquette": "",
+  "image": "images/quaker-white-oats-500g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "quaker-oats-550g",
+  "nom": "Quaker Oats, flocons d'avoine",
+  "marque": "Quaker",
+  "format": "Boîte 550 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 2800,
+  "etiquette": "",
+  "image": "images/quaker-oats-550g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "blue-band-100g",
+  "nom": "Blue Band Original, pot 100 g",
+  "marque": "Blue Band",
+  "format": "Pot 100 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 600,
+  "etiquette": "Favori",
+  "image": "images/blue-band-100g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "blue-band-900g",
+  "nom": "Blue Band Tartines, seau 900 g",
+  "marque": "Blue Band",
+  "format": "Seau 900 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 4500,
+  "etiquette": "",
+  "image": "images/blue-band-900g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "gloria-lait-evapore",
+  "nom": "Gloria Original, lait évaporé",
+  "marque": "Nestlé Gloria",
+  "format": "Boîte 370 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Laits",
+  "prix": 1000,
+  "etiquette": "Favori",
+  "image": "images/gloria-lait-evapore.webp",
+  "pack": false,
+  "verre": false
  }
 ];
 window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Laits", "Cafés", "Thés et infusions", "Bébé et enfants"];

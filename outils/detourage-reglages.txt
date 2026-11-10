@@ -37,3 +37,6 @@ candia-amande 3 plein
 candia-le-lait 6 plein
 candia-viva 6 plein
 candia-candyup-vanille 6 plein
+quaker-oats-550g 4 plein
+blue-band-900g 4 plein
+gloria-lait-evapore 6 plein
