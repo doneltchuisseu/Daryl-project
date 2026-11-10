@@ -108,7 +108,7 @@ img{max-width:100%;display:block}
 .card__img{position:relative;display:grid;place-items:center;aspect-ratio:1/1;padding:22px}
 .card__img img{max-height:100%;max-width:92%;object-fit:contain;filter:drop-shadow(0 10px 10px rgba(0,0,0,.18));transition:transform .25s}
 .card:hover .card__img img{transform:scale(1.05) rotate(-2deg)}
-.card__img .tag{position:absolute;top:12px;left:12px}
+.card__img .tag{position:absolute;top:12px;left:12px;z-index:1}
 .card__meta{border-top:var(--trait);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto}
 .card__meta b{display:block;font-family:var(--display);font-weight:400;font-size:14px;line-height:1.15;text-transform:uppercase}
 .card__meta small{display:block;font-size:12px;opacity:.7;margin:3px 0}
@@ -122,7 +122,7 @@ img{max-width:100%;display:block}
 .card:hover .explore{transform:scale(1)}
 
 /* ===== Familles ===== */
-.fams{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.fams{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
 .fam{border:var(--trait);background:var(--creme);padding:16px 10px;text-align:center;display:grid;gap:8px;justify-items:center;transition:transform .15s,box-shadow .15s}
 .fam:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--encre)}
 .fam .ico{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;overflow:hidden}

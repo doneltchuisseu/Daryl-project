@@ -37,9 +37,15 @@ const DESCRIPTIONS = {
   "Thés glacés": "Un thé glacé désaltérant, parfait quand il fait chaud à Yaoundé.",
   "Sirops": "À allonger d’eau bien fraîche : une bouteille donne des dizaines de verres pour toute la famille.",
   "Boissons maltées": "La boisson maltée sans alcool préférée du Cameroun, pleine d’énergie.",
+  "Petit-déjeuner": "Pour bien commencer la journée : boisson chocolatée, céréales et pâte à tartiner que toute la famille réclame.",
+  "Confitures et douceurs": "Confitures, compotée et galettes pur beurre Bonne Maman pour les tartines, le goûter et les desserts.",
+  "Laits": "Le lait longue conservation Candia, nature, vitaminé, sans lactose ou parfumé, prêt à boire.",
+  "Thés et infusions": "Le Lipton du quotidien, les thés anglais Twinings et des infusions, à boire chaud ou glacé.",
+  "Bébé et enfants": "Laits de croissance pour les 1 à 3 ans. Demandez conseil à votre pédiatre pour choisir le lait adapté à votre enfant.",
+  "Cafés": "Café soluble prêt en quelques secondes, ou café en grains Lavazza pour les amateurs d’espresso.",
 };
-const titreFamille = f => ({ "Eaux": "Les eaux", "Sodas": "Les sodas", "Jus et nectars": "Les jus", "Thés glacés": "Les thés glacés", "Sirops": "Les sirops", "Boissons maltées": "Les boissons maltées" }[f] || f);
-const BIENTOT = ["Petit-déjeuner", "Épicerie", "Bébé", "Hygiène et beauté", "Entretien", "Délestage", "Anti-moustiques"];
+const titreFamille = f => ({ "Eaux": "Les eaux", "Sodas": "Les sodas", "Jus et nectars": "Les jus", "Thés glacés": "Les thés glacés", "Sirops": "Les sirops", "Boissons maltées": "Les boissons maltées", "Cafés": "Les cafés", "Petit-déjeuner": "Le petit-déjeuner", "Bébé et enfants": "Bébé et enfants", "Thés et infusions": "Thés et infusions", "Laits": "Les laits", "Confitures et douceurs": "Confitures et douceurs" }[f] || f);
+const BIENTOT = ["Épicerie", "Hygiène et beauté", "Entretien", "Délestage", "Anti-moustiques"];
 
 /* ===== Composants ===== */
 function carte(p, i = 0) {
@@ -65,13 +71,14 @@ function section(titre, sousTitre, liste, lien, libelle, cls = "") {
 /* ===== Pages ===== */
 function pageAccueil() {
   const img = id => parId(id)?.image || "";
-  const favoris = PRODUITS.filter(p => ["Malta Guinness", "Tangui"].includes(p.marque) && !p.id.endsWith("ancien"));
+  const favOrdre = ["malta-canette", "tangui-1-5l", "supermont-10l", "nutella-pot"];
+  const favoris = favOrdre.map(parId).filter(Boolean);
   const promos = PRODUITS.filter(p => p.etiquette === "Promo");
   const nouveautes = PRODUITS.filter(p => ["Nouveau", "Édition limitée"].includes(p.etiquette));
   const fams = FAMILLES.map(f => {
     const liste = PRODUITS.filter(p => p.famille === f);
     const vitrine = liste.find(p => !p.pack) || liste[0];
-    return `<a class="fam" href="#/boissons/${slug(f)}"><span class="ico"><img src="${vitrine.image}" alt=""></span><b>${esc(f)}</b><span>${liste.length} produit${liste.length > 1 ? "s" : ""}</span></a>`;
+    return `<a class="fam" href="#/produits/${slug(f)}"><span class="ico"><img src="${vitrine.image}" alt=""></span><b>${esc(f)}</b><span>${liste.length} produit${liste.length > 1 ? "s" : ""}</span></a>`;
   }).join("");
 
   return `
@@ -80,7 +87,7 @@ function pageAccueil() {
     <span class="kernel" style="right:13%;top:96px;width:42px;height:42px;background:var(--bleu)"></span>
     <h1><span class="scrib l"></span>Vos courses<br>livrées <u>en 1 h</u><span class="scrib r"></span></h1>
     <p>Boissons fraîches et produits du quotidien, livrés partout à Yaoundé.</p>
-    <div class="ctas"><a class="pill dark" href="#/boissons">Faire mes courses</a><a class="pill" href="#/boissons/promos">Voir les promos</a></div>
+    <div class="ctas"><a class="pill dark" href="#/produits">Faire mes courses</a><a class="pill" href="#/produits/promos">Voir les promos</a></div>
     <div class="stage" aria-hidden="true">
       <span class="disc d1"></span><span class="disc d3"></span><span class="disc d2"></span>
       <img class="bottle b1" src="${img("sirop-pomme")}" alt="">
@@ -89,27 +96,27 @@ function pageAccueil() {
     </div>
   </section>
 
-  ${section("Les favoris d’ici", "Les incontournables du Cameroun, toujours en stock.", favoris, "#/boissons", "Toutes les boissons")}
+  ${section("Les favoris d’ici", "Les incontournables du Cameroun, toujours en stock.", favoris, "#/produits", "Tous les produits")}
 
   <section class="sec"><div class="wrap">
-    <div class="sec-head"><div><h2 class="h2">Nos rayons</h2><p>Les boissons sont en ligne. Le reste de la supérette arrive bientôt.</p></div><a class="pill" href="#/boissons">Tout voir</a></div>
+    <div class="sec-head"><div><h2 class="h2">Nos rayons</h2><p>Boissons, café, petit-déjeuner… et le reste de la supérette arrive bientôt.</p></div><a class="pill" href="#/produits">Tout voir</a></div>
     <div class="fams">${fams}</div>
     <div class="soon"><b>Bientôt&nbsp;:</b>${BIENTOT.map(b => `<span>${b}</span>`).join("")}</div>
   </div></section>
 
-  ${section("Les promos", "Les packs et plateaux au meilleur prix.", promos.slice(0, 8), "#/boissons/promos", "Toutes les promos")}
+  ${section("Les promos", "Les packs et plateaux au meilleur prix.", promos.slice(0, 8), "#/produits/promos", "Toutes les promos")}
 
   <section class="banner"><div class="wrap">
     <div>
       <div class="eyebrow">Livré frais</div>
       <h2><span class="scrib" style="position:relative;display:inline-block;filter:invert(1)"></span> Soif&nbsp;?<br>On arrive.</h2>
       <p>Eau, sodas, jus et Malta livrés en moins d’une heure. Pour la maison, le bureau ou la fête de ce soir.</p>
-      <a class="pill red" href="#/boissons">Commander maintenant</a>
+      <a class="pill red" href="#/produits">Commander maintenant</a>
     </div>
     <div class="pics" aria-hidden="true"><img src="${img("malta-verre")}" alt=""><img src="${img("tangui-1-5l")}" alt=""><img src="${img("the-glace-tropical")}" alt=""></div>
   </div></section>
 
-  ${section("Les nouveautés", "Les derniers arrivés dans nos rayons.", nouveautes.slice(0, 4), "#/boissons", "Toutes les boissons")}
+  ${section("Les nouveautés", "Les derniers arrivés dans nos rayons.", nouveautes.slice(0, 4), "#/produits", "Tous les produits")}
 
   <section class="steps" id="etapes">
     <div class="step"><span class="n">1</span><h3>Je remplis mon panier</h3><p>Sur le site, à toute heure.</p></div>
@@ -125,7 +132,7 @@ function pageAccueil() {
 }
 
 function pageCatalogue(filtre, recherche = "") {
-  let liste = PRODUITS, titre = "Boissons", sous = "Eaux, sodas, jus, sirops… tout pour se rafraîchir.";
+  let liste = PRODUITS, titre = "Nos produits", sous = "Boissons, cafés, petit-déjeuner… tout le quotidien, livré en 1 h.";
   const fam = filtre && filtre !== "promos" ? famDe(filtre) : null;
   if (filtre === "promos") { liste = liste.filter(p => p.etiquette === "Promo"); titre = "Les promos"; sous = "Les packs et plateaux au meilleur prix."; }
   else if (fam) { liste = liste.filter(p => p.famille === fam); titre = titreFamille(fam); sous = DESCRIPTIONS[fam] || ""; }
@@ -140,13 +147,13 @@ function pageCatalogue(filtre, recherche = "") {
 
   const chip = (href, label, n, actif) => `<a class="chip" href="${href}" aria-current="${actif}">${label}<small>${n}</small></a>`;
   const chips = recherche ? "" : [
-    chip("#/boissons", "Tout", PRODUITS.length, !filtre),
-    chip("#/boissons/promos", "Promos", PRODUITS.filter(p => p.etiquette === "Promo").length, filtre === "promos"),
-    ...FAMILLES.map(f => chip(`#/boissons/${slug(f)}`, f, PRODUITS.filter(p => p.famille === f).length, fam === f)),
+    chip("#/produits", "Tout", PRODUITS.length, !filtre),
+    chip("#/produits/promos", "Promos", PRODUITS.filter(p => p.etiquette === "Promo").length, filtre === "promos"),
+    ...FAMILLES.map(f => chip(`#/produits/${slug(f)}`, f, PRODUITS.filter(p => p.famille === f).length, fam === f)),
   ].join("");
 
   return `<div class="wrap page-head">
-    <nav class="crumbs"><a href="#/">Accueil</a> › ${recherche ? "Recherche" : fam || filtre === "promos" ? `<a href="#/boissons">Boissons</a> › ${titre}` : "Boissons"}</nav>
+    <nav class="crumbs"><a href="#/">Accueil</a> › ${recherche ? "Recherche" : fam || filtre === "promos" ? `<a href="#/produits">Nos produits</a> › ${titre}` : "Nos produits"}</nav>
     <h1 class="h2">${titre}</h1><p style="margin-top:8px;opacity:.8">${sous}</p>
     <div class="filters">
       <div class="chips">${chips}</div>
@@ -154,13 +161,13 @@ function pageCatalogue(filtre, recherche = "") {
         <option value="pertinence">Pertinence</option><option value="prix-asc">Prix croissant</option>
         <option value="prix-desc">Prix décroissant</option><option value="nom">Nom</option></select></label>
     </div>
-    ${liste.length ? grille(liste) : `<div class="empty"><b>Aucun produit trouvé</b><p>Essayez un autre mot, ou parcourez toutes les boissons.</p><a class="pill dark" href="#/boissons">Toutes les boissons</a></div>`}
+    ${liste.length ? grille(liste) : `<div class="empty"><b>Aucun produit trouvé</b><p>Essayez un autre mot, ou parcourez tous les produits.</p><a class="pill dark" href="#/produits">Tous les produits</a></div>`}
   </div>`;
 }
 
 function pageProduit(id) {
   const p = parId(id);
-  if (!p) return `<div class="wrap empty"><b>Produit introuvable</b><a class="pill dark" href="#/boissons">Voir les boissons</a></div>`;
+  if (!p) return `<div class="wrap empty"><b>Produit introuvable</b><a class="pill dark" href="#/produits">Voir les produits</a></div>`;
   const similaires = PRODUITS.filter(x => x.famille === p.famille && x.id !== p.id).slice(0, 4);
   const nb = (p.format.match(/^(\d+)\s/) || [])[1];
   const unite = p.pack && nb ? `Soit ${fcfa(Math.round(p.prix / +nb))} l’unité` : "";
@@ -169,7 +176,7 @@ function pageProduit(id) {
   if (p.verre) faits.push(["Verre", "Consigne en plus"]);
 
   return `<div class="wrap page-head">
-    <nav class="crumbs"><a href="#/">Accueil</a> › <a href="#/boissons">Boissons</a> › <a href="#/boissons/${slug(p.famille)}">${esc(p.famille)}</a> › ${esc(p.nom)}</nav>
+    <nav class="crumbs"><a href="#/">Accueil</a> › <a href="#/produits">Nos produits</a> › <a href="#/produits/${slug(p.famille)}">${esc(p.famille)}</a> › ${esc(p.nom)}</nav>
     <div class="product">
       <div class="product__vis">${tag}<span class="scrib s1"></span><span class="scrib s2"></span><span class="scrib s3"></span><span class="scrib s4"></span>
         <img src="${p.image}" alt="${esc(p.nom)}"></div>
@@ -188,7 +195,7 @@ function pageProduit(id) {
       </div>
     </div>
   </div>
-  ${section("Dans le même rayon", "Vous aimerez aussi.", similaires, `#/boissons/${slug(p.famille)}`, "Tout le rayon")}`;
+  ${section("Dans le même rayon", "Vous aimerez aussi.", similaires, `#/produits/${slug(p.famille)}`, "Tout le rayon")}`;
 }
 
 /* ===== Routeur ===== */
@@ -197,7 +204,7 @@ function route() {
   const app = $("#app");
   let html, titre = "Timaini Les Courses · Vos courses livrées en 1 h à Yaoundé";
   if (page === "produit") { html = pageProduit(arg); const p = parId(arg); if (p) titre = `${p.nom} · Timaini Les Courses`; }
-  else if (page === "boissons") { html = pageCatalogue(arg); titre = "Boissons · Timaini Les Courses"; }
+  else if (page === "produits" || page === "boissons") { html = pageCatalogue(arg); titre = "Nos produits · Timaini Les Courses"; }
   else if (page === "recherche") { const q = decodeURIComponent(arg); html = pageCatalogue("", q); $("#q").value = q; titre = `Recherche « ${q} » · Timaini Les Courses`; }
   else html = pageAccueil();
   app.innerHTML = html + `<div style="height:80px"></div>`;
@@ -252,7 +259,7 @@ function rendrePanier() {
       <div><b>${esc(p.nom)}</b><small>${esc(p.format)} · ${fcfa(p.prix)}</small><br>
         <span class="qty"><button data-d="-1" data-id="${id}" aria-label="Retirer un">−</button><span>${q}</span><button data-d="1" data-id="${id}" aria-label="Ajouter un">+</button></span></div>
       <span class="tot">${fcfa(p.prix * q)}</span></li>`;
-  }).join("") : `<li class="drawer__empty"><b>Votre panier est vide</b><span>Ajoutez vos boissons préférées.</span><a class="pill dark" href="#/boissons" data-close>Faire mes courses</a></li>`;
+  }).join("") : `<li class="drawer__empty"><b>Votre panier est vide</b><span>Ajoutez vos produits préférés.</span><a class="pill dark" href="#/produits" data-close>Faire mes courses</a></li>`;
 }
 $("#cart-items").addEventListener("click", e => {
   const b = e.target.closest("button[data-d]");
@@ -301,11 +308,11 @@ $("#order-form").addEventListener("submit", e => {
 dlg.addEventListener("close", () => { if (!$("#order-form .modal__body")) location.reload(); });
 
 /* ===== Recherche, menu, divers ===== */
-$("#search").addEventListener("submit", e => { e.preventDefault(); const q = $("#q").value.trim(); location.hash = q ? `#/recherche/${encodeURIComponent(q)}` : "#/boissons"; });
+$("#search").addEventListener("submit", e => { e.preventDefault(); const q = $("#q").value.trim(); location.hash = q ? `#/recherche/${encodeURIComponent(q)}` : "#/produits"; });
 $("#burger").onclick = e => { const o = $(".nav").classList.toggle("open"); e.currentTarget.setAttribute("aria-expanded", o); };
 let minuteur;
 function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(minuteur); minuteur = setTimeout(() => t.classList.remove("show"), 2400); }
-$("#foot-familles").innerHTML = FAMILLES.map(f => `<li><a href="#/boissons/${slug(f)}">${esc(f)}</a></li>`).join("");
+$("#foot-familles").innerHTML = FAMILLES.map(f => `<li><a href="#/produits/${slug(f)}">${esc(f)}</a></li>`).join("");
 $("#year").textContent = new Date().getFullYear();
 setInterval(majEta, 60000);
 

@@ -46,3 +46,64 @@ malta-verre;Malta Guinness, bouteille en verre;Malta Guinness;Bouteille en verre
 malta-pack24;Malta Guinness, plateau de 24;Malta Guinness;24 canettes;Eaux et boissons;Boissons maltées;11000;Promo;oui;prix, contenance (l'emballage indique 33 cl ?)
 tangui-1-5l;Eau minérale Tangui 1,5 L;Tangui;Bouteille 1,5 L;Eaux et boissons;Eaux;450;Favori;oui;prix
 tangui-1-5l-ancien;Eau minérale Tangui 1,5 L (ancienne étiquette);Tangui;Bouteille 1,5 L;Eaux et boissons;Eaux;450;;non;photo rognée à droite, doublon de tangui-1-5l (à supprimer ou remplacer)
+supermont-10l;Eau minérale Supermont 10 L;Supermont;Bidon 10 L;Eaux et boissons;Eaux;1500;Favori;oui;prix
+nescafe-classic;Nescafé Classic;Nescafé;Pot 200 g;Petit-déjeuner;Cafés;4500;;oui;prix
+nescafe-espresso;Nescafé Espresso;Nescafé;Pot 100 g;Petit-déjeuner;Cafés;4000;;oui;prix
+nescafe-gold-caramel;Nescafé Gold Espresso Caramel;Nescafé;Pot;Petit-déjeuner;Cafés;4500;Nouveau;oui;prix, format
+nescafe-gold-blend;Nescafé Gold Blend;Nescafé;Pot;Petit-déjeuner;Cafés;5000;;oui;prix, format
+nutella-pot;Nutella;Ferrero;Pot 750 g;Petit-déjeuner;Petit-déjeuner;4500;Favori;oui;prix, poids (le chiffre est caché sur la photo)
+milo-sachet-500g;Milo, sachet 500 g;Nestlé Milo;Sachet 500 g;Petit-déjeuner;Petit-déjeuner;2500;Favori;oui;prix
+milo-sachet-600g;Milo, sachet 600 g;Nestlé Milo;Sachet 600 g;Petit-déjeuner;Petit-déjeuner;3000;;oui;prix
+milo-boite-1-5kg;Milo, grande boîte 1,5 kg;Nestlé Milo;Boîte 1,5 kg;Petit-déjeuner;Petit-déjeuner;8500;Promo;oui;prix
+milo-cereales;Céréales Milo;Nestlé Milo;Boîte 350 g;Petit-déjeuner;Petit-déjeuner;3500;Nouveau;oui;prix
+nesquik-pot-500g;Nesquik chocolat, pot 500 g;Nestlé Nesquik;Pot 500 g;Petit-déjeuner;Petit-déjeuner;3500;;oui;prix
+nesquik-milkshake-500g;Nesquik Milkshake Mix chocolat;Nestlé Nesquik;Pot 500 g;Petit-déjeuner;Petit-déjeuner;3500;;oui;prix, doublon possible avec nesquik-pot-500g
+nesquik-boite-400g;Nesquik chocolat, boîte 400 g;Nestlé Nesquik;Boîte 400 g;Petit-déjeuner;Petit-déjeuner;3000;;oui;prix
+nesquik-fraise-350g;Nesquik fraise, sachet 350 g;Nestlé Nesquik;Sachet 350 g;Petit-déjeuner;Petit-déjeuner;2800;Nouveau;oui;prix
+nesquik-cereales;Céréales Nesquik;Nestlé Nesquik;Boîte;Petit-déjeuner;Petit-déjeuner;3500;;oui;prix, poids
+nido-boite-2-5kg;Lait en poudre Nido, boîte 2,5 kg;Nestlé Nido;Boîte 2,5 kg;Petit-déjeuner;Petit-déjeuner;16000;Favori;oui;prix
+nido-sachet-20g;Lait en poudre Nido, sachet 20 g;Nestlé Nido;Sachet 20 g;Petit-déjeuner;Petit-déjeuner;100;;oui;prix
+nido-kinder-1plus;Nido Kinder 1+;Nestlé Nido;Boîte 2 kg · 1 à 3 ans;Bébé;Bébé et enfants;14000;;oui;prix, poids, version vendue au Cameroun, règles de vente du lait de croissance
+nido-kinder-lacto-800g;Nido Kinder 1+ Lacto-Ease;Nestlé Nido;Boîte 800 g · 1 à 3 ans;Bébé;Bébé et enfants;8500;;oui;prix, version vendue au Cameroun, règles de vente du lait de croissance
+kelloggs-coco-pops;Céréales Coco Pops;Kellogg's;Boîte 650 g;Petit-déjeuner;Petit-déjeuner;4500;;oui;prix
+kelloggs-chocos-maxi;Céréales Chocos, format maxi;Kellogg's;Boîte maxi;Petit-déjeuner;Petit-déjeuner;5000;Promo;oui;prix, poids
+kelloggs-cornflakes-fraise;Corn Flakes à la fraise;Kellogg's;Boîte;Petit-déjeuner;Petit-déjeuner;3500;Nouveau;oui;prix, poids
+kelloggs-chocos-sachet;Céréales Chocos MultiGrain, sachet;Kellogg's;Sachet;Petit-déjeuner;Petit-déjeuner;2500;;non;photo avec logo de caddie d'un autre vendeur (à remplacer)
+kelloggs-cornflakes-sachet;Corn Flakes Original, petit sachet;Kellogg's;Sachet;Petit-déjeuner;Petit-déjeuner;500;;oui;prix, poids
+kelloggs-cornflakes-200g;Corn Flakes Original, boîte 200 g;Kellogg's;Boîte 200 g;Petit-déjeuner;Petit-déjeuner;2000;;oui;prix
+kelloggs-cornflakes-243g;Corn Flakes Original, boîte 243 g;Kellogg's;Boîte 243 g;Petit-déjeuner;Petit-déjeuner;2300;;oui;prix, doublon possible avec kelloggs-cornflakes-200g
+redwhite-cornflakes;Corn Flakes Red & White;Red & White;Boîte 510 g;Petit-déjeuner;Petit-déjeuner;3000;;non;photo tenue à la main sur fond jaune inutilisable (à reprendre sur fond blanc)
+lavazza-rossa-1kg;Lavazza Qualità Rossa, café en grains;Lavazza;Paquet 1 kg · grains;Petit-déjeuner;Cafés;12000;;oui;prix, demande réelle pour du café en grains
+lavazza-espresso-1kg;Lavazza Espresso, café en grains;Lavazza;Paquet 1 kg · grains;Petit-déjeuner;Cafés;14000;;oui;prix, demande réelle pour du café en grains
+twinings-english-25;English Breakfast, 25 sachets;Twinings;Boîte de 25 sachets;Petit-déjeuner;Thés et infusions;2500;;oui;prix
+twinings-english-100;English Breakfast, 100 sachets;Twinings;Boîte de 100 sachets · 200 g;Petit-déjeuner;Thés et infusions;7500;Promo;oui;prix
+twinings-earl-grey-100;Earl Grey, 100 sachets;Twinings;Boîte de 100 sachets · 200 g;Petit-déjeuner;Thés et infusions;7500;;oui;prix
+twinings-rooibos;Rooibos, 20 sachets;Twinings;Boîte de 20 sachets · sans théine;Petit-déjeuner;Thés et infusions;3000;Nouveau;oui;prix
+twinings-assortiment;Assortiment de thés noirs;Twinings;Coffret · Earl Grey, English, Irish, Lady Grey;Petit-déjeuner;Thés et infusions;4000;;oui;prix, nombre de sachets
+lipton-yellow-100;Lipton Yellow Label, 100 sachets;Lipton;Boîte de 100 sachets;Petit-déjeuner;Thés et infusions;3500;Favori;oui;prix
+lipton-yellow-1kg;Lipton Yellow Label, thé en vrac 1 kg;Lipton;Paquet 1 kg · vrac;Petit-déjeuner;Thés et infusions;9000;;oui;prix, version turque (étiquette en turc)
+candia-le-lait;Candia Le Lait demi-écrémé;Candia;Brique 1 L · UHT;Petit-déjeuner;Laits;1000;Favori;oui;prix, c'est la version vendue au Sénégal
+candia-viva;Candia Viva, lait vitaminé;Candia;Brique 1 L · UHT;Petit-déjeuner;Laits;1100;;oui;prix, version française
+candia-amande;Candia Léger & Digeste saveur amande;Candia;Brique 1 L · sans lactose;Petit-déjeuner;Laits;1800;Nouveau;oui;prix, version française
+candia-candyup-vanille;Candia Candy'up vanille;Candia;Brique individuelle;Petit-déjeuner;Laits;400;;oui;prix, contenance, version française
+candia-grandlait-bio;Candia GrandLait Bio, lait frais;Candia;Bouteille 1 L · lait frais;Petit-déjeuner;Laits;1600;;non;lait frais = phase 2 (chaîne du froid), à publier quand la boutique aura un frigo
+quaker-white-oats-500g;Quaker White Oats, boîte métal;Quaker;Boîte 500 g;Petit-déjeuner;Petit-déjeuner;3000;;oui;prix
+quaker-oats-550g;Quaker Oats, flocons d'avoine;Quaker;Boîte 550 g;Petit-déjeuner;Petit-déjeuner;2800;;oui;prix, version française
+blue-band-100g;Blue Band Original, pot 100 g;Blue Band;Pot 100 g;Petit-déjeuner;Petit-déjeuner;600;Favori;oui;prix, version sud-africaine
+blue-band-900g;Blue Band Tartines, seau 900 g;Blue Band;Seau 900 g;Petit-déjeuner;Petit-déjeuner;4500;;oui;prix, photo avec dates d'un lot (24/12/17)
+gloria-lait-evapore;Gloria Original, lait évaporé;Nestlé Gloria;Boîte 370 g;Petit-déjeuner;Laits;1000;Favori;oui;prix
+quaker-porridge-25;Quaker British Porridge Oats;Quaker;Boîte · 25 portions;Petit-déjeuner;Petit-déjeuner;3500;Nouveau;oui;prix, poids, version britannique
+quaker-old-fashioned;Quaker Oats Old Fashioned;Quaker;Grand pot cylindrique;Petit-déjeuner;Petit-déjeuner;5500;;oui;prix, poids, version américaine
+miel-royal-oku;Miel blanc d'Oku, Miel Royal;Miel Royal;Pot en verre;Petit-déjeuner;Petit-déjeuner;4000;Favori;non;produit camerounais à mettre en avant : photo à refaire (l'affiche porte les numéros du vendeur, la photo des 2 pots est sur tissu doré, pots en verre transparent)
+bonne-maman-fraise;Confiture de fraises Bonne Maman;Bonne Maman;Pot 370 g;Petit-déjeuner;Confitures et douceurs;3500;Favori;oui;prix, version américaine (étiquette en anglais)
+bonne-maman-mures;Confiture de mûres Bonne Maman;Bonne Maman;Pot 370 g;Petit-déjeuner;Confitures et douceurs;3500;;oui;prix, poids
+bonne-maman-compotee-pommes;Compotée de pommes Bonne Maman, pointe de vanille;Bonne Maman;Grand pot;Petit-déjeuner;Confitures et douceurs;4000;Nouveau;oui;prix, poids
+bonne-maman-galettes;Galettes pur beurre Bonne Maman;Bonne Maman;Boîte de 6 sachets · 12 galettes;Petit-déjeuner;Confitures et douceurs;3000;;oui;prix
+gloria-original-150g;Gloria Original, lait évaporé;Nestlé Gloria;Boîte 150 g;Petit-déjeuner;Laits;500;;oui;prix, photo petite avec léger halo gris sous la boîte (à remplacer par une photo plus nette)
+gloria-cuisine-entier;Gloria Cuisine, lait concentré entier non sucré;Gloria;Boîte 410 g;Petit-déjeuner;Laits;1200;;oui;prix, poids, version française
+gloria-cuisine-demi-ecreme;Gloria Cuisine, lait concentré 1/2 écrémé non sucré;Gloria;Boîte 410 g;Petit-déjeuner;Laits;1200;;oui;prix, poids, version française
+harrys-mie-nature-500g;Harrys 100% mie nature;Harrys;Sachet 500 g;Petit-déjeuner;Pains et brioches;2500;;non;pain de mie classé « phase 2 frais » dans le catalogue du client : à publier seulement après validation
+harrys-american-nature;Harrys American Sandwich nature;Harrys;Sachet · 14 tranches;Petit-déjeuner;Pains et brioches;2500;Favori;non;pain de mie classé « phase 2 frais » dans le catalogue du client : à publier seulement après validation
+harrys-american-rustique;Harrys American Sandwich rustique seigle et graines;Harrys;Sachet · 14 tranches;Petit-déjeuner;Pains et brioches;3000;;non;pain de mie classé « phase 2 frais » dans le catalogue du client : à publier seulement après validation
+harrys-brioche-pepites;Harrys Brioche tranchée pépites de chocolat;Harrys;Sachet;Petit-déjeuner;Pains et brioches;3000;Nouveau;non;brioche : à confirmer avec le client (frais ou longue conservation)
+harrys-sandwichs-8;Harrys Sandwich à garnir nature, 8 pains;Harrys;Sachet de 8 sandwichs;Petit-déjeuner;Pains et brioches;2800;;non;pain frais : à confirmer avec le client (frais ou longue conservation)

@@ -21,3 +21,33 @@ evian-sport-75cl 6
 malta-canette principal
 tangui-1-5l 6 principal
 tangui-1-5l-ancien 6
+supermont-10l 6
+nescafe-classic 6 plein
+nutella-pot 6 plein
+kelloggs-chocos-sachet principal
+kelloggs-cornflakes-200g 4 plein
+kelloggs-cornflakes-243g 4 plein
+redwhite-cornflakes principal
+twinings-english-25 12 neutre principal
+twinings-earl-grey-100 5 plein
+lipton-yellow-1kg principal
+lipton-yellow-100 6 plein
+candia-grandlait-bio 5 plein
+candia-amande 3 plein
+candia-le-lait 6 plein
+candia-viva 6 plein
+candia-candyup-vanille 6 plein
+quaker-oats-550g 4 plein
+blue-band-900g 4 plein
+gloria-lait-evapore 6 plein
+quaker-porridge-25 4 plein
+quaker-old-fashioned 6 plein
+bonne-maman-mures 3 plein
+bonne-maman-galettes 3 plein
+bonne-maman-fraise 4 plein
+gloria-cuisine-entier 6 plein
+gloria-cuisine-demi-ecreme 6 plein
+gloria-original-150g 40 principal plein
+harrys-mie-nature-500g 4 plein
+harrys-american-rustique 4 plein
+harrys-brioche-pepites 4 plein
