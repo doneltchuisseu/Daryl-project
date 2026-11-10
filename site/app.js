@@ -37,9 +37,10 @@ const DESCRIPTIONS = {
   "Thés glacés": "Un thé glacé désaltérant, parfait quand il fait chaud à Yaoundé.",
   "Sirops": "À allonger d’eau bien fraîche : une bouteille donne des dizaines de verres pour toute la famille.",
   "Boissons maltées": "La boisson maltée sans alcool préférée du Cameroun, pleine d’énergie.",
+  "Cafés": "Un café soluble prêt en quelques secondes : de l’eau chaude, et la journée peut commencer.",
 };
-const titreFamille = f => ({ "Eaux": "Les eaux", "Sodas": "Les sodas", "Jus et nectars": "Les jus", "Thés glacés": "Les thés glacés", "Sirops": "Les sirops", "Boissons maltées": "Les boissons maltées" }[f] || f);
-const BIENTOT = ["Petit-déjeuner", "Épicerie", "Bébé", "Hygiène et beauté", "Entretien", "Délestage", "Anti-moustiques"];
+const titreFamille = f => ({ "Eaux": "Les eaux", "Sodas": "Les sodas", "Jus et nectars": "Les jus", "Thés glacés": "Les thés glacés", "Sirops": "Les sirops", "Boissons maltées": "Les boissons maltées", "Cafés": "Les cafés" }[f] || f);
+const BIENTOT = ["Épicerie", "Bébé", "Hygiène et beauté", "Entretien", "Délestage", "Anti-moustiques"];
 
 /* ===== Composants ===== */
 function carte(p, i = 0) {
@@ -126,7 +127,7 @@ function pageAccueil() {
 }
 
 function pageCatalogue(filtre, recherche = "") {
-  let liste = PRODUITS, titre = "Boissons", sous = "Eaux, sodas, jus, sirops… tout pour se rafraîchir.";
+  let liste = PRODUITS, titre = "Boissons", sous = "Eaux, sodas, jus, sirops, cafés… tout ce qui se boit.";
   const fam = filtre && filtre !== "promos" ? famDe(filtre) : null;
   if (filtre === "promos") { liste = liste.filter(p => p.etiquette === "Promo"); titre = "Les promos"; sous = "Les packs et plateaux au meilleur prix."; }
   else if (fam) { liste = liste.filter(p => p.famille === fam); titre = titreFamille(fam); sous = DESCRIPTIONS[fam] || ""; }

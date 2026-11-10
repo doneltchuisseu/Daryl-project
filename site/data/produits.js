@@ -532,6 +532,58 @@ window.PRODUITS = [
   "image": "images/supermont-10l.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "nescafe-classic",
+  "nom": "Nescafé Classic",
+  "marque": "Nescafé",
+  "format": "Pot 200 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Cafés",
+  "prix": 4500,
+  "etiquette": "",
+  "image": "images/nescafe-classic.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "nescafe-espresso",
+  "nom": "Nescafé Espresso",
+  "marque": "Nescafé",
+  "format": "Pot 100 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Cafés",
+  "prix": 4000,
+  "etiquette": "",
+  "image": "images/nescafe-espresso.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "nescafe-gold-caramel",
+  "nom": "Nescafé Gold Espresso Caramel",
+  "marque": "Nescafé",
+  "format": "Pot",
+  "rayon": "Petit-déjeuner",
+  "famille": "Cafés",
+  "prix": 4500,
+  "etiquette": "Nouveau",
+  "image": "images/nescafe-gold-caramel.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "nescafe-gold-blend",
+  "nom": "Nescafé Gold Blend",
+  "marque": "Nescafé",
+  "format": "Pot",
+  "rayon": "Petit-déjeuner",
+  "famille": "Cafés",
+  "prix": 5000,
+  "etiquette": "",
+  "image": "images/nescafe-gold-blend.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Cafés"];

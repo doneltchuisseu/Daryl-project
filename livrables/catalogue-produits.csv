@@ -47,3 +47,7 @@ malta-pack24;Malta Guinness, plateau de 24;Malta Guinness;24 canettes;Eaux et bo
 tangui-1-5l;Eau minérale Tangui 1,5 L;Tangui;Bouteille 1,5 L;Eaux et boissons;Eaux;450;Favori;oui;prix
 tangui-1-5l-ancien;Eau minérale Tangui 1,5 L (ancienne étiquette);Tangui;Bouteille 1,5 L;Eaux et boissons;Eaux;450;;non;photo rognée à droite, doublon de tangui-1-5l (à supprimer ou remplacer)
 supermont-10l;Eau minérale Supermont 10 L;Supermont;Bidon 10 L;Eaux et boissons;Eaux;1500;Favori;oui;prix
+nescafe-classic;Nescafé Classic;Nescafé;Pot 200 g;Petit-déjeuner;Cafés;4500;;oui;prix
+nescafe-espresso;Nescafé Espresso;Nescafé;Pot 100 g;Petit-déjeuner;Cafés;4000;;oui;prix
+nescafe-gold-caramel;Nescafé Gold Espresso Caramel;Nescafé;Pot;Petit-déjeuner;Cafés;4500;Nouveau;oui;prix, format
+nescafe-gold-blend;Nescafé Gold Blend;Nescafé;Pot;Petit-déjeuner;Cafés;5000;;oui;prix, format

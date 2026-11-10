@@ -22,3 +22,4 @@ malta-canette principal
 tangui-1-5l 6 principal
 tangui-1-5l-ancien 6
 supermont-10l 6
+nescafe-classic 6 plein
