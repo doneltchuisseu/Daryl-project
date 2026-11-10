@@ -2,3 +2,5 @@
 # Défaut : 22. Plus bas = ne retire que le blanc pur (utile pour les emballages blancs).
 jus-pomme-pack12 8
 jus-orange-gold 8
+sprite-pack9 4
+sprite-verre-24 principal
