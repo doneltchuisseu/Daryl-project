@@ -15,3 +15,14 @@ sprite-50cl;Sprite 50 cl;Sprite;Bouteille 50 cl;Eaux et boissons;500;;prix
 sprite-1-25l;Sprite 1,25 L;Sprite;Bouteille 1,25 L;Eaux et boissons;900;;prix
 sprite-pack9;Sprite, pack de 9;Sprite;9 bouteilles de 1,5 L;Eaux et boissons;10000;Promo;prix, version française du pack
 sprite-verre-24;Sprite, casier de 24 en verre;Sprite;24 bouteilles en verre;Eaux et boissons;8500;;prix, contenance, consigne
+jus-orange-blend;Jus d'orange Orange Blend;Tropicana;Bouteille 450 ml;Eaux et boissons;1200;;prix, format
+fanta-canette-orange;Fanta orange canette;Fanta;Canette 33 cl;Eaux et boissons;500;;prix, photo floue (à remplacer)
+fanta-canette-fraise;Fanta fraise canette;Fanta;Canette 33 cl;Eaux et boissons;600;Nouveau;prix, photo floue (à remplacer)
+fanta-canette-ananas;Fanta ananas canette;Fanta;Canette 33 cl;Eaux et boissons;600;;prix, photo floue (à remplacer)
+fanta-canette-peche;Fanta pêche canette;Fanta;Canette 33 cl;Eaux et boissons;600;;prix, photo avec filigrane d'un autre vendeur (à remplacer)
+fanta-canette-raisin;Fanta raisin canette;Fanta;Canette 33 cl;Eaux et boissons;600;;prix, photo avec filigrane d'un autre vendeur (à remplacer)
+fanta-canette-fruits-rouges;Fanta fruits rouges canette;Fanta;Canette 33 cl;Eaux et boissons;600;;prix, photo avec filigrane d'un autre vendeur (à remplacer)
+fanta-orange-bouteille;Fanta orange;Fanta;Bouteille;Eaux et boissons;700;;prix, format
+fanta-orange-2l;Fanta orange 2 L;Fanta;Bouteille 2 L;Eaux et boissons;1200;;prix, format
+fanta-shokata;Fanta Shokata;Fanta;Bouteille;Eaux et boissons;900;Édition limitée;prix, format, disponibilité au Cameroun
+fanta-pack24;Fanta orange, plateau de 24;Fanta;24 canettes de 33 cl;Eaux et boissons;10500;Promo;prix

@@ -18,6 +18,9 @@ Emballage blanc sur fond blanc (brique, film plastique) : si le détourage
 outils/detourage-reglages.txt (ex. « jus-pomme-pack12 8 »).
 Pastille ou logo de vendeur détaché du produit : ajouter « principal »
 (ex. « sprite-verre-24 principal ») pour ne garder que le produit.
+Photo sur fond gris ou dégradé : ajouter « neutre » avec une tolérance
+de saturation (ex. « fanta-shokata 30 neutre »).
+Les images déjà transparentes (PNG/WebP) sont seulement recadrées.
 """
 import sys
 from collections import deque
@@ -29,18 +32,34 @@ RACINE = Path(__file__).resolve().parent.parent
 ENTREE = Path(sys.argv[1]) if len(sys.argv) > 1 else RACINE / "livrables/src/images/originaux"
 SORTIE = Path(sys.argv[2]) if len(sys.argv) > 2 else RACINE / "livrables/src/images"
 TOL = int(sys.argv[3]) if len(sys.argv) > 3 else 22
+NEUTRE = False  # True : fond gris/dégradé au lieu de blanc
 PRINCIPAL = False  # True : ne garder que le plus grand objet de l'image
 HAUTEUR_MIN = 1200  # px : hauteur minimale de sortie, pour un rendu homogène
-EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
+EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".jxl"}
+
+try:  # format .jxl (JPEG XL), si le module est installé : pip install pillow-jxl-plugin
+    import pillow_jxl  # noqa: F401
+except ImportError:
+    pass
 
 
 def detourer(src: Path, dst: Path) -> tuple[int, int]:
-    im = Image.open(src).convert("RGB")
+    brute = Image.open(src)
+    im = brute.convert("RGB")
     w, h = im.size
     px = im.load()
 
-    def presque_blanc(p):
-        return min(p) >= 255 - TOL and max(p) - min(p) <= 14
+    # Image déjà détourée (PNG/WebP transparent) : on garde sa transparence.
+    if brute.mode in ("RGBA", "LA", "P") and brute.convert("RGBA").getextrema()[3][0] < 128:
+        return finir(brute.convert("RGBA"), brute.convert("RGBA").getchannel("A"), dst)
+
+    if NEUTRE:
+        # Fond gris ou dégradé (photo de studio) : tout pixel peu coloré et assez clair.
+        def presque_blanc(p):
+            return max(p) - min(p) <= TOL and min(p) >= 110
+    else:
+        def presque_blanc(p):
+            return min(p) >= 255 - TOL and max(p) - min(p) <= 14
 
     fond = bytearray(w * h)
     file = deque([(x, y) for x in range(w) for y in (0, h - 1)] +
@@ -61,7 +80,11 @@ def detourer(src: Path, dst: Path) -> tuple[int, int]:
     if PRINCIPAL:
         masque = garder_principal(masque)
     masque = masque.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.8))
-    rgba = im.convert("RGBA")
+    return finir(im.convert("RGBA"), masque, dst)
+
+
+def finir(rgba: Image.Image, masque: Image.Image, dst: Path) -> tuple[int, int]:
+    """Applique le masque, recadre au plus près et met à la hauteur minimale."""
     rgba.putalpha(masque)
     cadre = masque.point(lambda v: 255 if v > 30 else 0).getbbox()
     if not cadre:
@@ -100,9 +123,9 @@ def garder_principal(masque: Image.Image) -> Image.Image:
     return Image.frombytes("L", (w, h), bytes(garde))
 
 
-def reglages() -> dict[str, tuple[int | None, bool]]:
+def reglages() -> dict[str, tuple[int | None, bool, bool]]:
     """Réglages par image, lus dans outils/detourage-reglages.txt :
-    « nom [tolérance] [principal] »."""
+    « nom [tolérance] [principal] [neutre] »."""
     f = RACINE / "outils/detourage-reglages.txt"
     if not f.exists():
         return {}
@@ -112,12 +135,12 @@ def reglages() -> dict[str, tuple[int | None, bool]]:
         if not mots:
             continue
         tol = next((int(m) for m in mots[1:] if m.isdigit()), None)
-        out[mots[0]] = (tol, "principal" in mots[1:])
+        out[mots[0]] = (tol, "principal" in mots[1:], "neutre" in mots[1:])
     return out
 
 
 def main():
-    global TOL, PRINCIPAL
+    global TOL, PRINCIPAL, NEUTRE
     SORTIE.mkdir(parents=True, exist_ok=True)
     tol_defaut, par_image = TOL, reglages()
     fichiers = sorted(p for p in ENTREE.iterdir() if p.suffix.lower() in EXTENSIONS)
@@ -129,7 +152,7 @@ def main():
         if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
             print(f"  déjà fait   {src.name}")
             continue
-        tol, PRINCIPAL = par_image.get(src.stem, (None, False))
+        tol, PRINCIPAL, NEUTRE = par_image.get(src.stem, (None, False, False))
         TOL = tol if tol is not None else tol_defaut
         try:
             taille = detourer(src, dst)

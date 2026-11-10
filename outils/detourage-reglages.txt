@@ -4,3 +4,10 @@ jus-pomme-pack12 8
 jus-orange-gold 8
 sprite-pack9 4
 sprite-verre-24 principal
+fanta-shokata 30 neutre principal
+fanta-canette-peche principal
+fanta-canette-fraise principal
+fanta-canette-raisin principal
+fanta-canette-fruits-rouges principal
+fanta-canette-orange principal
+fanta-canette-ananas principal
