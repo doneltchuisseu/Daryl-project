@@ -1078,6 +1078,32 @@ window.PRODUITS = [
   "image": "images/gloria-lait-evapore.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "quaker-porridge-25",
+  "nom": "Quaker British Porridge Oats",
+  "marque": "Quaker",
+  "format": "Boîte · 25 portions",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 3500,
+  "etiquette": "Nouveau",
+  "image": "images/quaker-porridge-25.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "quaker-old-fashioned",
+  "nom": "Quaker Oats Old Fashioned",
+  "marque": "Quaker",
+  "format": "Grand pot cylindrique",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 5500,
+  "etiquette": "",
+  "image": "images/quaker-old-fashioned.webp",
+  "pack": false,
+  "verre": false
  }
 ];
 window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Laits", "Cafés", "Thés et infusions", "Bébé et enfants"];
