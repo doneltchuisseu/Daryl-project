@@ -1,0 +1,7 @@
+image;nom;marque;format;rayon;prix_fcfa;etiquette;a_confirmer
+sirop-fraise;Sirop fraise;Teisseire;Bouteille 60 cl;Eaux et boissons;2900;Promo;prix
+sirop-pomme;Sirop pomme;Teisseire;Bouteille 60 cl;Eaux et boissons;2900;;prix
+sirop-peche;Sirop pêche;Teisseire;Bouteille 60 cl;Eaux et boissons;2900;;prix
+the-glace-agrumes;Thé glacé agrumes pétillant;Lipton;Bouteille 1,25 L;Eaux et boissons;1500;Nouveau;prix
+the-glace-peche;Thé glacé pêche;Lipton;Canette;Eaux et boissons;600;;prix, format
+the-glace-tropical;Thé glacé tropical;Lipton;Bouteille;Eaux et boissons;1300;;prix, format
