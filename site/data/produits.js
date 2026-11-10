@@ -1195,6 +1195,71 @@ window.PRODUITS = [
   "image": "images/gloria-cuisine-demi-ecreme.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "barilla-spaghetti-n5",
+  "nom": "Barilla Spaghetti n°5",
+  "marque": "Barilla",
+  "format": "Boîte 500 g",
+  "rayon": "Épicerie salée",
+  "famille": "Pâtes",
+  "prix": 1300,
+  "etiquette": "Favori",
+  "image": "images/barilla-spaghetti-n5.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "barilla-sedani-rigati",
+  "nom": "Barilla Sedani Rigati",
+  "marque": "Barilla",
+  "format": "Boîte 500 g",
+  "rayon": "Épicerie salée",
+  "famille": "Pâtes",
+  "prix": 1400,
+  "etiquette": "",
+  "image": "images/barilla-sedani-rigati.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "barilla-rotini",
+  "nom": "Barilla Rotini",
+  "marque": "Barilla",
+  "format": "Boîte 454 g",
+  "rayon": "Épicerie salée",
+  "famille": "Pâtes",
+  "prix": 1500,
+  "etiquette": "",
+  "image": "images/barilla-rotini.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "barilla-campanelle",
+  "nom": "Barilla Campanelle",
+  "marque": "Barilla",
+  "format": "Boîte 454 g",
+  "rayon": "Épicerie salée",
+  "famille": "Pâtes",
+  "prix": 1500,
+  "etiquette": "",
+  "image": "images/barilla-campanelle.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "barilla-tagliatelle",
+  "nom": "Barilla Tagliatelle n°16 Collezione",
+  "marque": "Barilla",
+  "format": "Boîte 500 g",
+  "rayon": "Épicerie salée",
+  "famille": "Pâtes",
+  "prix": 2200,
+  "etiquette": "Nouveau",
+  "image": "images/barilla-tagliatelle.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Bébé et enfants"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Bébé et enfants"];
