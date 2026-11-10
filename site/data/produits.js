@@ -805,6 +805,45 @@ window.PRODUITS = [
   "image": "images/kelloggs-cornflakes-fraise.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "kelloggs-cornflakes-sachet",
+  "nom": "Corn Flakes Original, petit sachet",
+  "marque": "Kellogg's",
+  "format": "Sachet",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 500,
+  "etiquette": "",
+  "image": "images/kelloggs-cornflakes-sachet.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "kelloggs-cornflakes-200g",
+  "nom": "Corn Flakes Original, boîte 200 g",
+  "marque": "Kellogg's",
+  "format": "Boîte 200 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 2000,
+  "etiquette": "",
+  "image": "images/kelloggs-cornflakes-200g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "kelloggs-cornflakes-243g",
+  "nom": "Corn Flakes Original, boîte 243 g",
+  "marque": "Kellogg's",
+  "format": "Boîte 243 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 2300,
+  "etiquette": "",
+  "image": "images/kelloggs-cornflakes-243g.webp",
+  "pack": false,
+  "verre": false
  }
 ];
 window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés", "Bébé et enfants"];

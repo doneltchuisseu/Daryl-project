@@ -25,3 +25,6 @@ supermont-10l 6
 nescafe-classic 6 plein
 nutella-pot 6 plein
 kelloggs-chocos-sachet principal
+kelloggs-cornflakes-200g 4 plein
+kelloggs-cornflakes-243g 4 plein
+redwhite-cornflakes principal

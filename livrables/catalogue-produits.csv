@@ -69,3 +69,7 @@ kelloggs-coco-pops;Céréales Coco Pops;Kellogg's;Boîte 650 g;Petit-déjeuner;P
 kelloggs-chocos-maxi;Céréales Chocos, format maxi;Kellogg's;Boîte maxi;Petit-déjeuner;Petit-déjeuner;5000;Promo;oui;prix, poids
 kelloggs-cornflakes-fraise;Corn Flakes à la fraise;Kellogg's;Boîte;Petit-déjeuner;Petit-déjeuner;3500;Nouveau;oui;prix, poids
 kelloggs-chocos-sachet;Céréales Chocos MultiGrain, sachet;Kellogg's;Sachet;Petit-déjeuner;Petit-déjeuner;2500;;non;photo avec logo de caddie d'un autre vendeur (à remplacer)
+kelloggs-cornflakes-sachet;Corn Flakes Original, petit sachet;Kellogg's;Sachet;Petit-déjeuner;Petit-déjeuner;500;;oui;prix, poids
+kelloggs-cornflakes-200g;Corn Flakes Original, boîte 200 g;Kellogg's;Boîte 200 g;Petit-déjeuner;Petit-déjeuner;2000;;oui;prix
+kelloggs-cornflakes-243g;Corn Flakes Original, boîte 243 g;Kellogg's;Boîte 243 g;Petit-déjeuner;Petit-déjeuner;2300;;oui;prix, doublon possible avec kelloggs-cornflakes-200g
+redwhite-cornflakes;Corn Flakes Red & White;Red & White;Boîte 510 g;Petit-déjeuner;Petit-déjeuner;3000;;non;photo tenue à la main sur fond jaune inutilisable (à reprendre sur fond blanc)
