@@ -1,0 +1,4 @@
+# Tolérance de détourage par image (nom du fichier sans extension, puis valeur).
+# Défaut : 22. Plus bas = ne retire que le blanc pur (utile pour les emballages blancs).
+jus-pomme-pack12 8
+jus-orange-gold 8

@@ -12,6 +12,10 @@ Méthode : on « remplit » le fond blanc à partir des bords de l'image,
 donc les zones blanches à l'intérieur du produit (logos, verres…) sont gardées.
 Ne marche que sur fond blanc uni : une photo sur fond coloré ou en situation
 doit être détourée à la main.
+
+Emballage blanc sur fond blanc (brique, film plastique) : si le détourage
+« mange » le produit, baisser la tolérance de cette image dans
+outils/detourage-reglages.txt (ex. « jus-pomme-pack12 8 »).
 """
 import sys
 from collections import deque
@@ -64,8 +68,23 @@ def detourer(src: Path, dst: Path) -> tuple[int, int]:
     return rgba.size
 
 
+def reglages() -> dict[str, int]:
+    """Tolérances par image, lues dans outils/detourage-reglages.txt (« nom tolérance »)."""
+    f = RACINE / "outils/detourage-reglages.txt"
+    if not f.exists():
+        return {}
+    out = {}
+    for ligne in f.read_text(encoding="utf-8").splitlines():
+        ligne = ligne.split("#")[0].split()
+        if len(ligne) == 2:
+            out[ligne[0]] = int(ligne[1])
+    return out
+
+
 def main():
+    global TOL
     SORTIE.mkdir(parents=True, exist_ok=True)
+    tol_defaut, par_image = TOL, reglages()
     fichiers = sorted(p for p in ENTREE.iterdir() if p.suffix.lower() in EXTENSIONS)
     if not fichiers:
         print(f"Aucune image dans {ENTREE}")
@@ -75,6 +94,7 @@ def main():
         if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
             print(f"  déjà fait   {src.name}")
             continue
+        TOL = par_image.get(src.stem, tol_defaut)
         try:
             taille = detourer(src, dst)
             petit = "  ⚠ image source petite, risque de flou" if min(Image.open(src).size) < 800 else ""

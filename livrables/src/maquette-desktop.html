@@ -60,11 +60,20 @@ body{width:1440px}
 .crew{padding:0 0 90px}
 .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .card .pimg{position:relative;height:360px;display:grid;place-items:center;margin:18px}
-.card .pimg img{height:300px;filter:drop-shadow(0 12px 12px rgba(0,0,0,.2))}
+.card .pimg img{max-height:300px;max-width:88%;filter:drop-shadow(0 12px 12px rgba(0,0,0,.2))}
 .card .pimg .scrib{position:absolute}
 .card .pimg .s1{left:60px;top:70px}.card .pimg .s2{right:60px;top:70px}
 .card .pimg .s3{left:54px;bottom:60px;transform:rotate(30deg)}.card .pimg .s4{right:54px;bottom:60px;transform:scaleX(-1) rotate(30deg)}
 .card .pimg .tag{position:absolute;top:0;left:0}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.card.pack{display:grid;grid-template-columns:1.2fr 1fr}
+.pack .pimg{height:330px;margin:18px}
+.pack .pimg img{max-height:290px;max-width:100%}
+.card.pack .meta{border-top:0;border-left:var(--trait);flex-direction:column;align-items:flex-start;justify-content:center;gap:16px;padding:24px}
+.pack .meta b{font-size:20px;line-height:1.1}
+.pack .meta small{font-size:13px}
+.pack .meta span{font-size:17px}
+.pack .save{font-family:var(--display);font-size:11px;text-transform:uppercase;color:var(--rouge)}
 
 /* Rayons */
 .rayons{padding:80px 0}
@@ -209,6 +218,25 @@ footer p{font-size:14px;margin-top:14px;max-width:280px}
       <div class="meta"><div><b>Pêche</b><small>Lipton · canette</small><span>600 FCFA</span></div><span class="plus">+</span></div></div>
     <div class="card"><div class="pimg"><img src="images/the-glace-tropical.webp" alt="Thé glacé tropical"></div>
       <div class="meta"><div><b>Tropical</b><small>Lipton · bouteille</small><span>1&nbsp;300 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+</div></section>
+
+<!-- JUS DE FRUITS -->
+<section class="crew"><div class="wrap">
+  <div class="sec-head"><div><h2 class="h2">Les jus de fruits</h2><p>100 % fruits pour le petit-déjeuner, et des packs pour toute la famille.</p></div><span class="pill">Toutes les boissons</span></div>
+  <div class="cgrid">
+    <div class="card"><div class="pimg"><img src="images/jus-orange-1l.webp" alt="Jus d'orange sans pulpe 1 L"></div>
+      <div class="meta"><div><b>Orange sans pulpe</b><small>Tropicana Pure Premium · 1 L</small><span>2&nbsp;500 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><img src="images/jus-orange-gold.webp" alt="Jus d'orange Premium Gold"></div>
+      <div class="meta"><div><b>Orange Premium Gold</b><small>Tropicana · brique 1 L</small><span>2&nbsp;200 FCFA</span></div><span class="plus">+</span></div></div>
+    <div class="card"><div class="pimg"><span class="tag">Nouveau</span><img src="images/limonade-fraise.webp" alt="Limonade fraise"></div>
+      <div class="meta"><div><b>Limonade fraise</b><small>Tropicana · bouteille</small><span>2&nbsp;800 FCFA</span></div><span class="plus">+</span></div></div>
+  </div>
+  <div class="pgrid">
+    <div class="card pack"><div class="pimg"><span class="tag red">Promo</span><img src="images/jus-orange-pack3.webp" alt="Pack de 3 jus d'orange"></div>
+      <div class="meta"><div><b>Pack famille<br>jus d’orange</b><small>Tropicana Pure Premium · 3 × 1,36 L</small></div><span>9&nbsp;500 FCFA</span><span class="save">Le litre à 2&nbsp;330 FCFA</span><span class="pill sm dark">+ Ajouter</span></div></div>
+    <div class="card pack"><div class="pimg"><img src="images/jus-pomme-pack12.webp" alt="Pack de 12 jus de pomme"></div>
+      <div class="meta"><div><b>Pack goûter<br>jus de pomme</b><small>Tropicana · 12 × 450 ml</small></div><span>11&nbsp;000 FCFA</span><span class="save">Moins de 920 FCFA la bouteille</span><span class="pill sm dark">+ Ajouter</span></div></div>
   </div>
 </div></section>
 
