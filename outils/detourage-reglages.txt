@@ -24,3 +24,4 @@ tangui-1-5l-ancien 6
 supermont-10l 6
 nescafe-classic 6 plein
 nutella-pot 6 plein
+kelloggs-chocos-sachet principal

@@ -766,6 +766,45 @@ window.PRODUITS = [
   "image": "images/nido-kinder-lacto-800g.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "kelloggs-coco-pops",
+  "nom": "Céréales Coco Pops",
+  "marque": "Kellogg's",
+  "format": "Boîte 650 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 4500,
+  "etiquette": "",
+  "image": "images/kelloggs-coco-pops.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "kelloggs-chocos-maxi",
+  "nom": "Céréales Chocos, format maxi",
+  "marque": "Kellogg's",
+  "format": "Boîte maxi",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 5000,
+  "etiquette": "Promo",
+  "image": "images/kelloggs-chocos-maxi.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "kelloggs-cornflakes-fraise",
+  "nom": "Corn Flakes à la fraise",
+  "marque": "Kellogg's",
+  "format": "Boîte",
+  "rayon": "Petit-déjeuner",
+  "famille": "Petit-déjeuner",
+  "prix": 3500,
+  "etiquette": "Nouveau",
+  "image": "images/kelloggs-cornflakes-fraise.webp",
+  "pack": false,
+  "verre": false
  }
 ];
 window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés", "Bébé et enfants"];
