@@ -1429,6 +1429,45 @@ window.PRODUITS = [
   "image": "images/amora-mayonnaise-squeeze.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "azur-huile-1l",
+  "nom": "Huile végétale Azur Gold, 1 L",
+  "marque": "Azur",
+  "format": "Bouteille 1 L",
+  "rayon": "Épicerie salée",
+  "famille": "Huiles",
+  "prix": 1600,
+  "etiquette": "Favori",
+  "image": "images/azur-huile-1l.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "azur-huile-pack3",
+  "nom": "Huile végétale Azur Gold, pack de 3 × 1 L",
+  "marque": "Azur",
+  "format": "3 bouteilles de 1 L",
+  "rayon": "Épicerie salée",
+  "famille": "Huiles",
+  "prix": 4500,
+  "etiquette": "Promo",
+  "image": "images/azur-huile-pack3.webp",
+  "pack": true,
+  "verre": false
+ },
+ {
+  "id": "azur-huile-5l",
+  "nom": "Huile Azur Gold, bidon 5 L",
+  "marque": "Azur",
+  "format": "Bidon 5 L",
+  "rayon": "Épicerie salée",
+  "famille": "Huiles",
+  "prix": 7500,
+  "etiquette": "",
+  "image": "images/azur-huile-5l.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Nouilles", "Sauces", "Bébé et enfants"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Nouilles", "Huiles", "Sauces", "Bébé et enfants"];

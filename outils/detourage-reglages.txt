@@ -64,3 +64,6 @@ heinz-ketchup-907g 6 plein
 amora-mayo-blanche 4 plein
 amora-mayonnaise-bocal 4 plein
 amora-mayonnaise-squeeze 4 plein
+azur-huile-pack3 6 principal
+azur-huile-1l 6 plein
+azur-huile-5l 6 plein
