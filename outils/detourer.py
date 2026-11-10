@@ -21,6 +21,7 @@ Pastille ou logo de vendeur détaché du produit : ajouter « principal »
 Photo sur fond gris ou dégradé : ajouter « neutre » avec une tolérance
 de saturation (ex. « fanta-shokata 30 neutre »). Si le fond est moucheté,
 ajouter « nettoyer » pour enlever les petites taches restantes.
+Fond noir ou gris foncé : ajouter aussi « sombre ».
 Les images déjà transparentes (PNG/WebP) sont seulement recadrées.
 """
 import sys
@@ -34,10 +35,11 @@ ENTREE = Path(sys.argv[1]) if len(sys.argv) > 1 else RACINE / "livrables/src/ima
 SORTIE = Path(sys.argv[2]) if len(sys.argv) > 2 else RACINE / "livrables/src/images"
 TOL = int(sys.argv[3]) if len(sys.argv) > 3 else 22
 NEUTRE = False  # True : fond gris/dégradé au lieu de blanc
+SOMBRE = False  # avec NEUTRE : le fond peut aussi être noir ou gris foncé
 PRINCIPAL = False  # True : ne garder que le plus grand objet de l'image
 NETTOYER = False  # True : enlever seulement les petites taches isolées
 HAUTEUR_MIN = 1200  # px : hauteur minimale de sortie, pour un rendu homogène
-EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".jxl"}
+EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".jxl", ".avif"}
 
 try:  # format .jxl (JPEG XL), si le module est installé : pip install pillow-jxl-plugin
     import pillow_jxl  # noqa: F401
@@ -58,7 +60,7 @@ def detourer(src: Path, dst: Path) -> tuple[int, int]:
     if NEUTRE:
         # Fond gris ou dégradé (photo de studio) : tout pixel peu coloré et assez clair.
         def presque_blanc(p):
-            return max(p) - min(p) <= TOL and min(p) >= 110
+            return max(p) - min(p) <= TOL and (SOMBRE or min(p) >= 110)
     else:
         def presque_blanc(p):
             return min(p) >= 255 - TOL and max(p) - min(p) <= 14
@@ -133,9 +135,9 @@ def garder_principal(masque: Image.Image, seuil: float = 0.0) -> Image.Image:
     return Image.frombytes("L", (w, h), bytes(garde))
 
 
-def reglages() -> dict[str, tuple[int | None, bool, bool, bool]]:
+def reglages() -> dict[str, tuple[int | None, bool, bool, bool, bool]]:
     """Réglages par image, lus dans outils/detourage-reglages.txt :
-    « nom [tolérance] [principal] [neutre] [nettoyer] »."""
+    « nom [tolérance] [principal] [neutre] [nettoyer] [sombre] »."""
     f = RACINE / "outils/detourage-reglages.txt"
     if not f.exists():
         return {}
@@ -145,12 +147,12 @@ def reglages() -> dict[str, tuple[int | None, bool, bool, bool]]:
         if not mots:
             continue
         tol = next((int(m) for m in mots[1:] if m.isdigit()), None)
-        out[mots[0]] = (tol, "principal" in mots[1:], "neutre" in mots[1:], "nettoyer" in mots[1:])
+        out[mots[0]] = (tol, "principal" in mots[1:], "neutre" in mots[1:], "nettoyer" in mots[1:], "sombre" in mots[1:])
     return out
 
 
 def main():
-    global TOL, PRINCIPAL, NEUTRE, NETTOYER
+    global TOL, PRINCIPAL, NEUTRE, NETTOYER, SOMBRE
     SORTIE.mkdir(parents=True, exist_ok=True)
     tol_defaut, par_image = TOL, reglages()
     fichiers = sorted(p for p in ENTREE.iterdir() if p.suffix.lower() in EXTENSIONS)
@@ -162,7 +164,7 @@ def main():
         if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
             print(f"  déjà fait   {src.name}")
             continue
-        tol, PRINCIPAL, NEUTRE, NETTOYER = par_image.get(src.stem, (None, False, False, False))
+        tol, PRINCIPAL, NEUTRE, NETTOYER, SOMBRE = par_image.get(src.stem, (None, False, False, False, False))
         TOL = tol if tol is not None else tol_defaut
         try:
             taille = detourer(src, dst)

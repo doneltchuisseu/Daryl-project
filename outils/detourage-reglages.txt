@@ -12,3 +12,4 @@ fanta-canette-fruits-rouges principal
 fanta-canette-orange principal
 fanta-canette-ananas principal
 coca-50cl 30 neutre nettoyer
+perrier-citron-50cl 40 neutre sombre nettoyer
