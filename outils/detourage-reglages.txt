@@ -61,3 +61,6 @@ indomie-oignon-poulet 6 plein
 heinz-mayonnaise 4 plein
 heinz-ketchup-zero 6 plein
 heinz-ketchup-907g 6 plein
+amora-mayo-blanche 4 plein
+amora-mayonnaise-bocal 4 plein
+amora-mayonnaise-squeeze 4 plein

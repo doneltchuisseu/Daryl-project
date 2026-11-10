@@ -39,7 +39,7 @@ const DESCRIPTIONS = {
   "Boissons maltées": "La boisson maltée sans alcool préférée du Cameroun, pleine d’énergie.",
   "Petit-déjeuner": "Pour bien commencer la journée : boisson chocolatée, céréales et pâte à tartiner que toute la famille réclame.",
   "Confitures et douceurs": "Confitures, compotée et galettes pur beurre Bonne Maman pour les tartines, le goûter et les desserts.",
-  "Sauces": "Ketchup et mayonnaise Heinz pour les frites, les sandwichs et les grillades.",
+  "Sauces": "Ketchup Heinz et mayonnaise Heinz ou Amora pour les frites, les sandwichs et les grillades.",
   "Nouilles": "Les nouilles instantanées Indomie, prêtes en 3 minutes : en sachet ou en gobelet.",
   "Riz": "Du riz basmati Taj Mahal en sachet de 1 kg ou en grand sac pour toute la famille.",
   "Pâtes": "Spaghetti, tagliatelle, rotini et autres pâtes Barilla pour les repas de dernière minute.",

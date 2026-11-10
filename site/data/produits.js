@@ -1390,6 +1390,45 @@ window.PRODUITS = [
   "image": "images/heinz-ketchup-zero.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "amora-mayo-blanche",
+  "nom": "Amora Mayo blanche",
+  "marque": "Amora",
+  "format": "Bocal",
+  "rayon": "Épicerie salée",
+  "famille": "Sauces",
+  "prix": 1800,
+  "etiquette": "Favori",
+  "image": "images/amora-mayo-blanche.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "amora-mayonnaise-bocal",
+  "nom": "Amora Mayonnaise fine, recette fouettée",
+  "marque": "Amora",
+  "format": "Bocal",
+  "rayon": "Épicerie salée",
+  "famille": "Sauces",
+  "prix": 2000,
+  "etiquette": "",
+  "image": "images/amora-mayonnaise-bocal.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "amora-mayonnaise-squeeze",
+  "nom": "Amora Mayonnaise fine, flacon souple",
+  "marque": "Amora",
+  "format": "Flacon souple",
+  "rayon": "Épicerie salée",
+  "famille": "Sauces",
+  "prix": 2200,
+  "etiquette": "Nouveau",
+  "image": "images/amora-mayonnaise-squeeze.webp",
+  "pack": false,
+  "verre": false
  }
 ];
 window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Pâtes", "Riz", "Nouilles", "Sauces", "Bébé et enfants"];
