@@ -45,3 +45,6 @@ quaker-old-fashioned 6 plein
 bonne-maman-mures 3 plein
 bonne-maman-galettes 3 plein
 bonne-maman-fraise 4 plein
+gloria-cuisine-entier 6 plein
+gloria-cuisine-demi-ecreme 6 plein
+gloria-original-150g 40 principal plein

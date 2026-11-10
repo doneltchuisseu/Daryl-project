@@ -1156,6 +1156,45 @@ window.PRODUITS = [
   "image": "images/bonne-maman-galettes.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "gloria-original-150g",
+  "nom": "Gloria Original, lait évaporé",
+  "marque": "Nestlé Gloria",
+  "format": "Boîte 150 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Laits",
+  "prix": 500,
+  "etiquette": "",
+  "image": "images/gloria-original-150g.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "gloria-cuisine-entier",
+  "nom": "Gloria Cuisine, lait concentré entier non sucré",
+  "marque": "Gloria",
+  "format": "Boîte 410 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Laits",
+  "prix": 1200,
+  "etiquette": "",
+  "image": "images/gloria-cuisine-entier.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "gloria-cuisine-demi-ecreme",
+  "nom": "Gloria Cuisine, lait concentré 1/2 écrémé non sucré",
+  "marque": "Gloria",
+  "format": "Boîte 410 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Laits",
+  "prix": 1200,
+  "etiquette": "",
+  "image": "images/gloria-cuisine-demi-ecreme.webp",
+  "pack": false,
+  "verre": false
  }
 ];
 window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Bébé et enfants"];
