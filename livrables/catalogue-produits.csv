@@ -41,3 +41,8 @@ evian-sport-75cl;Evian bouchon sport 75 cl;Evian;Bouteille 75 cl;Eaux et boisson
 evian-sport-1l;Evian bouchon sport 1 L;Evian;Bouteille 1 L;Eaux et boissons;1800;;prix, format
 evian-pack6-1l;Evian, pack de 6 × 1 L;Evian;6 bouteilles de 1 L;Eaux et boissons;8000;Promo;prix
 evian-pack6-50cl;Evian, pack de 6 × 50 cl;Evian;6 bouteilles de 50 cl;Eaux et boissons;5500;;prix
+malta-canette;Malta Guinness canette;Malta Guinness;Canette 33 cl;Eaux et boissons;500;Favori;prix
+malta-verre;Malta Guinness, bouteille en verre;Malta Guinness;Bouteille en verre;Eaux et boissons;400;;prix, contenance, consigne
+malta-pack24;Malta Guinness, plateau de 24;Malta Guinness;24 canettes;Eaux et boissons;11000;Promo;prix, contenance (l'emballage indique 33 cl ?)
+tangui-1-5l;Eau minérale Tangui 1,5 L;Tangui;Bouteille 1,5 L;Eaux et boissons;450;Favori;prix
+tangui-1-5l-ancien;Eau minérale Tangui 1,5 L (ancienne étiquette);Tangui;Bouteille 1,5 L;Eaux et boissons;450;;photo rognée à droite, doublon de tangui-1-5l (à supprimer ou remplacer)

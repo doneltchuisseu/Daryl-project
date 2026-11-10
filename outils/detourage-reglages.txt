@@ -18,3 +18,6 @@ evian-pack6-1l 6 plein
 evian-sport-1l 6
 evian-1-5l 6
 evian-sport-75cl 6
+malta-canette principal
+tangui-1-5l 6 principal
+tangui-1-5l-ancien 6
