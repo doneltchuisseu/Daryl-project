@@ -42,3 +42,6 @@ blue-band-900g 4 plein
 gloria-lait-evapore 6 plein
 quaker-porridge-25 4 plein
 quaker-old-fashioned 6 plein
+bonne-maman-mures 3 plein
+bonne-maman-galettes 3 plein
+bonne-maman-fraise 4 plein

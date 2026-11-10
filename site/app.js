@@ -38,12 +38,13 @@ const DESCRIPTIONS = {
   "Sirops": "À allonger d’eau bien fraîche : une bouteille donne des dizaines de verres pour toute la famille.",
   "Boissons maltées": "La boisson maltée sans alcool préférée du Cameroun, pleine d’énergie.",
   "Petit-déjeuner": "Pour bien commencer la journée : boisson chocolatée, céréales et pâte à tartiner que toute la famille réclame.",
+  "Confitures et douceurs": "Confitures, compotée et galettes pur beurre Bonne Maman pour les tartines, le goûter et les desserts.",
   "Laits": "Le lait longue conservation Candia, nature, vitaminé, sans lactose ou parfumé, prêt à boire.",
   "Thés et infusions": "Le Lipton du quotidien, les thés anglais Twinings et des infusions, à boire chaud ou glacé.",
   "Bébé et enfants": "Laits de croissance pour les 1 à 3 ans. Demandez conseil à votre pédiatre pour choisir le lait adapté à votre enfant.",
   "Cafés": "Café soluble prêt en quelques secondes, ou café en grains Lavazza pour les amateurs d’espresso.",
 };
-const titreFamille = f => ({ "Eaux": "Les eaux", "Sodas": "Les sodas", "Jus et nectars": "Les jus", "Thés glacés": "Les thés glacés", "Sirops": "Les sirops", "Boissons maltées": "Les boissons maltées", "Cafés": "Les cafés", "Petit-déjeuner": "Le petit-déjeuner", "Bébé et enfants": "Bébé et enfants", "Thés et infusions": "Thés et infusions", "Laits": "Les laits" }[f] || f);
+const titreFamille = f => ({ "Eaux": "Les eaux", "Sodas": "Les sodas", "Jus et nectars": "Les jus", "Thés glacés": "Les thés glacés", "Sirops": "Les sirops", "Boissons maltées": "Les boissons maltées", "Cafés": "Les cafés", "Petit-déjeuner": "Le petit-déjeuner", "Bébé et enfants": "Bébé et enfants", "Thés et infusions": "Thés et infusions", "Laits": "Les laits", "Confitures et douceurs": "Confitures et douceurs" }[f] || f);
 const BIENTOT = ["Épicerie", "Hygiène et beauté", "Entretien", "Délestage", "Anti-moustiques"];
 
 /* ===== Composants ===== */

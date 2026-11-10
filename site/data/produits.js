@@ -1104,6 +1104,58 @@ window.PRODUITS = [
   "image": "images/quaker-old-fashioned.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "bonne-maman-fraise",
+  "nom": "Confiture de fraises Bonne Maman",
+  "marque": "Bonne Maman",
+  "format": "Pot 370 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Confitures et douceurs",
+  "prix": 3500,
+  "etiquette": "Favori",
+  "image": "images/bonne-maman-fraise.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "bonne-maman-mures",
+  "nom": "Confiture de mûres Bonne Maman",
+  "marque": "Bonne Maman",
+  "format": "Pot 370 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Confitures et douceurs",
+  "prix": 3500,
+  "etiquette": "",
+  "image": "images/bonne-maman-mures.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "bonne-maman-compotee-pommes",
+  "nom": "Compotée de pommes Bonne Maman, pointe de vanille",
+  "marque": "Bonne Maman",
+  "format": "Grand pot",
+  "rayon": "Petit-déjeuner",
+  "famille": "Confitures et douceurs",
+  "prix": 4000,
+  "etiquette": "Nouveau",
+  "image": "images/bonne-maman-compotee-pommes.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "bonne-maman-galettes",
+  "nom": "Galettes pur beurre Bonne Maman",
+  "marque": "Bonne Maman",
+  "format": "Boîte de 6 sachets · 12 galettes",
+  "rayon": "Petit-déjeuner",
+  "famille": "Confitures et douceurs",
+  "prix": 3000,
+  "etiquette": "",
+  "image": "images/bonne-maman-galettes.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Laits", "Cafés", "Thés et infusions", "Bébé et enfants"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Confitures et douceurs", "Laits", "Cafés", "Thés et infusions", "Bébé et enfants"];
