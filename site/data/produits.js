@@ -584,6 +584,19 @@ window.PRODUITS = [
   "image": "images/nescafe-gold-blend.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "nutella-pot",
+  "nom": "Nutella",
+  "marque": "Ferrero",
+  "format": "Pot 750 g",
+  "rayon": "Petit-déjeuner",
+  "famille": "Pâtes à tartiner",
+  "prix": 4500,
+  "etiquette": "Favori",
+  "image": "images/nutella-pot.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Cafés"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Cafés", "Pâtes à tartiner"];
