@@ -74,6 +74,52 @@ function section(titre, sousTitre, liste, lien, libelle, cls = "") {
   </div></section>`;
 }
 
+
+/* ===== Mosaïque du hero =====
+   Chaque ligne : [produit, x en % (centre), bas, hauteur, rotation en °, plan]
+   « bas » et « hauteur » sont des fractions de la largeur de la mosaïque (valeur négative = rogné en bas). */
+const MOSAIQUE = {
+  grand: [
+    // plan arrière : mur de bouteilles
+    ["evian-1-5l", 4, .17, .24, -7, 1], ["fanta-orange-bouteille", 14, .18, .26, 5, 1], ["sirop-pomme", 24, .19, .27, -4, 1],
+    ["the-glace-agrumes", 34, .20, .27, 6, 1], ["azur-huile-1l", 44, .22, .27, -3, 1], ["perrier-1l", 56, .22, .27, 4, 1],
+    ["jus-orange-1l", 66, .20, .27, -6, 1], ["sirop-peche", 76, .19, .27, 4, 1], ["coca-zero-bouteille", 86, .18, .26, -5, 1],
+    ["tangui-1-5l", 96, .17, .24, 7, 1],
+    // plan intermédiaire
+    ["malta-canette", 9, .05, .27, -6, 2], ["nescafe-classic", 20, .03, .25, 5, 2], ["heinz-ketchup-907g", 31, .04, .29, -5, 2],
+    ["candia-le-lait", 69, .04, .29, 5, 2], ["supermont-10l", 80, .03, .30, -4, 2], ["bonne-maman-fraise", 91, .05, .21, 6, 2],
+    // plan avant : cœur de la mosaïque
+    ["indomie-oignon-poulet", 11, -.03, .20, -8, 3], ["quaker-white-oats-500g", 23, -.04, .24, -4, 3],
+    ["nutella-pot", 36, -.03, .26, -4, 3], ["milo-boite-1-5kg", 65, -.04, .27, 4, 3],
+    ["taj-mahal-xxxl-5kg", 78, -.04, .27, 5, 3], ["kelloggs-coco-pops", 90, -.04, .23, 7, 3],
+    ["nido-boite-2-5kg", 50, -.02, .32, 0, 4],
+  ],
+  petit: [
+    ["evian-1-5l", 8, .40, .40, -7, 1], ["sirop-pomme", 27, .42, .42, 4, 1], ["azur-huile-1l", 47, .44, .42, -3, 1],
+    ["jus-orange-1l", 67, .42, .42, 5, 1], ["coca-zero-bouteille", 87, .40, .40, -6, 1],
+    ["malta-canette", 17, .20, .40, -6, 2], ["heinz-ketchup-907g", 38, .18, .42, 5, 2],
+    ["candia-le-lait", 62, .18, .42, -5, 2], ["supermont-10l", 83, .20, .43, 6, 2],
+    ["quaker-white-oats-500g", 20, -.03, .34, -5, 3], ["nutella-pot", 40, -.05, .38, -4, 3],
+    ["milo-boite-1-5kg", 63, -.05, .40, 4, 3], ["taj-mahal-xxxl-5kg", 84, -.04, .34, 6, 3],
+    ["nido-boite-2-5kg", 51, -.02, .50, 0, 4],
+  ],
+};
+const DISQUES = {
+  grand: [[12, -.14, .30, "var(--orange)"], [32, -.18, .26, "var(--bleu)"], [50, -.22, .34, "var(--rouge)"], [70, -.18, .26, "var(--bleu)"], [89, -.14, .30, "var(--orange)"]],
+  petit: [[14, -.14, .62, "var(--orange)"], [50, -.20, .72, "var(--rouge)"], [88, -.14, .62, "var(--bleu)"]],
+};
+const mobileQ = matchMedia("(max-width:760px)");
+function mosaique() {
+  const m = mobileQ.matches ? "petit" : "grand";
+  const disques = DISQUES[m].map(([x, y, d, c]) => `<span class="disc" style="--x:${x};--y:${y};--d:${d};--c:${c}"></span>`).join("");
+  const tuiles = MOSAIQUE[m].map(([id, x, y, h, r, z], i) => {
+    const p = parId(id); if (!p) return "";
+    return `<a class="tile" href="#/produit/${id}" style="--x:${x};--y:${y};--h:${h};--r:${r}deg;--z:${z};--i:${i}" aria-label="${esc(p.nom)}" title="${esc(p.nom)}"><img src="${p.image}" alt="" loading="eager" decoding="async"></a>`;
+  }).join("");
+  return `<div class="mosaic">${disques}${tuiles}</div>`;
+}
+mobileQ.addEventListener("change", () => { if (!location.hash || location.hash === "#/") route(); });
+
 /* ===== Pages ===== */
 function pageAccueil() {
   const img = id => parId(id)?.image || "";
@@ -94,12 +140,7 @@ function pageAccueil() {
     <h1><span class="scrib l"></span>Vos courses<br>livrées <u>en 1 h</u><span class="scrib r"></span></h1>
     <p>Boissons fraîches et produits du quotidien, livrés partout à Yaoundé.</p>
     <div class="ctas"><a class="pill dark" href="#/produits">Faire mes courses</a><a class="pill" href="#/produits/promos">Voir les promos</a></div>
-    <div class="stage" aria-hidden="true">
-      <span class="disc d1"></span><span class="disc d3"></span><span class="disc d2"></span>
-      <img class="bottle b1" src="${img("sirop-pomme")}" alt="">
-      <img class="bottle b3" src="${img("sirop-peche")}" alt="">
-      <img class="bottle b2" src="${img("sirop-fraise")}" alt="">
-    </div>
+    ${mosaique()}
   </section>
 
   ${section("Les favoris d’ici", "Les incontournables du Cameroun, toujours en stock.", favoris, "#/produits", "Tous les produits")}
