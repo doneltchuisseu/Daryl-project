@@ -32,3 +32,8 @@ twinings-english-25 12 neutre principal
 twinings-earl-grey-100 5 plein
 lipton-yellow-1kg principal
 lipton-yellow-100 6 plein
+candia-grandlait-bio 5 plein
+candia-amande 3 plein
+candia-le-lait 6 plein
+candia-viva 6 plein
+candia-candyup-vanille 6 plein

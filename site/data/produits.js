@@ -961,6 +961,58 @@ window.PRODUITS = [
   "image": "images/lipton-yellow-1kg.webp",
   "pack": false,
   "verre": false
+ },
+ {
+  "id": "candia-le-lait",
+  "nom": "Candia Le Lait demi-écrémé",
+  "marque": "Candia",
+  "format": "Brique 1 L · UHT",
+  "rayon": "Petit-déjeuner",
+  "famille": "Laits",
+  "prix": 1000,
+  "etiquette": "Favori",
+  "image": "images/candia-le-lait.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "candia-viva",
+  "nom": "Candia Viva, lait vitaminé",
+  "marque": "Candia",
+  "format": "Brique 1 L · UHT",
+  "rayon": "Petit-déjeuner",
+  "famille": "Laits",
+  "prix": 1100,
+  "etiquette": "",
+  "image": "images/candia-viva.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "candia-amande",
+  "nom": "Candia Léger & Digeste saveur amande",
+  "marque": "Candia",
+  "format": "Brique 1 L · sans lactose",
+  "rayon": "Petit-déjeuner",
+  "famille": "Laits",
+  "prix": 1800,
+  "etiquette": "Nouveau",
+  "image": "images/candia-amande.webp",
+  "pack": false,
+  "verre": false
+ },
+ {
+  "id": "candia-candyup-vanille",
+  "nom": "Candia Candy'up vanille",
+  "marque": "Candia",
+  "format": "Brique individuelle",
+  "rayon": "Petit-déjeuner",
+  "famille": "Laits",
+  "prix": 400,
+  "etiquette": "",
+  "image": "images/candia-candyup-vanille.webp",
+  "pack": false,
+  "verre": false
  }
 ];
-window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Cafés", "Thés et infusions", "Bébé et enfants"];
+window.FAMILLES = ["Eaux", "Sodas", "Jus et nectars", "Thés glacés", "Sirops", "Boissons maltées", "Petit-déjeuner", "Laits", "Cafés", "Thés et infusions", "Bébé et enfants"];
