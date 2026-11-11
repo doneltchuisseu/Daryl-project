@@ -50,7 +50,6 @@ creatives["1-vos-courses-chez-vous"] = (
     + prod("azur-huile-1l.webp", 800, 760, 170, -5, 2)
     + prod("indomie-oignon-poulet.webp", 700, 930, 170, 3, 3)
     + prod("heinz-ketchup-907g.webp", 880, 930, 150, -4, 2)
-    + """<img class="sticker" src="assets/sticker-livre-1h.png" style="left:800px;top:500px;width:200px;transform:rotate(12deg);z-index:6">"""
     + """<span class="spark" style="left:520px;top:520px"></span><span class="spark" style="left:980px;top:560px;width:18px;height:18px"></span>"""
     + """<div class="cta">Faire mes courses →</div><div class="note">Paiement à la livraison · Sur notre site</div>"""
 )
