@@ -2,8 +2,8 @@
 
 Usage : python3 outils/generer-creatives.py   puis   node outils/rendre-creatives.js
 
-L'offre (formulée par le client) : vous commandez, on fait vos courses, on vous livre,
-vous payez à la livraison si vous êtes satisfait.
+L'offre (validée par le client), identique sur les 4 créatives :
+« Vos courses livrées chez vous. Vous payez à la réception. »
 Leviers d'Alex Hormozi utilisés :
   1. Résultat rêvé        : « Le frigo plein, sans sortir de chez vous »
   2. Garantie / risque nul : « Pas satisfait ? Vous ne payez pas »
@@ -28,7 +28,7 @@ body{font-family:"Quicksand",system-ui,sans-serif;color:#3A2316;position:relativ
 .logo{font-family:"Bowlby One",sans-serif;font-size:36px;line-height:.88;color:#C8232C;text-transform:uppercase}
 .logo small{display:block;font-size:.42em;color:#3A2316;letter-spacing:.14em}
 .badge{background:#3A2316;color:#FFF6E0;border-radius:999px;padding:12px 26px;font-size:23px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-h1{position:absolute;left:72px;top:160px;font-family:"Bowlby One",sans-serif;line-height:.98;text-transform:uppercase;color:#3A2316;text-shadow:0 6px 0 #FFF6E0}
+h1{position:absolute;left:72px;top:150px;font-family:"Bowlby One",sans-serif;line-height:.98;text-transform:uppercase;color:#3A2316;text-shadow:0 6px 0 #FFF6E0}
 h1 em{font-style:normal;color:#C8232C}
 .sub{position:absolute;left:72px;font-size:33px;line-height:1.35;font-weight:600}
 .sub b{font-weight:700;color:#C8232C}
@@ -37,6 +37,9 @@ h1 em{font-style:normal;color:#C8232C}
 .card .t{font-size:23px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C8232C}
 .spark{position:absolute;width:28px;height:28px;background:#FFF6E0;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
 .disc{position:absolute;border-radius:50%}
+.acc{position:relative;display:inline-block}
+.acc::after{content:"";position:absolute;left:30%;top:-.02em;width:.34em;height:.11em;background:currentColor;border-radius:.05em;transform:rotate(-24deg);box-shadow:0 .06em 0 #FFF6E0}
+.offre{position:absolute;left:72px;right:72px;top:508px;background:#3A2316;border-radius:26px;padding:22px 30px;text-align:center;box-shadow:0 10px 0 #C8232C;font-family:"Bowlby One",sans-serif;font-size:50px;line-height:1;color:#FFD65A;text-transform:uppercase}
 /* Bandeau du bas : image fixe, donc pas de bouton ni d'adresse */
 .foot{position:absolute;left:0;right:0;bottom:0;height:190px;background:#3A2316;display:flex;align-items:center;justify-content:space-between;padding:0 72px;gap:28px}
 .foot .site{font-family:"Bowlby One",sans-serif;color:#FFF6E0;font-size:34px;line-height:1.08;text-transform:uppercase;white-space:nowrap}
@@ -58,7 +61,13 @@ h1 em{font-style:normal;color:#C8232C}
 
 def foot():
     return ('<div class="foot"><div class="site">Faites vos courses<br>sur notre site</div>'
-            '<div class="pay"><b>Paiement à la livraison</b><span>Espèces ou mobile money</span></div></div>')
+            '<div class="pay"><b>Livraison à Yaoundé</b><span>Espèces ou mobile money</span></div></div>')
+
+
+def offre():
+    """L'offre, identique sur les 4 créatives."""
+    return ('<h1 style="font-size:96px;line-height:1.2;width:940px">Vos courses<br><em>livr<span class="acc">e</span>es<br>chez vous.</em></h1>'
+            '<div class="offre">Vous payez à la réception</div>')
 
 
 def top(badge):
@@ -117,60 +126,54 @@ def page(title, body):
 
 C = {}
 
-# 1. RÉSULTAT RÊVÉ (conservé, sans le sac, paiement à la livraison mis en avant)
-C["1-le-frigo-plein"] = (
-    top("Yaoundé · 7 j/7")
-    + '<h1 style="font-size:104px;width:940px">Le frigo plein,<br><em>sans sortir<br>de chez vous.</em></h1>'
-    + '<p class="sub" style="top:560px;width:440px">Vous choisissez vos produits sur notre site. <b>On vous apporte tout à la porte.</b></p>'
-    + '<span class="chip" style="left:72px;top:820px;transform:rotate(-3deg)">🛒 Plus de 100 produits</span>'
-    + '<span class="disc" style="left:560px;top:580px;width:470px;height:470px;background:#C8232C"></span>'
-    + groupe(545, 510, 500, 620, [
-        ("tangui-1-5l", 16, 150, 400, -8, 1), ("azur-huile-1l", 84, 150, 390, 8, 1),
-        ("sirop-fraise", 34, 170, 330, -3, 1), ("jus-orange-1l", 66, 170, 330, 4, 1),
-        ("nido-boite-2-5kg", 50, 40, 330, 0, 3),
-        ("malta-canette", 20, 0, 250, -6, 4), ("heinz-ketchup-907g", 80, 0, 260, 6, 4)])
-    + '<span class="spark" style="left:520px;top:500px"></span><span class="spark" style="left:1000px;top:560px;width:18px;height:18px"></span>'
+# 1. Les produits du quotidien, apportés à la porte
+C["offre-1-produits"] = (
+    top("Yaoundé · 7 j/7") + offre()
+    + '<p class="sub" style="top:660px;width:450px">Vous choisissez vos produits sur notre site. <b>On vous apporte tout à la porte.</b></p>'
+    + '<span class="chip" style="left:72px;top:930px;transform:rotate(-3deg)">🛒 Plus de 100 produits</span>'
+    + '<span class="disc" style="left:590px;top:680px;width:420px;height:420px;background:#C8232C"></span>'
+    + groupe(560, 640, 470, 500, [
+        ("tangui-1-5l", 16, 120, 330, -8, 1), ("azur-huile-1l", 84, 120, 320, 8, 1),
+        ("sirop-fraise", 34, 140, 270, -3, 1), ("jus-orange-1l", 66, 140, 270, 4, 1),
+        ("nido-boite-2-5kg", 50, 30, 270, 0, 3),
+        ("malta-canette", 20, 0, 200, -6, 4), ("heinz-ketchup-907g", 80, 0, 210, 6, 4)])
     + foot())
 
-# 2. LA GARANTIE : c'est l'offre. Le paiement à la livraison en appui, plus petit.
-C["2-satisfait-ou-rien"] = (
-    top("Zéro risque")
-    + '<h1 style="font-size:100px;width:940px">Pas satisfait ?<br><em>Vous ne<br>payez pas.</em></h1>'
-    + '<p class="sub" style="top:500px;width:900px;font-size:30px">Vous payez seulement à la livraison, <b>et seulement si tout vous convient.</b></p>'
-    + '<div class="card" style="left:72px;top:610px;width:540px"><div class="t">Comment ça se passe</div>'
-    + etapes(["Vous commandez sur notre site", "On fait vos courses pour vous", "On vous livre à la maison",
-              "Satisfait ? Vous payez."]) + '</div>'
-    + '<span class="disc" style="left:640px;top:640px;width:400px;height:400px;background:#3A2316;opacity:.92"></span>'
-    + groupe(630, 600, 420, 520, [
-        ("sirop-peche", 25, 120, 320, -7, 1), ("milo-boite-1-5kg", 72, 110, 280, 6, 1),
-        ("nutella-pot", 34, 0, 250, -4, 3), ("indomie-oignon-poulet", 74, 0, 220, 5, 3)])
+# 2. Comment ça se passe, en 4 étapes
+C["offre-2-etapes"] = (
+    top("Comment ça marche") + offre()
+    + '<div class="card" style="left:72px;top:660px;width:560px"><div class="t">Comment ça se passe</div>'
+    + etapes(["Vous commandez sur notre site", "On fait vos courses pour vous", "On vous livre chez vous",
+              "Vous payez à la réception"]) + '</div>'
+    + '<span class="disc" style="left:660px;top:700px;width:380px;height:380px;background:#3A2316;opacity:.92"></span>'
+    + groupe(645, 660, 400, 460, [
+        ("sirop-peche", 25, 110, 280, -7, 1), ("milo-boite-1-5kg", 72, 100, 250, 6, 1),
+        ("nutella-pot", 34, 0, 220, -4, 3), ("indomie-oignon-poulet", 74, 0, 190, 5, 3)])
     + foot())
 
-# 3. L'OFFRE EMPILÉE : tout ce que fait TIMAINI à la place du client
-C["3-on-soccupe-de-tout"] = (
-    top("L'offre")
-    + '<h1 style="font-size:76px;width:960px">Vous commandez.<br><em>On s’occupe<br>du reste.</em></h1>'
-    + '<div class="card" style="left:72px;top:440px;width:660px;padding:36px 34px">'
+# 3. Ce qui est inclus
+C["offre-3-inclus"] = (
+    top("L'offre") + offre()
+    + '<div class="card" style="left:72px;top:650px;width:640px;padding:32px 34px">'
     + coches([("On fait vos courses", "Plus besoin d’aller au marché"),
               ("On vous livre chez vous", "Livraison offerte dès 25 000 FCFA"),
-              ("Vous vérifiez avant de payer", "Espèces ou mobile money"),
-              ("Pas satisfait ? Vous ne payez pas.", "Aucun risque pour vous")])
+              ("Vous vérifiez à la livraison", "Puis vous payez, pas avant"),
+              ("Espèces ou mobile money", "Vous choisissez à la réception")])
     + '</div>'
-    + bag(735, 580, 320, [("jus-orange-1l", 22, 45, 290, -9), ("tangui-1-5l", 80, 45, 300, 8),
-                          ("coca-pack6-1-5l", 52, 35, 250, -2)])
+    + bag(745, 630, 290, [("jus-orange-1l", 22, 45, 260, -9), ("tangui-1-5l", 80, 45, 270, 8),
+                          ("coca-pack6-1-5l", 52, 35, 225, -2)])
     + foot())
 
-# 4. LA DESTINATION : le temps libre gagné, puis le service expliqué simplement
-C["4-gardez-votre-samedi"] = (
-    top("Gagnez du temps")
-    + '<h1 style="font-size:96px;width:960px">Gardez<br>votre samedi.<br><em>On fait<br>les courses.</em></h1>'
-    + '<p class="sub" style="top:720px;width:460px;font-size:30px">Pas de marché, pas d’embouteillages, rien à porter. <b>Vous commandez, on achète tout et on vous livre.</b></p>'
-    + '<span class="disc" style="left:590px;top:560px;width:440px;height:440px;background:#C8232C"></span>'
-    + groupe(560, 480, 490, 650, [
-        ("supermont-10l", 22, 150, 420, -7, 1), ("taj-mahal-xxxl-5kg", 78, 150, 390, 7, 1),
-        ("azur-huile-5l", 50, 110, 330, 0, 2),
-        ("nido-boite-2-5kg", 24, 0, 270, -4, 3), ("milo-boite-1-5kg", 74, 0, 260, 5, 3),
-        ])
+# 4. Les produits lourds : on porte, vous restez chez vous
+C["offre-4-on-porte"] = (
+    top("Gagnez du temps") + offre()
+    + '<p class="sub" style="top:660px;width:450px">Pas de marché, pas d’embouteillages, rien à porter. <b>On achète tout et on vous livre.</b></p>'
+    + '<span class="chip" style="left:72px;top:930px;transform:rotate(-2deg)">💪 Vous ne portez rien</span>'
+    + '<span class="disc" style="left:600px;top:680px;width:420px;height:420px;background:#C8232C"></span>'
+    + groupe(560, 620, 480, 520, [
+        ("supermont-10l", 22, 120, 340, -7, 1), ("taj-mahal-xxxl-5kg", 78, 120, 320, 7, 1),
+        ("azur-huile-5l", 50, 90, 270, 0, 2),
+        ("nido-boite-2-5kg", 26, 0, 220, -4, 3), ("milo-boite-1-5kg", 74, 0, 210, 5, 3)])
     + foot())
 
 if __name__ == "__main__":
